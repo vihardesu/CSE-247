@@ -1,24 +1,59 @@
 package timing;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Equilibrate implements GensRepeatRunnable {
 
 	static {
-		List<Integer> sizes = new ArrayList<Integer>(1000);
-		for (int i=0; i < 100; i=i+5) {
-			sizes.add(i);
-		}
-		Experiment exper = new Experiment(new Equilibrate(500), sizes, 3);
-		exper.run();
-		for (SizeAndTiming st : exper.getSizeAndTiming()) {
-			System.out.println(st);
+		final Duration target = Duration.ofNanos(6000000); // target for inflate value adjustments
+		final Duration tolerance = Duration.ofNanos(500000); // tolerance of deviation from the target
+		int inflate = 500;
+		boolean done = false;
+		while (!done) {
+			List<Integer> sizes = new ArrayList<Integer>(1000);
+			for (int i=0; i < 100; i=i+5) {
+				sizes.add(i);
+			}
+			Experiment exper = new Experiment(new Equilibrate(inflate), sizes, 3);
+			exper.run();
+			
+			Duration sumOfDiff = Duration.ZERO;
+			Duration prev = Duration.ZERO;
+			for (SizeAndTiming st : exper.getSizeAndTiming()) {
+				System.out.println(st);
+				sumOfDiff = sumOfDiff.plus(st.timing.minus(prev));
+				prev = st.timing;
+			}
+			Duration avg = sumOfDiff.dividedBy((long)(exper.getCount() - 1));
+			System.out.println("Average duration difference: " + avg);
+			
+			Duration result = target.minus(avg);
+			if (result.abs().compareTo(tolerance) < 0) {
+				// found inflate, save it and exit
+				System.out.println("Inflate final value = " + inflate);
+				done = true;
+			} else if (result.abs().compareTo(tolerance.multipliedBy(2)) < 0) {
+				// greater than tolerance but within twice tolerance
+				// change inflate by 25
+				if (result.isNegative())
+					inflate -= 25;
+				else
+					inflate += 25;
+			} else {
+				// greater than twice tolerance
+				// change inflate by 50
+				if (result.isNegative())
+					inflate -= 50;
+				else
+					inflate += 50;
+			}
 		}
 	}
-	
+
 	private final int inflate;
-	
+
 	public Equilibrate(int inflate) {
 		this.inflate = inflate;
 	}
@@ -62,8 +97,6 @@ public class Equilibrate implements GensRepeatRunnable {
 	public String toString() {
 		return "Equlibrate 1000";
 	}
-
-	private volatile int sum;
 
 	public static void main(String[] args) {
 
