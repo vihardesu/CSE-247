@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Equilibrate implements GensRepeatRunnable {
 
-	static {
+	public static int calcInflation() {
 		final Duration target = Duration.ofNanos(6000000); // target for inflate value adjustments
 		final Duration tolerance = Duration.ofNanos(500000); // tolerance of deviation from the target
 		int inflate = 500;
@@ -33,7 +33,7 @@ public class Equilibrate implements GensRepeatRunnable {
 			if (result.abs().compareTo(tolerance) < 0) {
 				// found inflate, save it and exit
 				System.out.println("Inflate final value = " + inflate);
-				done = true;
+				return inflate;
 			} else if (result.abs().compareTo(tolerance.multipliedBy(2)) < 0) {
 				// greater than tolerance but within twice tolerance
 				// change inflate by 25
@@ -50,6 +50,7 @@ public class Equilibrate implements GensRepeatRunnable {
 					inflate += 50;
 			}
 		}
+		return -1;
 	}
 
 	private final int inflate;
