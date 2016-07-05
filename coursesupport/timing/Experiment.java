@@ -11,6 +11,7 @@ public class Experiment implements Runnable {
 	final private GensRepeatRunnable grr;
 	final private Iterable<Integer> sizes;
 	private Iterable<Duration> times;
+	private Iterable<Long> ticks;
 	private boolean ran;
 	private int count;
 	private int repeats;
@@ -41,12 +42,25 @@ public class Experiment implements Runnable {
 		return result;
 	}
 	
+	public Iterable<SizeAndLong> getSizeAndTicks() {
+		Iterator<Long> iter = getTicks().iterator();
+		LinkedList<SizeAndLong> result = new LinkedList<SizeAndLong>();
+		for (int size : getSizes()) {
+			result.add(new SizeAndTicks(size, iter.next()));
+		}
+		return result;
+	}
+	
 	public Iterable<Integer> getSizes() {
 		return this.sizes;
 	}
 	
 	public Iterable<Duration> getTimes() {
 		return this.times;
+	}
+	
+	public Iterable<Long> getTicks() {
+		return this.ticks;
 	}
 	
 	/**
@@ -58,18 +72,28 @@ public class Experiment implements Runnable {
 		}
 		ran = true;
 		List<Duration> times = new LinkedList<Duration>();
+		List<Long> ticks     = new LinkedList<Long>();
 		for (int size : sizes) {
 			//System.out.println("Experiment size " + size);
-			RepeatRunnable rr = grr.gen(size);
+			Ticker t = new Ticker();
+			RepeatRunnable rr = grr.gen(size, t);
 			Duration time = TimedRunnable.getTimeFor(rr, repeats);
 			times.add(time);
+			ticks.add(t.getTickCount());
 			++count;
 		}
 		this.times = times;
+		this.ticks = ticks;
 	}
 	
 	public int getCount() {
 		return this.count;
+	}
+	
+	public static void runExperiment(String name, GensRepeatRunnable grr, Iterable<Integer> sizes, int repeats) {
+		Experiment e = new Experiment(grr, sizes, repeats);
+		e.run();
+		Output.writeSizeTiming("outputs/"+name+ "ticks.csv", name, e.getSizeAndTicks());
 	}
 
 }

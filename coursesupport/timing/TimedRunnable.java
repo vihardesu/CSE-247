@@ -53,19 +53,21 @@ public class TimedRunnable extends Thread implements Runnable {
 		//  and finish all the dead objects -- get all done you need to do
 		//
 		this.start = Instant.now();        // (1)
-		try {
-			runnable.run();                // (2)
-		}
-		catch (Throwable t) {
-			this.end = Instant.now();      // (3)
-			System.out.println("Runnable " + runnable + " threw error " + t);
-		}
-		finally {
-			if (this.end == null)
-				this.end = Instant.now();  // (3)
-			if (logging)
-				System.out.println("...Ending " + runnable );
-			Wrappers.notifyAll(this); //Notifies everyone that this.end might have changed
+		synchronized (this) {
+			try {
+				runnable.run();                // (2)
+			}
+			catch (Throwable t) {
+				this.end = Instant.now();      // (3)
+				System.out.println("Runnable " + runnable + " threw error " + t);
+			}
+			finally {
+				if (this.end == null)
+					this.end = Instant.now();  // (3)
+				if (logging)
+					System.out.println("...Ending " + runnable );
+				Wrappers.notifyAll(this); //Notifies everyone that this.end might have changed
+			}
 		}
 	}
 
@@ -74,7 +76,7 @@ public class TimedRunnable extends Thread implements Runnable {
 	 * 
 	 * @return the Duration of time taken by the Runnable
 	 */
-	public Duration getTime() {
+	public synchronized Duration getTime() {
 
 		while(this.end == null){
 			Wrappers.wait(this);	  //waits for the Runnable to finish

@@ -7,13 +7,13 @@ import java.time.Duration;
  * @author roncytron
  *
  */
-public class SizeAndTiming {
+public class SizeAndTiming extends SizeAndLong {
 	
 	public final int      size;
 	public final Duration timing;
 	
 	public SizeAndTiming(int size, Duration timing) {
-		super();
+		super(size, timing.toMillis());
 		this.size = size;
 		this.timing = timing;
 	}

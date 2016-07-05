@@ -12,7 +12,7 @@ public class Output {
 	 * @param exper column name
 	 * @param iter iterator that returns the sizes and durations
 	 */
-	public static void writeSizeTiming(String file, String exper, Iterable<SizeAndTiming> iter) {
+	public static void writeSizeTiming(String file, String exper, Iterable<SizeAndLong> iter) {
 		try {
 			if (!file.endsWith(".csv")) {
 				file = file + ".csv";
@@ -28,9 +28,9 @@ public class Output {
 			//
 			// and write the data
 			//
-			for (SizeAndTiming st : iter) {
+			for (SizeAndLong st : iter) {
 				w.write(""+st.size);
-				w.write(""+st.timing.toMillis());
+				w.write(""+st.value);
 				w.endRecord();
 			}
 			w.close();
