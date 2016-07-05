@@ -1,6 +1,12 @@
 package timing;
 
-public class Ticker {
+/**
+ * Keeps track of the number of operations associated with an
+ * implementation.
+ * @author roncytron
+ *
+ */
+final public class Ticker {
 	
 	private long tickCount;
 
@@ -8,11 +14,14 @@ public class Ticker {
 		this.tickCount = 0L;
 	}
 	
-	public void tick() {
+	/**
+	 * Log one more operation on behalf of the implementation.
+	 */
+	final public void tick() {
 		++tickCount;
 	}
 	
-	public long getTickCount() {
+	final public long getTickCount() {
 		return this.tickCount;
 	}
 

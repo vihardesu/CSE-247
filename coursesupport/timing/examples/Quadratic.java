@@ -1,4 +1,10 @@
-package timing;
+package timing.examples;
+
+import timing.Experiment;
+import timing.GenSizes;
+import timing.GensRepeatRunnable;
+import timing.RepeatRunnable;
+import timing.Ticker;
 
 public class Quadratic {
 

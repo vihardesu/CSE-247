@@ -1,4 +1,4 @@
-package timing;
+package timing.utils;
 
 /**
  * This class wraps some calls that throw checked exceptions.

@@ -6,9 +6,9 @@ import java.util.Random;
 import heaps.MinHeap;
 import timing.Experiment;
 import timing.GensRepeatRunnable;
-import timing.Output;
 import timing.RepeatRunnable;
 import timing.SizeAndTiming;
+import timing.results.Output;
 
 public class HeapTimer implements GensRepeatRunnable {
 	

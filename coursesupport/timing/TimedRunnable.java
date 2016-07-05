@@ -4,6 +4,9 @@ import java.time.Duration;
 import java.time.Instant;
 import java.util.PriorityQueue;
 
+import timing.results.ResultsChooser;
+import timing.utils.Wrappers;
+
 /**
  * Runs a specified Runnable, keeping track of
  *   when it started and ended,
@@ -91,7 +94,12 @@ public class TimedRunnable extends Thread implements Runnable {
 		return new TimedRunnable(r);
 	}
 
-	public static TimeAndTicks getTimeFor(RepeatRunnable r, int numTimes) {
+	public static TimeAndTicks getResultsFor(
+			RepeatRunnable r, 
+			int numTimes,
+			ResultsChooser<Duration> timeChooser,
+			ResultsChooser<Long> ticksChooser
+			) {
 		PriorityQueue<Duration> pq = new PriorityQueue<Duration>();
 		PriorityQueue<Long>     tq = new PriorityQueue<Long>();
 		for (int i=0; i < numTimes; ++i) {
@@ -102,23 +110,7 @@ public class TimedRunnable extends Thread implements Runnable {
 			tq.offer(ticks);
 			pq.offer(time);
 		}
-		//
-		// return the median time by pulling the first
-		//   n/2 entries from the PriorityQueue
-		//   for linked list we wanted the fastest time
-		//   but if there is randomness in the data, the median makes
-		//   more sense.
-		// FIXME The strategy for which time to take should be
-		//   something we can specify as a parameter
-		//   We study priority queues later 
-		//
-		Duration ans1 = null;
-		Long     ans2 = null;
-		for (int i=0; i <= numTimes/2; ++i) {
-			ans1 = pq.poll();
-			ans2 = tq.peek();
-		}
-		return new TimeAndTicks(ans1, ans2);
+		return new TimeAndTicks(timeChooser.getValue(pq), ticksChooser.getValue(tq));
 	}
 
 }

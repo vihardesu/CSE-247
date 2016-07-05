@@ -6,6 +6,9 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import timing.results.LeastChooser;
+import timing.results.Output;
+
 public class Experiment implements Runnable {
 	
 	final private GensRepeatRunnable grr;
@@ -76,7 +79,7 @@ public class Experiment implements Runnable {
 		for (int size : sizes) {
 			//System.out.println("Experiment size " + size);
 			RepeatRunnable rr = grr.gen(size);
-			TimeAndTicks tt = TimedRunnable.getTimeFor(rr, repeats);
+			TimeAndTicks tt = TimedRunnable.getResultsFor(rr, repeats, new LeastChooser<Duration>(), new LeastChooser<Long>());
 			Duration time = tt.time;
 			times.add(time);
 			ticks.add(tt.ticks);

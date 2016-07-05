@@ -1,8 +1,10 @@
-package timing;
+package timing.results;
 
 import java.io.FileWriter;
 
 import com.csvreader.CsvWriter;
+
+import timing.SizeAndLong;
 
 public class Output {
 
