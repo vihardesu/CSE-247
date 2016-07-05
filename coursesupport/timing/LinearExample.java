@@ -23,6 +23,9 @@ public class LinearExample {
 						// Nada
 					}
 					
+					public String toString() {
+						return "Linear size " + size;
+					}
 				};
 			}
 			
