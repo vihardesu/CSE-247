@@ -24,6 +24,10 @@ public class Quadratic {
 					public void reset() {
 						// Nada
 					}
+					
+					public String toString() { 
+						return "Quadratic work size " + size;
+					}
 
 				};
 			}
