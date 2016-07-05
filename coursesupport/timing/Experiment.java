@@ -75,11 +75,11 @@ public class Experiment implements Runnable {
 		List<Long> ticks     = new LinkedList<Long>();
 		for (int size : sizes) {
 			//System.out.println("Experiment size " + size);
-			Ticker t = new Ticker();
-			RepeatRunnable rr = grr.gen(size, t);
-			Duration time = TimedRunnable.getTimeFor(rr, repeats);
+			RepeatRunnable rr = grr.gen(size);
+			TimeAndTicks tt = TimedRunnable.getTimeFor(rr, repeats);
+			Duration time = tt.time;
 			times.add(time);
-			ticks.add(t.getTickCount());
+			ticks.add(tt.ticks);
 			++count;
 		}
 		this.times = times;

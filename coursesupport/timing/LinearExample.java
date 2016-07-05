@@ -8,11 +8,11 @@ public class LinearExample {
 		this.grr = new GensRepeatRunnable() {
 
 			@Override
-			public RepeatRunnable gen(final long size, final Ticker t) {
+			public RepeatRunnable gen(final long size) {
 				return new RepeatRunnable() {
 
 					@Override
-					public void run() {
+					public void run(Ticker t) {
 						for (int i=0; i < size; ++i) {
 							t.tick();
 						}

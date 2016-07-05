@@ -7,6 +7,6 @@ public interface GensRepeatRunnable {
 	 * @param size the input size
 	 * @return something that can be run many times to get accurate timing
 	 */
-	public RepeatRunnable gen(long size, Ticker t);
+	public RepeatRunnable gen(long size);
 
 }

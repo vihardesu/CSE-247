@@ -17,6 +17,7 @@ public class TimedRunnable extends Thread implements Runnable {
 	final private RepeatRunnable runnable;
 	private Instant start = null;
 	private Instant end   = null;
+	private Ticker ticker = null;
 	private static boolean logging = true;
 
 	/**
@@ -44,6 +45,7 @@ public class TimedRunnable extends Thread implements Runnable {
 		//   before we count timing
 		//
 		runnable.reset();
+		this.ticker = new Ticker();
 		//
 		// collect your garbage Java!
 		// 
@@ -55,7 +57,7 @@ public class TimedRunnable extends Thread implements Runnable {
 		this.start = Instant.now();        // (1)
 		synchronized (this) {
 			try {
-				runnable.run();                // (2)
+				runnable.run(ticker);                // (2)
 			}
 			catch (Throwable t) {
 				this.end = Instant.now();      // (3)
@@ -89,13 +91,16 @@ public class TimedRunnable extends Thread implements Runnable {
 		return new TimedRunnable(r);
 	}
 
-	public static Duration getTimeFor(RepeatRunnable r, int numTimes) {
+	public static TimeAndTicks getTimeFor(RepeatRunnable r, int numTimes) {
 		PriorityQueue<Duration> pq = new PriorityQueue<Duration>();
+		PriorityQueue<Long>     tq = new PriorityQueue<Long>();
 		for (int i=0; i < numTimes; ++i) {
 			TimedRunnable tr = genTimedRunnable(r);
 			tr.start();
-			Duration t = tr.getTime();
-			pq.offer(t);
+			Duration time = tr.getTime();
+			Long ticks = tr.ticker.getTickCount();
+			tq.offer(ticks);
+			pq.offer(time);
 		}
 		//
 		// return the median time by pulling the first
@@ -107,11 +112,13 @@ public class TimedRunnable extends Thread implements Runnable {
 		//   something we can specify as a parameter
 		//   We study priority queues later 
 		//
-		Duration ans = null;
+		Duration ans1 = null;
+		Long     ans2 = null;
 		for (int i=0; i <= numTimes/2; ++i) {
-			ans = pq.poll();
+			ans1 = pq.poll();
+			ans2 = tq.peek();
 		}
-		return ans;
+		return new TimeAndTicks(ans1, ans2);
 	}
 
 }
