@@ -37,8 +37,8 @@ public class Linear implements RepeatRunnable {
 		for (int i=0; i < 100; ++i) {
 			Experiment e = new Experiment(new Linear(i), 3);
 			e.run();
-			System.out.println(" ticks: " + e.getSizeAndTicks());
-			System.out.println(" time:  " + e.getSizeAndTiming());
+			System.out.println(" ticks: " + e.getTicks());
+			System.out.println(" time:  " + e.getTime());
 		}
 	}
 

@@ -1,45 +1,36 @@
 package timing;
 
 import java.time.Duration;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.PriorityQueue;
 
 import timing.results.LeastChooser;
-import timing.results.Output;
-import timing.utils.SizeAndLong;
-import timing.utils.SizeAndTicks;
-import timing.utils.SizeAndTiming;
-import timing.utils.TimeAndTicks;
+import timing.results.ResultsChooser;
 
 public class Experiment implements Runnable {
 
 	final private RepeatRunnable rr;
-	private boolean ran;
 	private int repeats;
 	private Duration time;
 	private Long     ticks;
+	private ResultsChooser<Duration> timeChooser;
+	private ResultsChooser<Long>     ticksChooser;
 
 
-	public Experiment(RepeatRunnable rr, int repeats) {
+
+	public Experiment(RepeatRunnable rr, int repeats, ResultsChooser<Duration> timeChooser, ResultsChooser<Long> ticksChooser) {
 		this.rr      = rr;
-		this.ran     = false;
 		this.repeats = repeats;
+		this.timeChooser  = timeChooser;
+		this.ticksChooser = ticksChooser;
 		this.time    = null;
 		this.ticks   = null;
 	}
-
-	public SizeAndLong getSizeAndTiming() {
-		return new SizeAndTiming(rr.getSize(), this.time);
-	}
-
-	public SizeAndLong getSizeAndTicks() {
-		return new SizeAndTicks(rr.getSize(), this.getTicks());
-	}
-
-	public long getSize() {
-		return this.rr.getSize();
+	
+	public Experiment(RepeatRunnable rr, int repeats) {
+		this(rr, repeats, 
+				new LeastChooser<Duration>(), 
+				new LeastChooser<Long>()
+				);
 	}
 
 	public Duration getTime() {
@@ -54,25 +45,20 @@ public class Experiment implements Runnable {
 	 * Actually do the experiment
 	 */
 	public void run() {
-		if (this.ran) {
-			throw new Error("Already ran");
+		PriorityQueue<Duration> pq = new PriorityQueue<Duration>();
+		PriorityQueue<Long>     tq = new PriorityQueue<Long>();
+		for (int i=0; i < repeats; ++i) {
+			TimedRunnable tr = new TimedRunnable(rr);
+			tr.start();
+			Duration time = tr.getTime();
+			Long ticks = tr.getTicker().getTickCount();
+			tq.offer(ticks);
+			pq.offer(time);
 		}
-		this.ran = true;
 		
-		//System.out.println("Experiment size " + size);
-		TimeAndTicks tt   = TimedRunnable.getResultsFor(rr, repeats, new LeastChooser<Duration>(), new LeastChooser<Long>());
-		Duration     time = tt.time;
-
-		this.time  = time;
-		this.ticks = tt.ticks;
+		this.time  = timeChooser.getValue(pq);
+		this.ticks = ticksChooser.getValue(tq);
 	}
 
-	public static void runExperiment(String name, RepeatRunnable rr, int repeats) {
-		Experiment e = new Experiment(rr, repeats);
-		e.run();
-		System.out.println(name+" ticks: " + e.getSizeAndTicks());
-		System.out.println(name+" time:  " + e.getSizeAndTiming());
-//		Output.writeSizeTiming("outputs/"+name+ "ticks.csv", name, e.getSizeAndTicks());
-	}
 
 }

@@ -2,10 +2,7 @@ package timing;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.PriorityQueue;
 
-import timing.results.ResultsChooser;
-import timing.utils.TimeAndTicks;
 import timing.utils.Wrappers;
 
 /**
@@ -90,28 +87,9 @@ public class TimedRunnable extends Thread implements Runnable {
 
 		return Duration.between(start, end);
 	}
-
-	public static TimedRunnable genTimedRunnable(RepeatRunnable r) {
-		return new TimedRunnable(r);
-	}
-
-	public static TimeAndTicks getResultsFor(
-			RepeatRunnable r, 
-			int numTimes,
-			ResultsChooser<Duration> timeChooser,
-			ResultsChooser<Long> ticksChooser
-			) {
-		PriorityQueue<Duration> pq = new PriorityQueue<Duration>();
-		PriorityQueue<Long>     tq = new PriorityQueue<Long>();
-		for (int i=0; i < numTimes; ++i) {
-			TimedRunnable tr = genTimedRunnable(r);
-			tr.start();
-			Duration time = tr.getTime();
-			Long ticks = tr.ticker.getTickCount();
-			tq.offer(ticks);
-			pq.offer(time);
-		}
-		return new TimeAndTicks(timeChooser.getValue(pq), ticksChooser.getValue(tq));
+	
+	public Ticker getTicker() {
+		return this.ticker;
 	}
 
 }

@@ -39,8 +39,8 @@ public class Quadratic implements RepeatRunnable {
 		for (int i=10000; i < 100000; i=i+1000) {
 			Experiment e = new Experiment(new Quadratic(i), 3);
 			e.run();
-			System.out.println(" ticks: " + e.getSizeAndTicks());
-			System.out.println(" time:  " + e.getSizeAndTiming());
+			System.out.println(" ticks: " + e.getTicks());
+			System.out.println(" time:  " + e.getTime());
 		}
 	}
 
