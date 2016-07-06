@@ -4,6 +4,8 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
+import timing.utils.SizeAndTiming;
+
 public class Equilibrate implements GensRepeatRunnable {
 
 	public static int calcInflation() {

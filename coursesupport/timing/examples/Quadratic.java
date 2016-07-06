@@ -1,10 +1,10 @@
 package timing.examples;
 
 import timing.Experiment;
-import timing.GenSizes;
 import timing.GensRepeatRunnable;
 import timing.RepeatRunnable;
 import timing.Ticker;
+import timing.utils.GenSizes;
 
 public class Quadratic {
 

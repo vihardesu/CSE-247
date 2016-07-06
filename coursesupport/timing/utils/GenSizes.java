@@ -1,4 +1,4 @@
-package timing;
+package timing.utils;
 
 import java.util.Iterator;
 

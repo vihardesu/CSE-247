@@ -1,5 +1,11 @@
 package timing;
 
+/**
+ * A class must implement this interface to be
+ *    "timed".
+ * @author roncytron
+ *
+ */
 public interface RepeatRunnable {
 	
 	/**

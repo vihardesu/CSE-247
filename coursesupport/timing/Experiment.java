@@ -8,6 +8,10 @@ import java.util.List;
 
 import timing.results.LeastChooser;
 import timing.results.Output;
+import timing.utils.SizeAndLong;
+import timing.utils.SizeAndTicks;
+import timing.utils.SizeAndTiming;
+import timing.utils.TimeAndTicks;
 
 public class Experiment implements Runnable {
 	

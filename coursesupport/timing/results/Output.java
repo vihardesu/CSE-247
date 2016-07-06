@@ -4,7 +4,7 @@ import java.io.FileWriter;
 
 import com.csvreader.CsvWriter;
 
-import timing.SizeAndLong;
+import timing.utils.SizeAndLong;
 
 public class Output {
 

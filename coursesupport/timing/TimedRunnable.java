@@ -5,6 +5,7 @@ import java.time.Instant;
 import java.util.PriorityQueue;
 
 import timing.results.ResultsChooser;
+import timing.utils.TimeAndTicks;
 import timing.utils.Wrappers;
 
 /**
