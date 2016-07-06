@@ -18,7 +18,7 @@ public class Equilibrate implements GensRepeatRunnable {
 			for (int i=0; i < 100; i=i+5) {
 				sizes.add(i);
 			}
-			Experiment exper = new Experiment(new Equilibrate(inflate), sizes, 3);
+			GenResults exper = new GenResults(new Equilibrate(inflate), sizes, 3);
 			exper.run();
 			
 			Duration sumOfDiff = Duration.ZERO;

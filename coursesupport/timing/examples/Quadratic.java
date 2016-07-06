@@ -1,6 +1,6 @@
 package timing.examples;
 
-import timing.Experiment;
+import timing.GenResults;
 import timing.RepeatRunnable;
 import timing.Ticker;
 
@@ -37,7 +37,7 @@ public class Quadratic implements RepeatRunnable {
 
 	public static void main(String[] args) {
 		for (int i=10000; i < 100000; i=i+1000) {
-			Experiment e = new Experiment(new Quadratic(i), 3);
+			GenResults e = new GenResults(new Quadratic(i), 3);
 			e.run();
 			System.out.println(" ticks: " + e.getTicks());
 			System.out.println(" time:  " + e.getTime());

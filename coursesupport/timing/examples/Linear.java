@@ -1,6 +1,6 @@
 package timing.examples;
 
-import timing.Experiment;
+import timing.GenResults;
 import timing.RepeatRunnable;
 import timing.Ticker;
 
@@ -35,7 +35,7 @@ public class Linear implements RepeatRunnable {
 	
 	public static void main(String[] args) {
 		for (int i=0; i < 100; ++i) {
-			Experiment e = new Experiment(new Linear(i), 3);
+			GenResults e = new GenResults(new Linear(i), 3);
 			e.run();
 			System.out.println(" ticks: " + e.getTicks());
 			System.out.println(" time:  " + e.getTime());

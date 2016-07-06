@@ -6,7 +6,7 @@ import java.util.PriorityQueue;
 import timing.results.LeastChooser;
 import timing.results.ResultsChooser;
 
-public class Experiment implements Runnable {
+public class GenResults implements Runnable {
 
 	final private RepeatRunnable rr;
 	private int repeats;
@@ -17,7 +17,7 @@ public class Experiment implements Runnable {
 
 
 
-	public Experiment(RepeatRunnable rr, int repeats, ResultsChooser<Duration> timeChooser, ResultsChooser<Long> ticksChooser) {
+	public GenResults(RepeatRunnable rr, int repeats, ResultsChooser<Duration> timeChooser, ResultsChooser<Long> ticksChooser) {
 		this.rr      = rr;
 		this.repeats = repeats;
 		this.timeChooser  = timeChooser;
@@ -26,7 +26,7 @@ public class Experiment implements Runnable {
 		this.ticks   = null;
 	}
 	
-	public Experiment(RepeatRunnable rr, int repeats) {
+	public GenResults(RepeatRunnable rr, int repeats) {
 		this(rr, repeats, 
 				new LeastChooser<Duration>(), 
 				new LeastChooser<Long>()
@@ -42,7 +42,8 @@ public class Experiment implements Runnable {
 	}
 
 	/**
-	 * Actually do the experiment
+	 * Actually do the experiment.  We run it repeats times, and then
+	 * use the ResultsChooser to pick from the results.
 	 */
 	public void run() {
 		PriorityQueue<Duration> pq = new PriorityQueue<Duration>();
