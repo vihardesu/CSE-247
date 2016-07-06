@@ -20,5 +20,11 @@ public interface RepeatRunnable {
 	 * @param ticker
 	 */
 	public void run(Ticker ticker);
+	
+	/**
+	 * The size of the input for this problem.
+	 * @return the size of the input for this problem
+	 */
+	public int getSize();
 
 }

@@ -1,52 +1,47 @@
 package timing.examples;
 
 import timing.Experiment;
-import timing.GensRepeatRunnable;
 import timing.RepeatRunnable;
 import timing.Ticker;
-import timing.utils.GenSizes;
 
-public class Quadratic {
+public class Quadratic implements RepeatRunnable {
 
-	private final GensRepeatRunnable grr;
+	private final int size;
 
-	public Quadratic(final int n) {
-		this.grr = new GensRepeatRunnable() {
-
-			@Override
-			public RepeatRunnable gen(final long size) {
-				return new RepeatRunnable() {
-
-					@Override
-					public void run(Ticker t) {
-						for (int i=0; i < size; ++i) {
-							for (int j=0; j < size; ++j) {
-								t.tick();
-							}
-						}
-					}
-
-					@Override
-					public void reset() {
-						// Nada
-					}
-					
-					public String toString() { 
-						return "Quadratic work size " + size;
-					}
-
-				};
-			}
-
-		};
+	public Quadratic(int size) {
+		this.size = size;
 	}
 
-	public void run() {
-		Experiment.runExperiment("quad", grr, new GenSizes(), 3);
+	@Override
+	public void reset() {
+		// No need to do anything
+	}
+
+	@Override
+	public void run(Ticker ticker) {
+		for (int i=0; i < size; ++i) {
+			for (int j=0; j < size; ++j) {
+				ticker.tick();
+			}
+		}	
+	}
+
+	@Override
+	public int getSize() {
+		return this.size;
+	}
+
+	public String toString() {
+		return "Quadratic " + size;
 	}
 
 	public static void main(String[] args) {
-		new Quadratic(1000).run();
+		for (int i=10000; i < 100000; i=i+1000) {
+			Experiment e = new Experiment(new Quadratic(i), 3);
+			e.run();
+			System.out.println(" ticks: " + e.getSizeAndTicks());
+			System.out.println(" time:  " + e.getSizeAndTiming());
+		}
 	}
 
 }
