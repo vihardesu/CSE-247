@@ -26,11 +26,6 @@ public class Quadratic implements RepeatRunnable {
 		}	
 	}
 
-	@Override
-	public int getSize() {
-		return this.size;
-	}
-
 	public String toString() {
 		return "Quadratic " + size;
 	}

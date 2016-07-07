@@ -24,11 +24,6 @@ public class Linear implements RepeatRunnable {
 		}	
 	}
 
-	@Override
-	public int getSize() {
-		return this.size;
-	}
-	
 	public String toString() {
 		return "Linear " + size;
 	}
