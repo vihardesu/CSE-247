@@ -15,6 +15,10 @@ public class ExecuteAlgorithm<T,U> {
 		this.algorithm = algorithm;
 	}
 	
+	/**
+	 * Load the input, and then run the algorithm under the
+	 * controlled timing setting.
+	 */
 	public void run() {
 		algorithm.loadInput(input);
 		GenResults gs = new GenResults(algorithm, 3);
