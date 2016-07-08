@@ -42,5 +42,10 @@ public class HeapSort implements Algorithm<Integer[],Integer[]>{
 	public Integer[] getResults() {
 		return this.sortedArray;
 	}
+	
+	public String toString() {
+		return originalArray == null ? "Heapsort" :
+			"Heapsort of " + originalArray.length + " integers";
+	}
 
 }
