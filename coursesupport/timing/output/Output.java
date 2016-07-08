@@ -1,4 +1,4 @@
-package timing.results;
+package timing.output;
 
 import java.io.FileWriter;
 

@@ -7,7 +7,7 @@ import heaps.MinHeap;
 import timing.GenResults;
 import timing.GensRepeatRunnable;
 import timing.RepeatRunnable;
-import timing.results.Output;
+import timing.output.Output;
 import timing.utils.SizeAndTiming;
 
 public class HeapTimer implements GensRepeatRunnable {

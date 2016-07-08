@@ -1,10 +1,16 @@
 package timing.examples;
 
+import timing.Algorithm;
+import timing.ExecuteAlgorithm;
 import timing.GenResults;
 import timing.RepeatRunnable;
 import timing.Ticker;
+import timing.quiet.ExecuteQuietAlgorithm;
+import timing.quiet.NoInputNeeded;
+import timing.quiet.NoOutputNeeded;
+import timing.quiet.QuietAlgorithm;
 
-public class Linear implements RepeatRunnable {
+public class Linear extends QuietAlgorithm {
 	
 	private final int size;
 	
@@ -30,10 +36,10 @@ public class Linear implements RepeatRunnable {
 	
 	public static void main(String[] args) {
 		for (int i=0; i < 100; ++i) {
-			GenResults e = new GenResults(new Linear(i), 3);
-			e.run();
-			System.out.println(" ticks: " + e.getTicks());
-			System.out.println(" time:  " + e.getTime());
+			ExecuteQuietAlgorithm ea = new ExecuteQuietAlgorithm(new Linear(i), 3);
+			ea.run();
+			System.out.println(" ticks: " + ea.getTicks());
+			System.out.println(" time:  " + ea.getTime());
 		}
 	}
 
