@@ -9,18 +9,19 @@ import timing.quiet.QuietAlgorithm;
 public class Quadratic extends QuietAlgorithm {
 
 	private final int size;
+	private Ticker ticker;
 
 	public Quadratic(int size) {
 		this.size = size;
 	}
 
 	@Override
-	public void reset() {
-		// No need to do anything
+	public void reset(Ticker ticker) {
+		this.ticker = ticker;
 	}
 
 	@Override
-	public void run(Ticker ticker) {
+	public void run() {
 		for (int i=0; i < size; ++i) {
 			for (int j=0; j < size; ++j) {
 				ticker.tick();

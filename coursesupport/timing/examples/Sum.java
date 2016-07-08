@@ -6,19 +6,22 @@ import timing.Algorithm;
 import timing.ExecuteAlgorithm;
 import timing.GenResults;
 import timing.Ticker;
+import timing.utils.IntArrayGenerator;
 
 public class Sum implements Algorithm<Integer[],Integer> {
 
 	private int answer;
 	private Integer[] numbers;
+	private Ticker ticker;
 
 	@Override
-	public void reset() {
+	public void reset(Ticker ticker) {
+		this.ticker = ticker;
 		this.answer = 0;
 	}
 
 	@Override
-	public void run(Ticker ticker) {
+	public void run() {
 		for (int i=0; i < numbers.length; ++i) {
 			answer = answer + numbers[i];
 			ticker.tick();

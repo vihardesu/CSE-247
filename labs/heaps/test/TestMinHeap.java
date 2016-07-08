@@ -15,6 +15,7 @@ import heaps.Decreaser;
 import heaps.MinHeap;
 import heaps.util.HeapToStrings;
 import heaps.validate.MinHeapValidator;
+import timing.Ticker;
 
 /**
  * 
@@ -32,7 +33,7 @@ public class TestMinHeap {
 	public FailReporter tvs = new FailReporter();
 
 	private static MinHeapValidator<Integer> genHeap(int size) {
-		MinHeap<Integer> heap = new MinHeap<Integer>(size);
+		MinHeap<Integer> heap = new MinHeap<Integer>(size, new Ticker());
 		return new MinHeapValidator<Integer>(heap);
 	}
 	

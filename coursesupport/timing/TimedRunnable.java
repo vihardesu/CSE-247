@@ -45,8 +45,8 @@ public class TimedRunnable extends Thread implements Runnable {
 		// Have the ResetRunnable set itself up again
 		//   before we count timing
 		//
-		runnable.reset();
 		this.ticker = new Ticker();
+		runnable.reset(this.ticker);
 		//
 		// collect your garbage Java!
 		// 
@@ -58,7 +58,7 @@ public class TimedRunnable extends Thread implements Runnable {
 		this.start = Instant.now();        // (1)
 		synchronized (this) {
 			try {
-				runnable.run(ticker);                // (2)
+				runnable.run();                // (2)
 			}
 			catch (Throwable t) {
 				this.end = Instant.now();      // (3)

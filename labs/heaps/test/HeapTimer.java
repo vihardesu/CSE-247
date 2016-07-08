@@ -1,56 +1,15 @@
 package heaps.test;
 
-import java.util.Arrays;
-import java.util.Random;
+import heaps.HeapSort;
+import timing.ExecuteAlgorithm;
+import timing.utils.IntArrayGenerator;
 
-import heaps.MinHeap;
-import timing.GenResults;
-import timing.GensRepeatRunnable;
-import timing.RepeatRunnable;
-import timing.output.Output;
-import timing.utils.SizeAndTiming;
-
-public class HeapTimer implements GensRepeatRunnable {
+public class HeapTimer {
 	
 
 	public HeapTimer() {
 	}
 
-	public RepeatRunnable genRunnable(final long n) {
-		return new RepeatRunnable() {
-			
-			private MinHeap<Integer> heap;
-			private Random r = new Random(0);
-
-			@Override
-			public void reset() {
-				heap = new MinHeap<Integer>((int)	n);
-			}
-			
-			//
-			// Our work consists of:
-			//    inserting  n times into the heap
-			//    extracting n times from the heap
-			//
-
-			@Override
-			public void run() {
-				for (int i=0; i < n; ++i) {
-					heap.insert(r.nextInt());
-				}
-				for (int i=0; i < n; ++i) {
-					heap.extractMin();
-				}
-
-			}
-
-			public String toString() {
-				return "Heap " + " of size " + n;
-			}
-
-
-		};
-	}
 
 
 	public static void main(String[] args) {
@@ -64,21 +23,15 @@ public class HeapTimer implements GensRepeatRunnable {
 		for (int i=start; i < end; ++i) {
 			sizes[i-start] = i*factor;
 		}
-		
-		GenResults e = new GenResults(new HeapTimer(), Arrays.asList(sizes), 5);
-		e.run();
-
-		for (SizeAndTiming st : e.getSizeAndTiming()) {
-			System.out.println(st.size + " " + st.timing.toMillis());
+		for (int size : sizes) {
+			System.out.println("Size " + size);
+			ExecuteAlgorithm<Integer[],Integer[]> ea = 
+					new ExecuteAlgorithm<Integer[],Integer[]>(
+							new IntArrayGenerator(), new HeapSort(), size
+							);
+			ea.run();
+			System.out.println("Ticks :" + ea.getTicks());
 		}
-		
-		Output.writeSizeTiming("outputs/prioqueue.csv", "binary heap", e.getSizeAndTiming());
-	}
-
-
-	@Override
-	public RepeatRunnable gen(long size) {
-		return genRunnable(size);
 	}
 
 }

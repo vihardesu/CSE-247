@@ -7,11 +7,13 @@ import javax.swing.JOptionPane;
 
 import heaps.util.HeapToStrings;
 import heaps.validate.MinHeapValidator;
+import timing.Ticker;
 
 public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 
 	private Decreaser<T>[] array;
-	private int size; 
+	private int size;
+	private final Ticker ticker;
 
 	/**
 	 * I've implemented this for you.  We create an array
@@ -21,9 +23,10 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 * @param maxSize
 	 */
 	@SuppressWarnings("unchecked")
-	public MinHeap(int maxSize) {
+	public MinHeap(int maxSize, Ticker ticker) {
 		this.array = new Decreaser[maxSize+1];
 		this.size = 0;
+		this.ticker = ticker;
 	}
 
 	//
@@ -202,7 +205,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 */
 	public static void main(String[] args) {
 		JOptionPane.showMessageDialog(null, "You are welcome to run this, but be sure also to run the TestMinHeap JUnit test");
-		MinHeap<Integer> h = new MinHeap<Integer>(500);
+		MinHeap<Integer> h = new MinHeap<Integer>(500, new Ticker());
 		MinHeapValidator<Integer> v = new MinHeapValidator<Integer>(h);
 		Random r = new Random();
 		for (int i=0; i < 100; ++i) {

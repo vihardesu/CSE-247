@@ -1,4 +1,4 @@
-package timing.examples;
+package timing.utils;
 
 import java.util.Random;
 
