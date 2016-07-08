@@ -3,7 +3,7 @@ package heaps;
 import timing.Algorithm;
 import timing.Ticker;
 
-public class HeapSort implements Algorithm<Integer[],Integer[]>{
+public class HeapSort implements Algorithm<Integer[],Integer[]> {
 	
 	private Integer[] originalArray, sortedArray;
 	private MinHeap<Integer> heap;
