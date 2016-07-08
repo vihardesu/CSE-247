@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 
 import heaps.MinHeap;
-import timing.Experiment;
+import timing.GenResults;
 import timing.GensRepeatRunnable;
 import timing.RepeatRunnable;
 import timing.results.Output;
@@ -65,7 +65,7 @@ public class HeapTimer implements GensRepeatRunnable {
 			sizes[i-start] = i*factor;
 		}
 		
-		Experiment e = new Experiment(new HeapTimer(), Arrays.asList(sizes), 5);
+		GenResults e = new GenResults(new HeapTimer(), Arrays.asList(sizes), 5);
 		e.run();
 
 		for (SizeAndTiming st : e.getSizeAndTiming()) {
