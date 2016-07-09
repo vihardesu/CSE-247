@@ -37,14 +37,17 @@ public class Quadratic extends QuietAlgorithm {
 
 	public static void main(String[] args) {
 		Output out = new Output("quadratic", "quadticks");
+		Output out2 = new Output("quadartic", "quadtimes");
 		for (int i=10000; i < 100000; i=i+10000) {
 			ExecuteQuietAlgorithm e = new ExecuteQuietAlgorithm(new Quadratic(i), InputSpec.gen(i));
 			e.run();
 			out.writeSizeValue(i, e.getTicks());
+			out2.writeSizeValue(i, e.getTime().toMillis());
 			System.out.println(" ticks: " + e.getTicks());
 			System.out.println(" time:  " + e.getTime());
 		}
 		out.close();
+		out2.close();
 	}
 
 }
