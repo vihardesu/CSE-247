@@ -1,6 +1,7 @@
 package timing.examples;
 
 import timing.Algorithm;
+import timing.ComplexityParameters;
 import timing.ExecuteAlgorithm;
 import timing.GenResults;
 import timing.RepeatRunnable;
@@ -37,7 +38,7 @@ public class Linear extends QuietAlgorithm {
 	
 	public static void main(String[] args) {
 		for (int i=0; i < 100; ++i) {
-			ExecuteQuietAlgorithm ea = new ExecuteQuietAlgorithm(new Linear(i), 3);
+			ExecuteQuietAlgorithm ea = new ExecuteQuietAlgorithm(new Linear(i), ComplexityParameters.gen(i));
 			ea.run();
 			System.out.println(" ticks: " + ea.getTicks());
 			System.out.println(" time:  " + ea.getTime());

@@ -3,6 +3,7 @@ package timing.examples;
 import java.util.Random;
 
 import timing.Algorithm;
+import timing.ComplexityParameters;
 import timing.ExecuteAlgorithm;
 import timing.GenResults;
 import timing.Ticker;
@@ -45,7 +46,7 @@ public class Sum implements Algorithm<Integer[],Integer> {
 
 	public static void main(String[] args) {
 		int size = 10000000;
-		ExecuteAlgorithm<Integer[],Integer> ea = new ExecuteAlgorithm<Integer[], Integer>(new IntArrayGenerator(), new Sum(), size);
+		ExecuteAlgorithm<Integer[],Integer> ea = new ExecuteAlgorithm<Integer[], Integer>(new IntArrayGenerator(), new Sum(), ComplexityParameters.gen(size));
 		ea.run();
 		System.out.println("Answer is " + ea.getResults());
 		System.out.println(ea.getTicks());

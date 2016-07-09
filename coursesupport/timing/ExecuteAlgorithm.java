@@ -4,13 +4,14 @@ import java.time.Duration;
 
 public class ExecuteAlgorithm<T,U> {
 	
+	private final static int NUMREPEATS = 3;
 	private U              results;
 	private T              input;
 	private Algorithm<T,U> algorithm;
 	private Long           ticks;
 	private Duration       time;
 	
-	public ExecuteAlgorithm(InputProvider<T> inputProvider, Algorithm<T,U> algorithm, int size) {
+	public ExecuteAlgorithm(InputProvider<T> inputProvider, Algorithm<T,U> algorithm, ComplexityParameters size) {
 		this.input     = inputProvider.genInput(size);
 		this.algorithm = algorithm;
 	}
@@ -21,7 +22,7 @@ public class ExecuteAlgorithm<T,U> {
 	 */
 	public void run() {
 		algorithm.loadInput(input);
-		GenResults gs = new GenResults(algorithm, 3);
+		GenResults gs = new GenResults(algorithm, NUMREPEATS);
 		gs.run();
 		this.results = algorithm.getResults();
 		this.ticks   = gs.getTicks();
