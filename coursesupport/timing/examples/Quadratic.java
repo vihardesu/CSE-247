@@ -1,8 +1,6 @@
 package timing.examples;
 
 import timing.InputSpec;
-import timing.GenResults;
-import timing.RepeatRunnable;
 import timing.Ticker;
 import timing.output.Output;
 import timing.quiet.ExecuteQuietAlgorithm;

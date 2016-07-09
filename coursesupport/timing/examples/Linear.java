@@ -1,14 +1,8 @@
 package timing.examples;
 
-import timing.Algorithm;
 import timing.InputSpec;
-import timing.ExecuteAlgorithm;
-import timing.GenResults;
-import timing.RepeatRunnable;
 import timing.Ticker;
 import timing.quiet.ExecuteQuietAlgorithm;
-import timing.quiet.NoInputNeeded;
-import timing.quiet.NoOutputNeeded;
 import timing.quiet.QuietAlgorithm;
 
 public class Linear extends QuietAlgorithm {
