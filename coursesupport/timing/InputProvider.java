@@ -13,6 +13,6 @@ public interface InputProvider<T> {
 	 * @param c the complexity parameter 
 	 * @return
 	 */
-	public T genInput(ComplexityParameters c);
+	public T genInput(InputSpec c);
 
 }

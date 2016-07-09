@@ -1,6 +1,6 @@
 package timing.quiet;
 
-import timing.ComplexityParameters;
+import timing.InputSpec;
 import timing.InputProvider;
 
 public class NoInputNeeded implements InputProvider<NoInputNeeded> {
@@ -10,7 +10,7 @@ public class NoInputNeeded implements InputProvider<NoInputNeeded> {
 	private NoInputNeeded() { }
 	
 	@Override
-	public NoInputNeeded genInput(ComplexityParameters size) {
+	public NoInputNeeded genInput(InputSpec size) {
 		return null;
 	}
 

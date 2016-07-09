@@ -2,19 +2,19 @@ package timing;
 
 import java.util.Arrays;
 
-public class ComplexityParameters {
+public class InputSpec {
 	
 	private final int[] params;
 	
-	private ComplexityParameters(int[] params) {
+	private InputSpec(int[] params) {
 		this.params = Arrays.copyOf(params, params.length);
 	}
 	
-	private ComplexityParameters(int one) {
+	private InputSpec(int one) {
 		this(new int[] { one });
 	}
 	
-	private ComplexityParameters(int one, int two) {
+	private InputSpec(int one, int two) {
 		this(new int[] { one, two });
 	}
 	
@@ -32,12 +32,12 @@ public class ComplexityParameters {
 	
 	// Factory methods
 	
-	public static ComplexityParameters gen(int one) {
-		return new ComplexityParameters(one);
+	public static InputSpec gen(int one) {
+		return new InputSpec(one);
 	}
 	
-	public static ComplexityParameters gen(int one, int two) {
-		return new ComplexityParameters(one, two);
+	public static InputSpec gen(int one, int two) {
+		return new InputSpec(one, two);
 	}
 	
 	public String toString() {

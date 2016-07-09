@@ -11,7 +11,7 @@ public class ExecuteAlgorithm<T,U> {
 	private Long           ticks;
 	private Duration       time;
 	
-	public ExecuteAlgorithm(InputProvider<T> inputProvider, Algorithm<T,U> algorithm, ComplexityParameters size) {
+	public ExecuteAlgorithm(InputProvider<T> inputProvider, Algorithm<T,U> algorithm, InputSpec size) {
 		this.input     = inputProvider.genInput(size);
 		this.algorithm = algorithm;
 	}

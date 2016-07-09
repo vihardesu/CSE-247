@@ -1,6 +1,6 @@
 package timing.examples;
 
-import timing.ComplexityParameters;
+import timing.InputSpec;
 import timing.GenResults;
 import timing.RepeatRunnable;
 import timing.Ticker;
@@ -38,7 +38,7 @@ public class Quadratic extends QuietAlgorithm {
 	public static void main(String[] args) {
 		Output out = new Output("quadratic", "quadticks");
 		for (int i=10000; i < 100000; i=i+10000) {
-			ExecuteQuietAlgorithm e = new ExecuteQuietAlgorithm(new Quadratic(i), ComplexityParameters.gen(i));
+			ExecuteQuietAlgorithm e = new ExecuteQuietAlgorithm(new Quadratic(i), InputSpec.gen(i));
 			e.run();
 			out.writeSizeValue(i, e.getTicks());
 			System.out.println(" ticks: " + e.getTicks());
