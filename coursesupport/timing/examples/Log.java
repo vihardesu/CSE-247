@@ -6,12 +6,12 @@ import timing.output.Output;
 import timing.quiet.ExecuteQuietAlgorithm;
 import timing.quiet.QuietAlgorithm;
 
-public class Linear extends QuietAlgorithm {
+public class Log extends QuietAlgorithm {
 	
 	private final int size;
 	private Ticker ticker;
 	
-	public Linear(int size) {
+	public Log(int size) {
 		this.size = size;
 	}
 	
@@ -22,9 +22,16 @@ public class Linear extends QuietAlgorithm {
 
 	@Override
 	public void run() {
-		for (int i=0; i < size; ++i) {
+		helper(size);
+	}
+	
+	private void helper(int size) {
+		if (size <= 1)
+			return;
+		else {
 			ticker.tick();
-		}	
+			helper(size/2);
+		}
 	}
 
 	public String toString() {
@@ -32,9 +39,9 @@ public class Linear extends QuietAlgorithm {
 	}
 	
 	public static void main(String[] args) {
-		Output out = new Output("linear", "linearticks");
-		for (int i=10000; i < 100000; i=i+10000) {
-			ExecuteQuietAlgorithm e = new ExecuteQuietAlgorithm(new Linear(i), InputSpec.gen(i));
+		Output out = new Output("log", "logticks");
+		for (int i=1; i < 1000000; i=i*2) {
+			ExecuteQuietAlgorithm e = new ExecuteQuietAlgorithm(new Log(i), InputSpec.gen(i));
 			e.run();
 			out.writeSizeValue(i, e.getTicks());
 			System.out.println(" ticks: " + e.getTicks());
