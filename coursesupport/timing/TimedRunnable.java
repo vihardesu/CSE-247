@@ -48,7 +48,7 @@ public class TimedRunnable extends Thread implements Runnable {
 		this.ticker = new Ticker();
 		runnable.reset(this.ticker);
 		//
-		// collect your garbage Java!
+		// collect your garbage, Java!
 		// 
 		System.gc();
 		System.runFinalization();

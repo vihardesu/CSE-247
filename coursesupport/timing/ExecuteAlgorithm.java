@@ -2,6 +2,16 @@ package timing;
 
 import java.time.Duration;
 
+/**
+ * 
+ * @author roncytron
+ * 
+ * Allows runs of an algorithm for a specific input size.
+ * This is used for generating timing profiles for an algorithm.
+ *
+ * @param <T> Input type for the algorithm
+ * @param <U> Output type for the algorithm
+ */
 public class ExecuteAlgorithm<T,U> {
 	
 	private final static int NUMREPEATS = 3;
@@ -11,6 +21,12 @@ public class ExecuteAlgorithm<T,U> {
 	private Long           ticks;
 	private Duration       time;
 	
+	/**
+	 * 
+	 * @param inputProvider source for the input to the algorithm
+	 * @param algorithm     the algorithm itself
+	 * @param size          describes the size of the input to be supplied by the inputProvider
+	 */
 	public ExecuteAlgorithm(InputProvider<T> inputProvider, Algorithm<T,U> algorithm, InputSpec size) {
 		this.input     = inputProvider.genInput(size);
 		this.algorithm = algorithm;

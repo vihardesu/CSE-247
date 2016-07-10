@@ -2,6 +2,13 @@ package timing;
 
 import java.util.Arrays;
 
+/**
+ * Describes the size of input for an algorithm.  Accommodates multiple
+ *   parameters, for algorithms that are O(n,m) etc.
+ * Typically for CSE247, we just need one parameter
+ * @author roncytron
+ *
+ */
 public class InputSpec {
 	
 	private final int[] params;

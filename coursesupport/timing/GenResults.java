@@ -6,6 +6,12 @@ import java.util.PriorityQueue;
 import timing.results.LeastChooser;
 import timing.results.ResultsChooser;
 
+/**
+ * Obtains results from a RepeatRunnable by running it repeats times
+ * and then choosing the results using the specified ResultsChoosers.
+ * @author roncytron
+ *
+ */
 public class GenResults implements Runnable {
 
 	final private RepeatRunnable rr;
@@ -17,6 +23,13 @@ public class GenResults implements Runnable {
 
 
 
+	/**
+	 * 
+	 * @param rr  The payload to be run 
+	 * @param repeats How many times to try the payload for timing
+	 * @param timeChooser How to choose the results for time
+	 * @param ticksChooser How to choose the results for ticks
+	 */
 	public GenResults(RepeatRunnable rr, int repeats, ResultsChooser<Duration> timeChooser, ResultsChooser<Long> ticksChooser) {
 		this.rr      = rr;
 		this.repeats = repeats;
