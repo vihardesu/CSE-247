@@ -2,6 +2,7 @@ package heaps.test;
 
 import heaps.HeapSort;
 import timing.ExecuteAlgorithm;
+import timing.InputSpec;
 import timing.utils.IntArrayGenerator;
 
 public class HeapTimer {
@@ -27,7 +28,7 @@ public class HeapTimer {
 			System.out.println("Size " + size);
 			ExecuteAlgorithm<Integer[],Integer[]> ea = 
 					new ExecuteAlgorithm<Integer[],Integer[]>(
-							new IntArrayGenerator(), new HeapSort(), size
+							new IntArrayGenerator(), new HeapSort(), InputSpec.gen(size)
 							);
 			ea.run();
 			System.out.println("Ticks :" + ea.getTicks());

@@ -22,10 +22,13 @@ public class Quadratic extends QuietAlgorithm {
 
 	@Override
 	public void run() {
+		ticker.tick();
 		for (int i=0; i < size; ++i) {
+			ticker.tick();
 			for (int j=0; j < size; ++j) {
 				ticker.tick();
 			}
+			ticker.tick();
 		}	
 	}
 
