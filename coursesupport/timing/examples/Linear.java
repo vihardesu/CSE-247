@@ -1,15 +1,12 @@
 package timing.examples;
 
 import timing.ExecuteAlgorithm;
-import timing.InputSpec;
 import timing.Ticker;
-import timing.output.Output;
-import timing.quiet.ExecuteQuietAlgorithm;
 import timing.quiet.QuietAlgorithm;
 import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 
-public class Linear extends QuietAlgorithm<Integer[]> {
+public class Linear extends QuietAlgorithm {
 
 	private Ticker ticker;
 

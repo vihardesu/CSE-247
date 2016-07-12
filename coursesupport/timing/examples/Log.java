@@ -6,7 +6,7 @@ import timing.quiet.QuietAlgorithm;
 import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 
-public class Log extends QuietAlgorithm<Integer[]> {
+public class Log extends QuietAlgorithm {
 	
 	private Ticker ticker;
 	
