@@ -1,18 +1,16 @@
 package timing.examples;
 
-import timing.InputSpec;
+import timing.ExecuteAlgorithm;
 import timing.Ticker;
-import timing.output.Output;
-import timing.quiet.ExecuteQuietAlgorithm;
 import timing.quiet.QuietAlgorithm;
+import timing.utils.GenSizes;
+import timing.utils.IntArrayGenerator;
 
-public class Log extends QuietAlgorithm {
+public class Log extends QuietAlgorithm<Integer[]> {
 	
-	private final int size;
 	private Ticker ticker;
 	
-	public Log(int size) {
-		this.size = size;
+	public Log() {
 	}
 	
 	@Override
@@ -39,15 +37,13 @@ public class Log extends QuietAlgorithm {
 	}
 	
 	public static void main(String[] args) {
-		Output out = new Output("log", "logticks");
-		for (int i=1; i < 1000000; i=i*2) {
-			ExecuteQuietAlgorithm e = new ExecuteQuietAlgorithm(new Log(i), InputSpec.gen(i));
-			e.run();
-			out.writeSizeValue(i, e.getTicks());
-			System.out.println(" ticks: " + e.getTicks());
-			System.out.println(" time:  " + e.getTime());
-		}
-		out.close();
+		GenSizes sizes = GenSizes.geometric(1, 1000000, 2);
+		ExecuteAlgorithm.timeAlgorithm(
+				"log", 
+				"timing.examples.Log", 
+				new IntArrayGenerator(), 
+				sizes
+				);
 	}
 
 }

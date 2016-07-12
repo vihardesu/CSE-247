@@ -1,5 +1,6 @@
 package timing.examples;
 
+import java.util.List;
 import java.util.Random;
 
 import timing.Algorithm;
@@ -7,6 +8,7 @@ import timing.InputSpec;
 import timing.ExecuteAlgorithm;
 import timing.GenResults;
 import timing.Ticker;
+import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 
 public class Sum implements Algorithm<Integer[],Integer> {
@@ -45,13 +47,14 @@ public class Sum implements Algorithm<Integer[],Integer> {
 	}
 
 	public static void main(String[] args) {
-		int size = 10000000;
-		ExecuteAlgorithm<Integer[],Integer> ea = new ExecuteAlgorithm<Integer[], Integer>(new IntArrayGenerator(), new Sum(), InputSpec.gen(size));
-		ea.run();
-		System.out.println("Answer is " + ea.getResults());
-		System.out.println(ea.getTicks());
-		System.out.println(ea.getTime());
-
+		GenSizes sizes = GenSizes.singleValue(10000000);
+		List<Integer> ans = ExecuteAlgorithm.timeAlgorithm(
+				"sum", 
+				"timing.examples.Sum", 
+				new IntArrayGenerator(), 
+				sizes
+				);	
+		System.out.println("Answer is " + ans);
 	}
 
 }

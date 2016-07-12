@@ -3,12 +3,14 @@ package timing.quiet;
 import timing.Algorithm;
 import timing.Ticker;
 
-abstract public class QuietAlgorithm implements Algorithm<NoInputNeeded,NoOutputNeeded>{
+abstract public class QuietAlgorithm<T> implements Algorithm<T[],NoOutputNeeded>{
 
 
+	protected int size;
+	
 	@Override
-	public void loadInput(NoInputNeeded input) {
-		
+	public void loadInput(T[] input) {
+		this.size = input.length;
 	}
 
 	@Override

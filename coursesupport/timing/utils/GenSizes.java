@@ -4,18 +4,45 @@ import java.util.Iterator;
 
 public class GenSizes implements Iterable<Integer> {
 	
-	private final int start, almostEnd, bump;
+	private final int start, almostEnd;
+	private final ProvidesNextValue pnp;
 
-	public GenSizes(int start, int almostEnd, int bump) {
+	private GenSizes(int start, int almostEnd, ProvidesNextValue pnp) {
 		this.start     = start;
 		this.almostEnd = almostEnd;
-		this.bump      = bump;
+		this.pnp       = pnp;
 	}
 	
-	public GenSizes() {
-		this(0,100,1);
-	}
+	public static GenSizes arithmetic(int start, int end, final int bump) {
+		return new GenSizes(start, end, new ProvidesNextValue() {
 
+			@Override
+			public int nextValue(int oldValue) {
+				return oldValue + bump;
+			}
+			
+		});
+	}
+	
+	public static GenSizes geometric(int start, int end, final int bump) {
+		return new GenSizes(start, end, new ProvidesNextValue() {
+
+			@Override
+			public int nextValue(int oldValue) {
+				return oldValue * bump;
+			}
+			
+		});
+	}
+	
+	public static GenSizes arithmetic() {
+		return arithmetic(0,100,1);
+	}
+	
+	public static GenSizes singleValue(int value) {
+		return arithmetic(value, value+1,1);
+	}
+	
 	@Override
 	public Iterator<Integer> iterator() {
 		return new Iterator<Integer> () {
@@ -30,7 +57,7 @@ public class GenSizes implements Iterable<Integer> {
 			@Override
 			public Integer next() {
 				int ans = i;
-				i = i + bump;
+				i = pnp.nextValue(i);
 				return ans;
 			}
 			
