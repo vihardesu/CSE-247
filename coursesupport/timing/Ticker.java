@@ -21,6 +21,10 @@ final public class Ticker {
 		++tickCount;
 	}
 	
+	final public void tick(long ticks) {
+		tickCount += ticks;
+	}
+	
 	final public long getTickCount() {
 		return this.tickCount;
 	}
