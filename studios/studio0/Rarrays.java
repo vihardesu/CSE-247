@@ -26,8 +26,8 @@ abstract public class Rarrays extends QuietAlgorithm {
 	 */
 	@Override
 	public void reset(Ticker ticker) {
-		this.array  = new int[2];
 		this.ticker = ticker;
+		this.array  = new int[2];
 		ticker.tick(2);
 	}
 
