@@ -20,7 +20,7 @@ public class TimesTen extends Rarrays {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
 				"times10", 
-				"studio0solved.TimesTen", 
+				"studio0.TimesTen", 
 				new IntArrayGenerator(), 
 				sizes
 				);	

@@ -20,7 +20,7 @@ public class Quadruple extends Rarrays {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
 				"quadruple", 
-				"studio0solved.Quadruple", 
+				"studio0.Quadruple", 
 				new IntArrayGenerator(), 
 				sizes
 				);	

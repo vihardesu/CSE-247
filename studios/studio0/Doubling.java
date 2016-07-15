@@ -25,7 +25,7 @@ public class Doubling extends Rarrays {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
 				"doubling", 
-				"studio0solved.Doubling", 
+				"studio0.Doubling", 
 				new IntArrayGenerator(), 
 				sizes
 				);	

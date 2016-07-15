@@ -25,7 +25,7 @@ public class AddOne extends Rarrays {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
 				"growbyone", 
-				"studio0solved.AddOne", 
+				"studio0.AddOne", 
 				new IntArrayGenerator(), 
 				sizes
 				);	
