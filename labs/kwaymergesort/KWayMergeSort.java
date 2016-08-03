@@ -7,7 +7,7 @@ public class KWayMergeSort {
 	/**
 	 * 
 	 * @param K some positive power of 2.
-	 * @param input an array of unsorted integers whose size is a power of 2 and at least K
+	 * @param input an array of unsorted integers.  Its size is either 1, or some other power of 2 that is at least K
 	 * @param ticker call .tick() on this to account for the work you do
 	 * @return
 	 */
