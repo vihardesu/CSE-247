@@ -12,10 +12,10 @@ public class MergeSort implements Algorithm<Integer[], Integer[]> {
 	private Ticker ticker;
 
 	/**
-	 * By default, do an 8-way mergesort
+	 * By default, do an 2-way mergesort
 	 */
 	public MergeSort() {
-		this(8);
+		this(2);
 	}
 
 	public MergeSort(int K) {

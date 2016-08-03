@@ -17,9 +17,7 @@ public class MergeSortTimer {
 	}
 
 	private static void runExperiment(int factor) {
-		int start = 5;
-		int end   = 50;
-		GenSizes sizes = GenSizes.arithmetic(start*factor, end*factor, factor);
+		GenSizes sizes = GenSizes.geometric(2, 1000000, 2);
 		ExecuteAlgorithm.timeAlgorithm(
 				"mergesort", 
 				"kwaymergesort.MergeSort", 
