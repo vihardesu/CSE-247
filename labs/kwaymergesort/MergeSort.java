@@ -2,11 +2,10 @@ package kwaymergesort;
 
 import java.util.Arrays;
 
-import heaps.MinHeap;
 import timing.Algorithm;
 import timing.Ticker;
 
-public class MergeSort implements Algorithm<Integer[], Integer[]>{
+public class MergeSort implements Algorithm<Integer[], Integer[]> {
 
 	private int K;
 	private Integer[] originalArray, sortedArray;
