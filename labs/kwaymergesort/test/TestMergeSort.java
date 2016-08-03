@@ -28,9 +28,9 @@ public class TestMergeSort {
 
 	
 	private void sortOnce() {
-		int p = r.nextInt(8); 
+		int p = r.nextInt(4); 
 		int K = twoToThe(p+2);
-		int n = twoToThe(p+2+r.nextInt(6));
+		int n = twoToThe((p+2)*(r.nextInt(3)+1));
 		System.out.println(""+K+"-way merge sort of " + n + " integers");
 		Ticker t = new Ticker();
 		Integer[] input = genInts(n);
@@ -38,7 +38,7 @@ public class TestMergeSort {
 		Arrays.sort(gold);
 		Integer[] ans = KWayMergeSort.kwaymergesort(K, input, t);
 		for (int i=0; i < n; ++i) {
-			if (ans[i] != gold[i]) {
+			if (!ans[i].equals(gold[i])) {
 				fail("At index " + i + " expected " + gold[i] + " but got " + ans[i]);
 			}
 		}
