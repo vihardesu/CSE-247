@@ -62,7 +62,8 @@ public class TimedRunnable extends Thread implements Runnable {
 			}
 			catch (Throwable t) {
 				this.end = Instant.now();      // (3)
-				System.out.println("Runnable " + runnable + " threw error " + t);
+				System.out.println("Runnable " + runnable + " aborted, threw error " + t);
+				throw t;
 			}
 			finally {
 				if (this.end == null)

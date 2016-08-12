@@ -8,14 +8,11 @@ public class AddOne extends Rarrays {
 
 	/**
 	 * We ask for a new, bigger array that is just one element larger
-	 *   than the curent one.
+	 *   than the current one.
 	 */
 	@Override
 	public int getNewSize() {
-		//
-		// FIXME
-		//
-		return -1;
+		return array.length + 1;
 		
 	}
 	

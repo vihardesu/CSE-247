@@ -4,14 +4,13 @@ import timing.ExecuteAlgorithm;
 import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 
-public class TimesTen extends Rarrays {
+public class OurGrowth2 extends Rarrays {
 
 	/**
-	 * We ask for a new, bigger array that is 4 times as large
-	 *  as the current one.
+	 * Try some function you think will work here.
 	 */
 	public int getNewSize() {
-		return 10 * array.length;
+		throw new Error("You must implement this function");
 	}
 	
 	public String toString() { return "Grow by multiplying by 10"; }
@@ -19,8 +18,8 @@ public class TimesTen extends Rarrays {
 	public static void main(String[] args) {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
-				"times10", 
-				"studio0.TimesTen", 
+				"growth2", 
+				"studio0.OurGrowth2", 
 				new IntArrayGenerator(), 
 				sizes
 				);	

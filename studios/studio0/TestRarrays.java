@@ -14,7 +14,7 @@ public class TestRarrays {
 
 	@Test
 	public void testInit() {
-		Quadruple q = new Quadruple();
+		OurGrowth1 q = new OurGrowth1();
 		Ticker t = new Ticker();
 		q.reset(t);
 		assertEquals("Array should have 2 elements after reset, but had " + q.array.length, 2, q.array.length);

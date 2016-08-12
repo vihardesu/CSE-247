@@ -12,11 +12,7 @@ public class Doubling extends Rarrays {
 	 */
 	@Override
 	public int getNewSize() {
-		//
-		// FIXME
-		//
-		return -1;
-		
+		return 2 * array.length;
 	}
 	
 	public String toString() { return "Grow by doubling"; }

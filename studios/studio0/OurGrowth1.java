@@ -4,23 +4,22 @@ import timing.ExecuteAlgorithm;
 import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 
-public class Quadruple extends Rarrays {
+public class OurGrowth1 extends Rarrays {
 
 	/**
-	 * We ask for a new, bigger array that is 4 times as large
-	 *  as the current one.
+	 * Try some function you think will work here.
 	 */
 	public int getNewSize() {
-		return 4 * array.length;
+		throw new Error("You must implement this function");
 	}
 	
-	public String toString() { return "Grow by quadrupling"; }
+	public String toString() { return "Grow by our own function (1)"; }
 
 	public static void main(String[] args) {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
-				"quadruple", 
-				"studio0.Quadruple", 
+				"growth1", 
+				"studio0.OurGrowth1", 
 				new IntArrayGenerator(), 
 				sizes
 				);	
