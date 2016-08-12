@@ -37,6 +37,9 @@ public class Allocates extends QuietAlgorithm {
 		for (int i=0; i < 100000; ++i) {
 			//
 			// Allocate this.size integers
+			// Does the statement below take constant time?
+			//     Or does it vary with this.size?
+			//     If it does vary, how does it vary?
 			//
 			this.array = new int[this.size];
 		}
@@ -50,7 +53,7 @@ public class Allocates extends QuietAlgorithm {
 		GenSizes sizes = GenSizes.arithmetic(0, 10000, 500);
 		ExecuteAlgorithm.timeAlgorithm(
 				"allocates", 
-				"studio0.Allocates", 
+				"studio0.allocates.Allocates", 
 				new IntArrayGenerator(), 
 				sizes
 				);	
