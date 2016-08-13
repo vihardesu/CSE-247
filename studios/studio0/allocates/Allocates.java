@@ -42,6 +42,12 @@ public class Allocates extends QuietAlgorithm {
 			//     If it does vary, how does it vary?
 			//
 			this.array = new int[this.size];
+			//
+			// Is the following ticker statement
+			//   an accurate count of the operations
+			//   taken by the above statement?
+			//
+			ticker.tick();
 		}
 	}
 	

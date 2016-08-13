@@ -37,7 +37,7 @@ public class AddsTwoNumbers extends QuietAlgorithm {
 		//   so that its time shows up in the milliseconds range
 		// If your run is taking too long, decrease the upper bound
 		//   of the loop.
-		// If your data is showing 0 time (not ticks), increase the upper bound
+		// If your data is showing 0 time (not ticks, they should be OK), increase the upper bound
 		//   of the loop
 		//
 		for (long i=0; i < 100000000L; ++i) {
