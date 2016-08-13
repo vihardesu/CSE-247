@@ -24,7 +24,7 @@ public class Linear extends QuietAlgorithm {
 	public void run() {
 		for (int i=0; i < size; ++i) {
 			ticker.tick();
-			this.counter = this.counter + 1;
+			this.counter = this.counter + i;
 		}	
 	}
 
@@ -33,7 +33,7 @@ public class Linear extends QuietAlgorithm {
 	}
 
 	public static void main(String[] args) {
-		GenSizes sizes = GenSizes.arithmetic(10000, 100000, 10000);
+		GenSizes sizes = GenSizes.arithmetic(1000000, 10000000, 1000000);
 		ExecuteAlgorithm.timeAlgorithm(
 				"linear", 
 				"timing.examples.Linear", 

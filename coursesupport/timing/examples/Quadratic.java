@@ -25,7 +25,7 @@ public class Quadratic extends QuietAlgorithm {
 		for (int i=0; i < size; ++i) {
 			for (int j=0; j < size; ++j) {
 				ticker.tick();
-				this.counter = this.counter + 1;
+				this.counter = this.counter + i;
 			}
 		}	
 	}
