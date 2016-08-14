@@ -30,7 +30,7 @@ public class AddsTwoNumbers extends QuietAlgorithm {
 	 */
 	@Override
 	public void run() {
-		if (this.size == 0)  // special case to get 0 time
+		if (this.n == 0)  // special case to get 0 time
 			return;
 		//
 		// We loop so that the allocation takes place many times,
@@ -44,12 +44,16 @@ public class AddsTwoNumbers extends QuietAlgorithm {
 			//
 			// Add two numbers
 			//
-			this.sum = this.size + i;
+			this.sum = this.n + i;
+			//
+			// Account for one operation, the time it takes to sum two values above
+			//
+			ticker.tick();
 		}
 	}
 	
 	public String toString() {
-		return "Allocation of " + size + " integers";
+		return "Allocation of " + n + " integers";
 	}
 
 	public static void main(String[] args) {

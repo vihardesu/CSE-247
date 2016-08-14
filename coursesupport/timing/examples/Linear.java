@@ -22,14 +22,14 @@ public class Linear extends QuietAlgorithm {
 
 	@Override
 	public void run() {
-		for (int i=0; i < size; ++i) {
+		for (int i=0; i < n; ++i) {
 			ticker.tick();
 			this.value = this.value + i;
 		}	
 	}
 
 	public String toString() {
-		return "Linear " + size;
+		return "Linear " + n;
 	}
 
 	public static void main(String[] args) {

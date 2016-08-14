@@ -22,8 +22,8 @@ public class Quadratic extends QuietAlgorithm {
 
 	@Override
 	public void run() {
-		for (int i=0; i < size; ++i) {
-			for (int j=0; j < size; ++j) {
+		for (int i=0; i < n; ++i) {
+			for (int j=0; j < n; ++j) {
 				ticker.tick();
 				this.value = this.value + i;
 			}
@@ -31,7 +31,7 @@ public class Quadratic extends QuietAlgorithm {
 	}
 
 	public String toString() {
-		return "Quadratic " + size;
+		return "Quadratic " + n;
 	}
 
 	public static void main(String[] args) {

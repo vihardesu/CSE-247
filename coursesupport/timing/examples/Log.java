@@ -20,7 +20,7 @@ public class Log extends QuietAlgorithm {
 
 	@Override
 	public void run() {
-		helper(size);
+		helper(n);
 	}
 	
 	private void helper(int size) {
@@ -33,7 +33,7 @@ public class Log extends QuietAlgorithm {
 	}
 
 	public String toString() {
-		return "Linear " + size;
+		return "Linear " + n;
 	}
 	
 	public static void main(String[] args) {

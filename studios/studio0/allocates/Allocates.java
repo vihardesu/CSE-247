@@ -41,7 +41,7 @@ public class Allocates extends QuietAlgorithm {
 			//     Or does it vary with this.size?
 			//     If it does vary, how does it vary?
 			//
-			this.array = new int[this.size];
+			this.array = new int[this.n];
 			//
 			// Is the following ticker statement
 			//   an accurate count of the operations
@@ -52,7 +52,7 @@ public class Allocates extends QuietAlgorithm {
 	}
 	
 	public String toString() {
-		return "Allocation of " + size + " integers";
+		return "Allocation of " + n + " integers";
 	}
 
 	public static void main(String[] args) {

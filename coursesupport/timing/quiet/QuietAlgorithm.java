@@ -1,16 +1,15 @@
 package timing.quiet;
 
 import timing.Algorithm;
-import timing.Ticker;
 
 abstract public class QuietAlgorithm implements Algorithm<Integer[],NoOutputNeeded>{
 
 
-	protected int size;
+	protected int n;
 	
 	@Override
 	public void loadInput(Integer[] input) {
-		this.size = input.length;
+		this.n = input.length;
 	}
 
 	@Override
