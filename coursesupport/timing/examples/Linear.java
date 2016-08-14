@@ -9,7 +9,7 @@ import timing.utils.IntArrayGenerator;
 public class Linear extends QuietAlgorithm {
 
 	private Ticker ticker;
-	public  int    counter;
+	public  int    value;
 
 	public Linear() {
 	}
@@ -17,14 +17,14 @@ public class Linear extends QuietAlgorithm {
 	@Override
 	public void reset(Ticker ticker) {
 		this.ticker = ticker;
-		this.counter = 0;
+		this.value = 0;
 	}
 
 	@Override
 	public void run() {
 		for (int i=0; i < size; ++i) {
 			ticker.tick();
-			this.counter = this.counter + i;
+			this.value = this.value + i;
 		}	
 	}
 

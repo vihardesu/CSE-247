@@ -9,7 +9,7 @@ import timing.utils.IntArrayGenerator;
 public class Quadratic extends QuietAlgorithm {
 
 	private Ticker ticker;
-	public  int    counter;
+	public  int    value;
 
 	public Quadratic() {
 	}
@@ -17,7 +17,7 @@ public class Quadratic extends QuietAlgorithm {
 	@Override
 	public void reset(Ticker ticker) {
 		this.ticker = ticker;
-		this.counter = 0;
+		this.value = 0;
 	}
 
 	@Override
@@ -25,7 +25,7 @@ public class Quadratic extends QuietAlgorithm {
 		for (int i=0; i < size; ++i) {
 			for (int j=0; j < size; ++j) {
 				ticker.tick();
-				this.counter = this.counter + i;
+				this.value = this.value + i;
 			}
 		}	
 	}
