@@ -21,7 +21,7 @@ public class Output {
 		try {
 			FileWriter fw = new FileWriter("outputs/" + file, append);
 			this.w  = new CsvWriter(fw, ',');
-			w.write("size");
+			w.write("n");
 			w.write(exper);
 			w.endRecord();
 		} catch (IOException e) {
@@ -44,7 +44,7 @@ public class Output {
 
 	public void writeSizeValue(int size, long value) {
 		try {
-			System.out.println("writing " + size + " " + value);
+			// System.out.println("writing " + size + " " + value);
 			w.write("" + size);
 			w.write("" + value);
 			w.endRecord();

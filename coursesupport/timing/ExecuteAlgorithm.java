@@ -70,8 +70,8 @@ public class ExecuteAlgorithm<T,U> {
 		try {
 			List<U> results = new LinkedList<U>();
 			Algorithm<T,U> alg = (Algorithm<T,U>) Class.forName(algname).newInstance();
-			Output ticks = new Output(name, name+"-ticks");
-			Output times = new Output(name, name+"-times");
+			Output ticks = new Output(name+".ticks", name+"-ticks");
+			Output times = new Output(name+".time", name+"-times");
 			for (int size : sizes) {
 				ExecuteAlgorithm<T,U> ea = new ExecuteAlgorithm<T,U>(
 						ip, alg, InputSpec.gen(size)
