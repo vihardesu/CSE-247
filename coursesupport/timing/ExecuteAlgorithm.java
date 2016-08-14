@@ -71,7 +71,7 @@ public class ExecuteAlgorithm<T,U> {
 			List<U> results = new LinkedList<U>();
 			Algorithm<T,U> alg = (Algorithm<T,U>) Class.forName(algname).newInstance();
 			Output ticks = new Output(name+".ticks", name+"-ticks");
-			Output times = new Output(name+".time", name+"-times");
+			Output times = new Output(name+".time", name+"-time");
 			for (int size : sizes) {
 				ExecuteAlgorithm<T,U> ea = new ExecuteAlgorithm<T,U>(
 						ip, alg, InputSpec.gen(size)
