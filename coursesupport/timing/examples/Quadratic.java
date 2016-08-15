@@ -20,12 +20,18 @@ public class Quadratic extends QuietAlgorithm {
 		this.value = 0;
 	}
 
+	/**
+	 * Create a quadratic amount of work,
+	 *   using two nested loops each of n iterations.
+	 */
 	@Override
 	public void run() {
 		for (int i=0; i < n; ++i) {
 			for (int j=0; j < n; ++j) {
-				ticker.tick();
+				//
+				// Statement below takes one operation
 				this.value = this.value + i;
+				ticker.tick();
 			}
 		}	
 	}

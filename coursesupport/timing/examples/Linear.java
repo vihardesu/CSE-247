@@ -23,8 +23,11 @@ public class Linear extends QuietAlgorithm {
 	@Override
 	public void run() {
 		for (int i=0; i < n; ++i) {
-			ticker.tick();
+			//
+			// Statement below is deemed to take one operation
+			//
 			this.value = this.value + i;
+			ticker.tick();
 		}	
 	}
 

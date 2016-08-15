@@ -18,22 +18,25 @@ public class Log extends QuietAlgorithm {
 		this.ticker = ticker;
 	}
 
+	/**
+	 * Kick off the helper with the size parameter n
+	 */
 	@Override
 	public void run() {
 		helper(n);
 	}
 	
 	private void helper(int size) {
+		ticker.tick();       // each side of the if takes one operation, let's say
 		if (size <= 1)
 			return;
 		else {
-			ticker.tick();
 			helper(size/2);
 		}
 	}
 
 	public String toString() {
-		return "Linear " + n;
+		return "Logarithmic " + n;
 	}
 	
 	public static void main(String[] args) {

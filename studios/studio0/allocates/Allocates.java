@@ -25,8 +25,8 @@ public class Allocates extends QuietAlgorithm {
 	}
 
 	/**
-	 * As a "quiet" algorithm, all we care about is the size
-	 * parameter.
+	 * As a "quiet" algorithm, all we care about is the
+	 * parameter n.
 	 */
 	@Override
 	public void run() {
@@ -45,7 +45,8 @@ public class Allocates extends QuietAlgorithm {
 			//
 			// Is the following ticker statement
 			//   an accurate count of the operations
-			//   taken by the above statement?
+			//   taken by the above statement? 
+			//   Does it take one tick to allocate n integers?
 			//
 			ticker.tick();
 		}

@@ -25,8 +25,8 @@ public class AddsTwoNumbers extends QuietAlgorithm {
 	}
 
 	/**
-	 * As a "quiet" algorithm, all we care about is the size
-	 * parameter.
+	 * As a "quiet" algorithm, all we care about is the
+	 * parameter n.
 	 */
 	@Override
 	public void run() {
@@ -53,7 +53,7 @@ public class AddsTwoNumbers extends QuietAlgorithm {
 	}
 	
 	public String toString() {
-		return "Allocation of " + n + " integers";
+		return "Summing two integers";
 	}
 
 	public static void main(String[] args) {
