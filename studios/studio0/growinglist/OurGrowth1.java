@@ -19,7 +19,7 @@ public class OurGrowth1 extends Rarrays {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
 				"growth1", 
-				"studio0.OurGrowth1", 
+				"studio0.growinglist.OurGrowth1", 
 				new IntArrayGenerator(), 
 				sizes
 				);	

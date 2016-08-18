@@ -22,7 +22,7 @@ public class AddOne extends Rarrays {
 		GenSizes sizes = GenSizes.arithmetic(1, 1000, 1);
 		ExecuteAlgorithm.timeAlgorithm(
 				"growbyone", 
-				"studio0.AddOne", 
+				"studio0.growinglist.AddOne", 
 				new IntArrayGenerator(), 
 				sizes
 				);	
