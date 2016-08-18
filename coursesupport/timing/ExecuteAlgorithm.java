@@ -60,16 +60,25 @@ public class ExecuteAlgorithm<T,U> {
 	public Long getTicks() {
 		return ticks;
 	}
+	
+	/**
+	 * 
+	 * @param name
+	 * @param className String name of the class to be instantiated
+	 * @param ip can provide suitable input of specified size
+	 * @param sizes values of n to try for the algorithm
+	 * @return
+	 */
 
 	public static<T,U> List<U> timeAlgorithm(
 			String name,
-			String algname,
+			String className,
 			InputProvider<T> ip,
 			Iterable<Integer> sizes
 			) {
 		try {
 			List<U> results = new LinkedList<U>();
-			Algorithm<T,U> alg = (Algorithm<T,U>) Class.forName(algname).newInstance();
+			Algorithm<T,U> alg = (Algorithm<T,U>) Class.forName(className).newInstance();
 			Output ticks = new Output(name+".ticks", name+"-ticks");
 			Output times = new Output(name+".time", name+"-time");
 			for (int size : sizes) {

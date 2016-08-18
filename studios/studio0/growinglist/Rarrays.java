@@ -1,4 +1,4 @@
-package studio0;
+package studio0.growinglist;
 
 import timing.Ticker;
 import timing.quiet.QuietAlgorithm;
