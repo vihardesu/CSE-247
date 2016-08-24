@@ -1,5 +1,6 @@
 package timing.output;
 
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
@@ -14,12 +15,25 @@ public class Output {
 	public Output(String exper, String file) {
 		this(exper,file, false);
 	}
+
+	private static int findDigit(String p, String q) {
+		for (int i=0; i < 100; ++i) {
+			File f = new File(p+i+"."+q);
+			if (!f.exists()) {
+				return i;
+			}
+		}
+		throw new Error("Out of digits for unique file " + p);
+	}
+
 	public Output(String exper, String file, boolean append) {
 		if (!file.endsWith(".csv")) {
 			file    = file + ".csv";
 		}
 		try {
-			FileWriter fw = new FileWriter("outputs/" + file, append);
+			String[] parts = file.split("\\.(?=[^\\.]+$)");
+			int digit = findDigit("outputs/"+parts[0], parts[1]);
+			FileWriter fw = new FileWriter("outputs/" + parts[0]+digit+"."+parts[1], append);
 			this.w  = new CsvWriter(fw, ',');
 			w.write("n");
 			w.write(exper);
@@ -54,7 +68,7 @@ public class Output {
 		}
 
 	}
-	
+
 	public void close() {
 		w.close();
 	}
