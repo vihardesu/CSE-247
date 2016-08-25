@@ -1,3 +1,9 @@
 Students in your studio group:
 
-Name        Student ID
+    Name        Student ID
+	
+1.
+2.
+3.
+4.
+5.
