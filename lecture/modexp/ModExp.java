@@ -1,5 +1,9 @@
 package modexp;
 
+/*
+ * instructions to self:  refactor into a real class, capturing p
+ * and computing the array at construction time
+ */
 public class ModExp {
 
 	/**
