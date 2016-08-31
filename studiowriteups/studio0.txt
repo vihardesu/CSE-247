@@ -6,9 +6,9 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
-3.
+1.Vihar Desu	443845
+2.Conner Coan	444059
+3.Tess Gong 	437120
 4.
 5.
 6.
@@ -17,45 +17,61 @@ Below each question, type in your short, to-the-point answers.
 
 Question A1: 
 	What do you see in both plots? 
+		In the quadratic.tick  and the quadrative.time plot, we see a slight curve upward.
 	Are there any differences between the two?
+		The range of the Y-axis for time is smaller.
 	What could account for those differences?
-	
+		computer can do 10^9 operations in one second. a tick is a metric of computations and is more accurate
+		than time because cpu can change how much time a program takes.
 Discuss this (and all your responses for this assignment) with your TA as you go.
 
 Question A2:
 	Why do the times provided for Quadratic produce such a nice plot, while the original values of Linear did not?
-	
+		In the quadratic plot, we are working with massive numbers (billions of ticks), while with linear, we are working with small
+		numbers (hundreds). So when there are slight inconsistencies with time, they seem much bigger in the linear plot than the quadratic plot because of the smaller scale.
 Question A3: 
 	From the runs you have tried so far, how does the placement of ticker.tick() calls affect the plots you see? 
 	In particular, do the changes affect the shapes of the curves, the values plotted, or both
-	
+		Ticker.ticks in the innermost for loop, have quadratic properties, so putting ticker.ticks here, makes the plot go up much faster. The middle for loop is linear. The outer for loop is constant.
+		
 Question A4: 
 	In terms of n, how would you characterize, in the most simple terms, 
 	the time and ticks curves that have been generated so far?
-		
+		Time and ticks increase faster than we increase n because ticks and time increases as a quadratic function while n increases linearly.
 Question A5: 
 	What would happen if you deleted all ticker.tick() calls in the innermost loop,
 	while leaving other calls to ticker.tick() that you just placed in run()?
+		It would become linear because the quadratic term is removed. 
 	
 Question B1:
 	What do you see? How do the curves reflect the code inside AddsTwoNumbers?
 	Do you think the value of n matters here in terms of the time it takes to perform the operation?
 	Why or why not?
+		The ticks curve is an absolute constant-a straight line. The time is relatively constant; its a computational
+		component. The value of n doesnt matter because either way we are adding 500--magnitude doesnt matter. 
 	
 Question B2:
 	What do the data and plot tell you about the time it takes to allocate an array of n integers?
 	Is it reasonable to say that the line of code
+	
 
  		this.array = new int[this.n]
  		
 	takes a constant amount of time, independent of the value of this.n?
 	
+	As you make a bigger array, it takes more time to make it. It does not take a constant amount of time independent
+	of n because a bigger array takes longer to make. 
+	
 Question B3:
 	Do the ticks agree in shape with the time we measured in running the Allocates code?
 	
+	They agree in shape because ticks is counting what it takes to create a new array, regardless of size, but time must increase as we increase the number of terms. 
+		
 Question B4:
 	Are the plots more similar to each other than before?
 	What does this tell you about how much time it takes to allocate an array of n integers?
+	
+	They are more similar in shape because we've added a linear function inside of run, so both time and ticks should be linear. Again, it tells you that as you increase n, you increase the time needed to create it. 
 	
 Question B5:
 	Which group do you expect to finish first?
@@ -69,17 +85,23 @@ Question B5:
 		
 	If you are not sure, take a look the link from the assignment web page.
 	
+	Any time you are writing down a number, tally marks would be inefficient because you would need to keep writing and storing tallys. However, if you were counting, tallys would be much better because you don't need to erase and rewrite the count everytime you add something. 
+	
 Question D1:
 	How would you describe the curve you see?
 	As a team, think about possible polynomial functions that could generate such a curve.
 	Write your answer here:
 	
+		linear but if you divide by a number of elements, itll be a constant time for each.
+	
 Question E1:
 	What is the closed form solution for T(n)?
+	
+	n(n+1)/2
 	
 Question E2:
 	What is the closed form solution for T(n)?
 	Can you express this result in terms of n, as well as k?
 	Write your answer here:
 	
-	
+	2^(k+1) - 1

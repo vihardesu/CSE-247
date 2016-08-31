@@ -22,6 +22,7 @@ public class Allocates extends QuietAlgorithm {
 	@Override
 	public void reset(Ticker ticker) {
 		this.ticker = ticker;
+	
 	}
 
 	/**
@@ -48,6 +49,7 @@ public class Allocates extends QuietAlgorithm {
 			//   taken by the above statement? 
 			//   Does it take one tick to allocate n integers?
 			//
+			ticker.tick(this.n);
 			ticker.tick();
 		}
 	}
