@@ -19,11 +19,13 @@ Below each question, type in your short, to-the-point answers.
 
 What are the exact, closed-form formulas for the ticker counts in:
 
-ProbA?   n
+ProbA?   n   (this one was given to you)
 
 ProbB?  
 
 ProbC?
+
+If you need to do the next two on your own after studio, that's fine.
 
 ProbD?
 
