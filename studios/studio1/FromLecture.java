@@ -31,7 +31,7 @@ public class FromLecture extends QuietAlgorithm {
 	@Override
 	public void run() {
 		int j = 0;
-		while (j < n/2) {
+		while (j <= n/2) {
 			for (int k=0; k < 3; ++k) {
 				//
 				// Here
