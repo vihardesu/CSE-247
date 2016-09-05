@@ -17,6 +17,8 @@ Students in your studio group:
 
 Below each question, type in your short, to-the-point answers.
 
+Part A
+
 What are the exact, closed-form formulas for the ticker counts in:
 
 ProbA?   n   (this one was given to you)
@@ -31,4 +33,18 @@ ProbD?
 
 ProbE?
 
-	
+
+Part B
+
+1.  c =         n0 =
+2.  c =         n0 =
+3.  c =         n0 =
+
+Part C
+
+1.
+
+2.
+
+Part D
+
