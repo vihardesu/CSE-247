@@ -21,17 +21,15 @@ Part A
 
 What are the exact, closed-form formulas for the ticker counts in:
 
-ProbA?   n   (this one was given to you)
+	ProbA?   n   (I'm giving you this answer, make sure it agrees with what you saw)
 
-ProbB?  
+	ProbB?  
 
-ProbC?
+	ProbC?
 
-If you need to do the next two on your own after studio, that's fine.
+	ProbD?
 
-ProbD?
-
-ProbE?
+	ProbE?
 
 
 Part B
