@@ -1,6 +1,6 @@
 Studio 1 write up
 
-Your TA's name:
+Your TA's name: Zimu Wang
 
 
 
@@ -8,9 +8,9 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
-3.
+1.Vihar Desu 443845
+2.Conner Coan 444059
+3.Will Blanchard 438233
 4.
 5.
 6.
@@ -21,28 +21,37 @@ Part A
 
 What are the exact, closed-form formulas for the ticker counts in:
 
-	ProbA?   n   (I'm giving you this answer, make sure it agrees with what you saw)
+	ProbA?   n - 1  (I'm giving you this answer, make sure it agrees with what you saw)
 
-	ProbB?  
+	ProbB?   sum from 1 to n-1; i
 
-	ProbC?
+	ProbC?   sum from 1 to n; i
 
-	ProbD?
+	ProbD? 	 sum from 1 to n; i^2 
 
-	ProbE?
+	ProbE?	 sum from 1 to n; (i^2)-1
 
 
 Part B
 
-1.  c =         n0 =
-2.  c =         n0 =
-3.  c =         n0 =
+1.  c =   1      n0 = 1
+2.  c =  1000    n0 = 1
+3.  c =   4      n0 = 1
 
 Part C
 
-1.
+1. 5000 = O(n^2)
+ c =  1      n0 = 75 
 
-2.
-
+2. n = O(an+b)
+ c =  (1/a) + 1    n0 = -b(1+a) / a^2
+ 
 Part D
 
+an+b = O(n)
+c =  	a + 1	   n0 = b + 1
+
+Part E
+1. when n is large, function f will be bigger because it'll be the same number of terms as the factornial except they will all b n's instead of 1 -> n
+2. function f exponentials will always dominate powers 
+3. any polynomial will be bigger than any log.
