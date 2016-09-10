@@ -22,7 +22,7 @@ public class LinkedListWithTail<T> implements List<T> {
 	/**
 	 * Modify this method for studio 2 so that it uses an instance
 	 * variable for the tail reference, and modify code in this class
-	 * so that teh tail reference
+	 * so that the tail reference
 	 * that always points to the end of the list.
 	 * 
 	 * Use that tail reference to add to the end of the list, instead
