@@ -72,7 +72,6 @@ worst-case for performing each of the following operations?
   5)  insert
   
   6)  isEmpty
-
   
  
  Are there situations when you would want to use the OrderedArray or the UnorderedList instead of
