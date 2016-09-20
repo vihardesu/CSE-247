@@ -74,7 +74,6 @@ worst-case for performing each of the following operations?
   6)  isEmpty
 
   
- Part C
  
  Are there situations when you would want to use the OrderedArray or the UnorderedList instead of
  the binary heap described in class?   Explain please.
