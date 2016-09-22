@@ -1,0 +1,92 @@
+Studio 3 write up
+
+Your TA's name: 
+
+Charlie Wu
+
+
+
+Students in your studio group:
+
+    Name        Student ID (begins with a 4)
+	
+1. David Paticoff 441459
+2. Conner Coan 444059
+3. Vihar Desu 443845
+4.
+5.
+6.
+
+
+Part A
+
+What are three data types that can serve as T?
+int, double, float
+
+Which class did you pick to examine its compareTo method?
+Int
+
+How did its compareTo method impose a natural order on that class's instances?
+It assigns "this" to an integer (thisVal) and assigns the input to anotherVal.
+
+Part B
+
+How does compareTo work?  Does it always return either -1, 0, or +1?
+It compares the size of each interger value, and uses -1, 0, or 1 to determine if it is greater than, equal to, or less than the other integer.
+
+
+Part C
+
+From your inspection of the LinkedList<T> class's source code:
+Given a LinkedList<T> of size n, what is the asymptotic complexity, worst-case, 
+for performing each of the following operations?
+
+  1)  Appending to the end of that list  addLast(..)
+  n
+  
+  2)  Prepending to the beginning of that list   addFirst(...)
+  n
+  
+  3)  Inserting an element in the middle of the list  add(size/2, .....)
+  n
+  
+And for your implementation of a PriorityQueue using the Unordered List, 
+given n elements already in the queue, what is the asymptotic complexity, 
+worst-case for performing each of the following operations?
+  
+  4)  extractMin
+  n
+  
+  5)  insert
+  constant
+  
+  6)  isEmpty
+  constant
+  
+  
+  
+Part D
+
+From your implementation of OrderedArray, what is the asymptotic complexity, worst-case, for performing each of the following operations?
+
+  1)  Adding an element at the end of the array
+  
+  
+  2)  Inserting an element at the beginning of the array
+  
+  
+  3)  Inserting an element in the middle of the list
+
+And for your implementation of a PriorityQueue using the Ordered Array, 
+given n elements already in the queue, what is the asymptotic complexity, 
+worst-case for performing each of the following operations?
+  
+  4)  extractMin
+  
+  5)  insert
+  
+  6)  isEmpty
+  
+ 
+ Are there situations when you would want to use the OrderedArray or the UnorderedList instead of
+ the binary heap described in class?   Explain please.
