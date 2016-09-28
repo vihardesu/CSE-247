@@ -8,9 +8,9 @@ Students in your studio group:
 
     Name        Student ID (begins with a 4)
 	
-1.
-2.
-3.
+1. Vihar Desu	443845
+2. David Paticoff 441459
+3. Conner Coan  444059
 4.
 5.
 6.
@@ -20,17 +20,28 @@ Substitution
 
 Using substitution, prove that the solution to T(n)=T(n-1)+10 is T(n)=10n
 
-
+T(n) = T(n-1) + 10
+T(n)=K(n-1)+10= K*n-K+10, TRUE when k=10. i.e. T(n)=10n
 
 Using substitution, show that T(n)=T(n-1)+10 is O(n-squared)
 
+T(n) = O(n-squared)
+T(n) = k*n^2
+T(n)
+T(n-1) = k*(n-1)^2 = k(n^2 - 2n + 1) + c --> k*n^2 - 2*k*n + k + c
+
+k*n^2 - 2*k*n + k + c <= k*n^2
+= - 2*k*n + k + c <= 0
+= c/(2n - 1) = k 
+= c = k(2n-1)
+= k = 1 ==> T(n) <=  c*n^2 ==> T(n) = O(n^2);
 
 Recursion Tree Solutions
 
-1.
+1.  n^2 + 10
 
 
-2.
+2. 2n^2 - 3n + 5
 
 
 3.
