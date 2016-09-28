@@ -29,9 +29,12 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		this.ticker = ticker;
 	}
 
-	//
+	// 
 	// Here begin the methods described in lecture
 	//
+	//Things to get done in this lab:
+	// Methods: insert(), 
+	// 
 	
 	/**
 	 * Insert a new thing into the heap.  As discussed in lecture, it
@@ -45,6 +48,7 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 *   in the heap array, and a reference back to MinHeap so it can call
 	 *   decrease(int loc) when necessary.
 	 */
+	
 	public Decreaser<T> insert(T thing) {
 		//
 		// Below we create the "handle" through which the value of
@@ -63,9 +67,10 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// You have to now put ans into the heap array
 		//   Recall in class we reduced insert to decrease
-		//
-		// FIXME
-		//
+		array[size] = ans;
+		array[size].loc = size;
+		decrease(size);
+		ticker.tick(5);
 		return ans;
 	}
 
@@ -98,8 +103,19 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	void decrease(int loc) {
 		//
 		// As described in lecture
-		//
-		
+		if (loc == 1){
+			ticker.tick(1);
+			return;
+		}
+		if((array[loc].getValue().compareTo((array[(loc/2)]).getValue()))<0){
+			Decreaser<T> var = array[loc/2];
+			array[loc/2] = array[loc];
+			array[loc] = var;
+			array[loc].loc = loc;
+			array[loc/2].loc = (loc/2);
+			ticker.tick(6);
+			decrease(loc/2);
+		}
 	}
 	
 	/**
@@ -119,6 +135,16 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 		//
 		// FIXME
 		//
+		array[1] = array[size];
+		array[1].loc = 1;
+		array[size] = null;
+		this.size = this.size - 1;
+		ticker.tick(6);
+		if(size > 1){
+			ticker.tick(2);
+			heapify(1);
+		}
+		ticker.tick(1);
 		return ans;
 	}
 
@@ -129,11 +155,64 @@ public class MinHeap<T extends Comparable<T>> implements PriorityQueue<T> {
 	 *   affected must be heapified itself by a recursive call.
 	 * @param where the index into the array where the parent lives
 	 */
+	
+	public void swapValues(int parent, int child){
+		Decreaser<T> temp = array[parent];
+		array[parent] = array[child];
+		array[child] = temp;
+		array[parent].loc = parent;
+		array[child].loc = child;
+		ticker.tick(6);
+	}
+	
 	private void heapify(int where) {
-		//
-		// As described in lecture
-		//  FIXME
-		//
+
+		//Cases where heapify must be able to accomodate for
+		//1st is location of parent is greater than actual size of array or nothing is in parent
+		//2nd occurs if the left child element is located in position greater than the array or is nul
+		//3rd is same as above but for right child element
+		//augmented by exiting heapify
+		
+		
+		if (where > size || array[where] == null){
+			ticker.tick(2);
+			return;
+		}
+		if (where*2 > size || array[where*2] == null){
+			ticker.tick(2);
+			return;
+		}
+		if (2*where+1 > size || array[2*where+1] ==null) {
+			if((array[where*2].getValue().compareTo((array[where]).getValue())<0)){
+				swapValues(where*2, where);
+				ticker.tick(3);
+			}
+			return;
+		}
+		
+		//the most bomb heapify code
+		if(array[where*2] != null){
+			if(array[where*2+1] != null){
+				if (array[2*where].getValue().compareTo(array[where].getValue()) < 0
+				&&	array[2*where].getValue().compareTo(array[2*where+1].getValue()) <= 0){
+					//swap the values of array[where*2] to array[where]
+					swapValues(where, where*2);
+					ticker.tick(5);
+					heapify(where*2);
+				}
+				else if(array[2*where+1].getValue().compareTo(array[where].getValue()) < 0) {
+					swapValues(where, where*2+1);
+					ticker.tick(3);
+					heapify(where*2+1);
+				}
+			}		
+		}
+		else{
+			ticker.tick(1);
+			return;
+		}
+		
+		
 	}
 	
 	/**
