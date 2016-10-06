@@ -1,0 +1,207 @@
+-------------------
+CSE247 Robot tester starts testing heaps on 2016-10-06 14:34:50 -0500
+
+========
+Testing in checkoutlab3ontime/cse247-f16-students-vihar.desu: heaps as of 2016-09-28 09:00
+========
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/roncytron/git/cse247-f16-students key vihar.desu testfilesource test/TestMinHeap package heaps repo checkoutlab3ontime/cse247-f16-students-vihar.desu
+     [copy] Copying 1 file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab3ontime/cse247-f16-students-vihar.desu/labs/heaps/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Now in: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab3ontime/cse247-f16-students-vihar.desu
+Compiling the code
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/MinHeap
+    [mkdir] Created dir: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab3ontime/cse247-f16-students-vihar.desu/bin
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab3ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling heaps/test/TestMinHeap
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab3ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test test.TestMinHeap
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+test:
+    [junit] Running heaps.test.TestMinHeap
+    [junit] Testsuite: heaps.test.TestMinHeap
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] done
+    [junit] Testing unique size 2
+    [junit] done
+    [junit] Testing unique size 3
+    [junit] done
+    [junit] Testing unique size 4
+    [junit] done
+    [junit] Testing unique size 5
+    [junit] done
+    [junit] Testing unique size 6
+    [junit] done
+    [junit] Testing unique size 7
+    [junit] done
+    [junit] Testing unique size 8
+    [junit] done
+    [junit] Testing unique size 9
+    [junit] done
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] done
+    [junit] Testing with duplicates size 2
+    [junit] done
+    [junit] Testing with duplicates size 3
+    [junit] done
+    [junit] Testing with duplicates size 4
+    [junit] done
+    [junit] Testing with duplicates size 5
+    [junit] done
+    [junit] Testing with duplicates size 6
+    [junit] done
+    [junit] Testing with duplicates size 7
+    [junit] done
+    [junit] Testing with duplicates size 8
+    [junit] done
+    [junit] Testing with duplicates size 9
+    [junit] done
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit]                                                                0                                                               
+    [junit]                                1                                                               4                               
+    [junit]                10                              2                               6                               8               
+    [junit]        11              22              9               3               7               25              28              19      
+    [junit]    15      12      23      29      34      13      20      5       17      18      42      30      37      33      46      31  
+    [junit]  43  38  32  47  41  24  45  35  40  49  36  27  48  26  16  14  44  39  21
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.003 sec
+    [junit] Output:
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] done
+    [junit] Testing unique size 2
+    [junit] done
+    [junit] Testing unique size 3
+    [junit] done
+    [junit] Testing unique size 4
+    [junit] done
+    [junit] Testing unique size 5
+    [junit] done
+    [junit] Testing unique size 6
+    [junit] done
+    [junit] Testing unique size 7
+    [junit] done
+    [junit] Testing unique size 8
+    [junit] done
+    [junit] Testing unique size 9
+    [junit] done
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] done
+    [junit] Testing with duplicates size 2
+    [junit] done
+    [junit] Testing with duplicates size 3
+    [junit] done
+    [junit] Testing with duplicates size 4
+    [junit] done
+    [junit] Testing with duplicates size 5
+    [junit] done
+    [junit] Testing with duplicates size 6
+    [junit] done
+    [junit] Testing with duplicates size 7
+    [junit] done
+    [junit] Testing with duplicates size 8
+    [junit] done
+    [junit] Testing with duplicates size 9
+    [junit] done
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit]                                                                0                                                               
+    [junit]                                1                                                               4                               
+    [junit]                10                              2                               6                               8               
+    [junit]        11              22              9               3               7               25              28              19      
+    [junit]    15      12      23      29      34      13      20      5       17      18      42      30      37      33      46      31  
+    [junit]  43  38  32  47  41  24  45  35  40  49  36  27  48  26  16  14  44  39  21
+    [junit] 
+    [junit] 
+    [junit] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.003 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Testing unique size 0
+    [junit] done
+    [junit] Testing unique size 1
+    [junit] done
+    [junit] Testing unique size 2
+    [junit] done
+    [junit] Testing unique size 3
+    [junit] done
+    [junit] Testing unique size 4
+    [junit] done
+    [junit] Testing unique size 5
+    [junit] done
+    [junit] Testing unique size 6
+    [junit] done
+    [junit] Testing unique size 7
+    [junit] done
+    [junit] Testing unique size 8
+    [junit] done
+    [junit] Testing unique size 9
+    [junit] done
+    [junit] Testing with duplicates size 0
+    [junit] done
+    [junit] Testing with duplicates size 1
+    [junit] done
+    [junit] Testing with duplicates size 2
+    [junit] done
+    [junit] Testing with duplicates size 3
+    [junit] done
+    [junit] Testing with duplicates size 4
+    [junit] done
+    [junit] Testing with duplicates size 5
+    [junit] done
+    [junit] Testing with duplicates size 6
+    [junit] done
+    [junit] Testing with duplicates size 7
+    [junit] done
+    [junit] Testing with duplicates size 8
+    [junit] done
+    [junit] Testing with duplicates size 9
+    [junit] done
+    [junit] Displaying a correct heap of 50 unique integers:
+    [junit]                                                                0                                                               
+    [junit]                                1                                                               4                               
+    [junit]                10                              2                               6                               8               
+    [junit]        11              22              9               3               7               25              28              19      
+    [junit]    15      12      23      29      34      13      20      5       17      18      42      30      37      33      46      31  
+    [junit]  43  38  32  47  41  24  45  35  40  49  36  27  48  26  16  14  44  39  21
+    [junit] 
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testViaSorting took 0.01 sec
+    [junit] Testcase: testEmptyHeap took 0 sec
+    [junit] Testcase: testAndPrint took 0.022 sec
+    [junit] Testcase: testExtractMin took 0.018 sec
+    [junit] Testcase: testLocUpdatedHeapify took 0 sec
+    [junit] Testcase: testInsert took 0 sec
+    [junit] Testcase: testUsingHeapSort took 0.94 sec
+    [junit] Testcase: testLocUpdatedDecrease took 0 sec
+
+BUILD SUCCESSFUL
+Total time: 1 second
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing heaps on 2016-10-06 14:34:54 -0500
+-------------------
