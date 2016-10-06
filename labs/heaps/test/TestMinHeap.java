@@ -12,10 +12,13 @@ import org.junit.Rule;
 import org.junit.Test;
 
 import heaps.Decreaser;
+import heaps.HeapSort;
 import heaps.MinHeap;
 import heaps.util.HeapToStrings;
 import heaps.validate.MinHeapValidator;
+import timing.InputSpec;
 import timing.Ticker;
+import timing.utils.IntArrayGenerator;
 
 /**
  * 
@@ -84,6 +87,14 @@ public class TestMinHeap {
 			mhv.check();
 		}
 		assertTrue("Heap should be empty now", pq.isEmpty());
+	}
+	
+	@Test
+	public void testUsingHeapSort() {
+		HeapSort heaper = new HeapSort();
+		heaper.loadInput(new IntArrayGenerator().genInput(InputSpec.gen(1000000)));
+		heaper.reset(new Ticker());
+		heaper.run();
 	}
 
 	private void verifySize(String event, MinHeap<?> pq, int expectedSize) {
