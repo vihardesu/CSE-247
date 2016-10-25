@@ -78,7 +78,9 @@ public class ShortestPaths {
 		// and then decrease it using the Decreaser handle
 		//
 		startVertDist.decrease(startVertDist.getValue().sameVertexNewDistance(0));
-
+		
+		//start with one node and figure out what its connected to and decrease
+		
 
 		//
 		// OK you take it from here
@@ -86,6 +88,27 @@ public class ShortestPaths {
 		//   and act upon them as instructed in class and the text.
 		//
 		// FIXME
+		while (!pq.isEmpty()){
+			VertexAndDist v = pq.extractMin();
+			//pq.insert(v);
+			
+			for(Edge e: v.getVertex().edgesFrom()){
+				
+				//Vertex v2 = e.to;
+			
+				int dist = v.getDistance() + weights.get(e);
+				Decreaser<VertexAndDist> dec = map.get(e.to);
+					
+				if(dist < dec.getValue().getDistance()){
+						
+					dec.decrease(dec.getValue().sameVertexNewDistance(dist));
+					toEdge.put(e.to, e);		
+				}
+				
+			}
+			//pq.extractMin();
+			
+		}	
 	}
 
 	
@@ -104,9 +127,12 @@ public class ShortestPaths {
 
 		//
 		// FIXME
-		
-		
 		//
+		while (endVertex!=startVertex){	
+			Edge e = toEdge.get(endVertex);
+			path.addFirst(e);
+			endVertex = e.from;
+		}	
 
 		return path;
 	}
