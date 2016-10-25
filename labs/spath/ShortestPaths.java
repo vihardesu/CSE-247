@@ -80,8 +80,6 @@ public class ShortestPaths {
 		startVertDist.decrease(startVertDist.getValue().sameVertexNewDistance(0));
 		
 		//start with one node and figure out what its connected to and decrease
-		
-
 		//
 		// OK you take it from here
 		// Extract nodes from the pq heap
@@ -89,19 +87,16 @@ public class ShortestPaths {
 		//
 		// FIXME
 		while (!pq.isEmpty()){
-			VertexAndDist v = pq.extractMin();
-			//pq.insert(v);
+			VertexAndDist x = pq.extractMin();
+			//pq.insert(x);
 			
-			for(Edge e: v.getVertex().edgesFrom()){
-				
-				//Vertex v2 = e.to;
-			
-				int dist = v.getDistance() + weights.get(e);
-				Decreaser<VertexAndDist> dec = map.get(e.to);
+			for(Edge e: x.getVertex().edgesFrom()){
+				int distance = x.getDistance() + weights.get(e);
+				Decreaser<VertexAndDist> decrease = map.get(e.to);
 					
-				if(dist < dec.getValue().getDistance()){
+				if(distance < decrease.getValue().getDistance()){
 						
-					dec.decrease(dec.getValue().sameVertexNewDistance(dist));
+					decrease.decrease(decrease.getValue().sameVertexNewDistance(distance));
 					toEdge.put(e.to, e);		
 				}
 				
