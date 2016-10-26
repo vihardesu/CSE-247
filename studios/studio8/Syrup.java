@@ -1,9 +1,12 @@
 package studio8;
 
+import java.util.Random;
+
 public class Syrup {
 
 	public double density;
 	public String brand;
+	Random rand = new Random();
 
 	public Syrup(String brand, double density) {
 
@@ -12,7 +15,7 @@ public class Syrup {
 	}
 
 	public int hashCode(){
-		return (int)(brand.hashCode() * 31 + density);
+		return rand.nextInt();
 	}
 
 	@Override
