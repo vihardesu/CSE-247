@@ -17,7 +17,7 @@ public class Pancake {
 	public int hashCode(){
 		int hash = radius;
 		if (wheat){
-			hash = hash * -1;
+			hash = hash + 5;
 		}
 		return hash;
 	}
