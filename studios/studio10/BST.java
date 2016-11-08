@@ -21,7 +21,56 @@ public class BST<E> implements SortedSet<E> {
 		this.root = null;
 		this.ticker = t;
 	}
-	
+
+	public static void main(String[] args) {
+		BST<String> lonely = new BST<String>(new Ticker());
+		lonely.add("sad");
+		lonely.add("happy");
+		System.out.println("lonely tree \n" + lonely.dumpTree());
+		BST<Integer> t = new BST<Integer>(new Ticker()); // here, E is Integer
+		Random r = new Random();
+//		for (int i=0; i < 5; ++i) {
+//			t.add(r.nextInt(100));
+//		}
+		t.add(50);
+		t.add(30);
+		t.add(70);
+		t.add(40);
+		t.add(60);
+		t.add(35);
+		t.add(45);
+		t.add(247);
+		System.out.println("Contains a 5? " + t.contains(5));
+		System.out.println("Contains a 35? " + t.contains(35));
+		System.out.println("Contains 247? " + t.contains(247));
+		System.out.println("Contains a 6? " + t.contains(6));
+		
+		System.out.println("Least is " +t.first());
+		System.out.println("greatest is " + t.last());
+		
+		System.out.println("tree dump is \n" + t.dumpTree());
+		System.out.println("tree is \n" + t);
+		
+		System.out.println("bye bye 40");
+		t.remove(40);
+		System.out.println("After remove 40 \n" + t.dumpTree());
+		t.remove(50);
+		System.out.println("After remove of 50\n" +t.dumpTree());
+		System.out.println("iterator:");
+		for (Integer i : t) {
+			System.out.print(i + " ");
+		}
+		System.out.println();
+		
+		
+		
+// Why does this code fail?
+//		
+//		BST<Color> col = new BST<Color>(new Ticker());
+//		col.add(Color.RED);
+//		col.add(Color.BLUE);
+	}
+
 	@Override
 	public void clear() {
 		ticker.tick();
@@ -236,54 +285,6 @@ public class BST<E> implements SortedSet<E> {
 		return "{ " + toStringHelper(root) + " }";
 	}
 	
-	public static void main(String[] args) {
-		BST<String> lonely = new BST<String>(new Ticker());
-		lonely.add("sad");
-		lonely.add("happy");
-		System.out.println("lonely tree \n" + lonely.dumpTree());
-		BST<Integer> t = new BST<Integer>(new Ticker()); // here, E is Integer
-		Random r = new Random();
-//		for (int i=0; i < 5; ++i) {
-//			t.add(r.nextInt(100));
-//		}
-		t.add(50);
-		t.add(30);
-		t.add(70);
-		t.add(40);
-		t.add(60);
-		t.add(35);
-		t.add(45);
-		t.add(247);
-		System.out.println("Contains a 5? " + t.contains(5));
-		System.out.println("Contains a 35? " + t.contains(35));
-		System.out.println("Contains 247? " + t.contains(247));
-		System.out.println("Contains a 6? " + t.contains(6));
-		
-		System.out.println("Least is " +t.first());
-		System.out.println("greatest is " + t.last());
-		
-		System.out.println("tree dump is \n" + t.dumpTree());
-		System.out.println("tree is \n" + t);
-		
-		System.out.println("bye bye 40");
-		t.remove(40);
-		System.out.println("After remove 40 \n" + t.dumpTree());
-		t.remove(50);
-		System.out.println("After remove of 50\n" +t.dumpTree());
-		System.out.println("iterator:");
-		for (Integer i : t) {
-			System.out.print(i + " ");
-		}
-		System.out.println();
-		
-		
-		
-// Why does this code fail?
-//		
-//		BST<Color> col = new BST<Color>(new Ticker());
-//		col.add(Color.RED);
-//		col.add(Color.BLUE);
-	}
 
 	@Override
 	public int size() {
