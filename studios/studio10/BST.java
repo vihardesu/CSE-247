@@ -278,7 +278,7 @@ public class BST<E> implements SortedSet<E> {
 		
 		
 		
-// the code below fails because Color does not implement Comparable<Color>
+// Why does this code fail?
 //		
 //		BST<Color> col = new BST<Color>(new Ticker());
 //		col.add(Color.RED);
