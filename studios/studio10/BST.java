@@ -1,5 +1,6 @@
 package studio10;
 
+import java.awt.Color;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.Iterator;
@@ -236,14 +237,14 @@ public class BST<E> implements SortedSet<E> {
 	}
 	
 	public static void main(String[] args) {
-//		BST<String> lonely = new BST<String>();
-//		lonely.add("sad");
-//		lonely.remove("sadd");
-//		System.out.println("lonely tree \n" + lonely.dumpTree());
+		BST<String> lonely = new BST<String>(new Ticker());
+		lonely.add("sad");
+		lonely.add("happy");
+		System.out.println("lonely tree \n" + lonely.dumpTree());
 		BST<Integer> t = new BST<Integer>(new Ticker()); // here, E is Integer
 		Random r = new Random();
 //		for (int i=0; i < 5; ++i) {
-//			treeOfInts.add(r.nextInt(100));
+//			t.add(r.nextInt(100));
 //		}
 		t.add(50);
 		t.add(30);
@@ -252,11 +253,11 @@ public class BST<E> implements SortedSet<E> {
 		t.add(60);
 		t.add(35);
 		t.add(45);
-		t.add(47);
-//		System.out.println("Contains a 5?" + t.contains(5));
-//		System.out.println("Contains a 3?" + t.contains(3));
-//		System.out.println("Contains 247?" + t.contains(247));
-//		System.out.println("Contains a 6?" + t.contains(6));
+		t.add(247);
+		System.out.println("Contains a 5? " + t.contains(5));
+		System.out.println("Contains a 35? " + t.contains(35));
+		System.out.println("Contains 247? " + t.contains(247));
+		System.out.println("Contains a 6? " + t.contains(6));
 		
 		System.out.println("Least is " +t.first());
 		System.out.println("greatest is " + t.last());
@@ -277,9 +278,9 @@ public class BST<E> implements SortedSet<E> {
 		
 		
 		
-		// the code below fails because Color does not implement Comparable<Color>
+// the code below fails because Color does not implement Comparable<Color>
 //		
-//		BST<Color> col = new BST<Color>();
+//		BST<Color> col = new BST<Color>(new Ticker());
 //		col.add(Color.RED);
 //		col.add(Color.BLUE);
 	}
