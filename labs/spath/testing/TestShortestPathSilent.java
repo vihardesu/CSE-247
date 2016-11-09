@@ -1,16 +1,10 @@
 package spath.testing;
 
-import static org.junit.Assert.*;
-
+import static org.junit.Assert.assertEquals;
 
 import java.util.LinkedList;
 
-import javax.swing.JOptionPane;
-
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.TestWatcher;
-import org.junit.runner.Description;
 
 import spath.ShortestPaths;
 import spath.graphs.DirectedGraph;
@@ -62,12 +56,4 @@ public class TestShortestPathSilent {
 				sp.returnValue(gg.end()));
 	}
 
-	private class genGraphVizOnFail extends TestWatcher {
-		@Override
-		protected void failed(Throwable e, Description description) {
-			GraphViz<Integer> viz = new GraphViz<Integer>(gg.getGraph(), gg.weights(), gg.start(), gg.end(), expectedPath, outputPath);
-			viz.print();
-			JOptionPane.showMessageDialog(null, "Press OK when done");
-		}
-	}
 }
