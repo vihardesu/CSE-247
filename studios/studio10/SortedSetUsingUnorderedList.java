@@ -11,14 +11,14 @@ import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 import timing.utils.IntSequenceArrayGenerator;
 
-public class SortUsingUnorderedList implements Algorithm<Integer[], Integer[]> {
+public class SortedSetUsingUnorderedList implements Algorithm<Integer[], Integer[]> {
 
 	private Integer[] originalArray;
 	private Ticker ticker;
 	private List<Integer> list;
 	
 
-	public SortUsingUnorderedList() {
+	public SortedSetUsingUnorderedList() {
 
 	}
 
@@ -57,7 +57,7 @@ public class SortUsingUnorderedList implements Algorithm<Integer[], Integer[]> {
 		GenSizes sizes = GenSizes.arithmetic(100, 10000, 100);
 		ExecuteAlgorithm.timeAlgorithm(
 				"sortusingunorderedlist", 
-				"studio10.SortUsingUnorderedList", 
+				"studio10.SortedSetUsingUnorderedList", 
 				new IntArrayGenerator(), 
 /*				new IntSequenceArrayGenerator(),   */
 				sizes

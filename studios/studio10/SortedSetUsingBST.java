@@ -9,13 +9,13 @@ import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 import timing.utils.IntSequenceArrayGenerator;
 
-public class SortUsingBST implements Algorithm<Integer[], Integer[]> {
+public class SortedSetUsingBST implements Algorithm<Integer[], Integer[]> {
 
 	private Integer[] originalArray;
 	private Ticker ticker;
 	private BST<Integer> bst;
 
-	public SortUsingBST() {
+	public SortedSetUsingBST() {
 
 	}
 
@@ -34,8 +34,9 @@ public class SortUsingBST implements Algorithm<Integer[], Integer[]> {
 	public Integer[] getResults() {
 		Integer[] ans = new Integer[originalArray.length];
 		Iterator<Integer> iter = bst.iterator();
-		for (int i=0; i < ans.length; ++i) {
-			ans[i] = iter.next();
+		int i=0;
+		while (iter.hasNext()) {
+			ans[i++] = iter.next();
 		}
 		return ans;
 	}
@@ -55,7 +56,7 @@ public class SortUsingBST implements Algorithm<Integer[], Integer[]> {
 		GenSizes sizes = GenSizes.arithmetic(100, 10000, 100);
 		ExecuteAlgorithm.timeAlgorithm(
 				"sortusingbst", 
-				"studio10.SortUsingBST", 
+				"studio10.SortedSetUsingBST", 
 				new IntArrayGenerator(), 
 /*				new IntSequenceArrayGenerator(),   */
 				sizes
