@@ -1,0 +1,174 @@
+-------------------
+CSE247 Robot tester starts testing kwaymergesort on 2016-11-17 14:22:34 -0600
+
+========
+Testing in checkoutlab7ontime/cse247-f16-students-vihar.desu: kwaymergesort as of 2016-11-03 09:00
+========
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/roncytron/git/cse247-f16-students key vihar.desu testfilesource test/TestMergeSort package kwaymergesort repo checkoutlab7ontime/cse247-f16-students-vihar.desu
+     [copy] Copying 1 file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7ontime/cse247-f16-students-vihar.desu/labs/kwaymergesort/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Now in: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7ontime/cse247-f16-students-vihar.desu
+Compiling the code
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling kwaymergesort/KWayMergeSort
+    [mkdir] Created dir: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7ontime/cse247-f16-students-vihar.desu/bin
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling kwaymergesort/test/TestMergeSort
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test test.TestMergeSort
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+test:
+    [junit] Running kwaymergesort.test.TestMergeSort
+    [junit] Testsuite: kwaymergesort.test.TestMergeSort
+    [junit] 4-way merge sort of 16 integers
+    [junit] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+    [junit] Output:
+    [junit] 4-way merge sort of 16 integers
+    [junit] 
+    [junit] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.014 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] 4-way merge sort of 16 integers
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: sortTest took 0.002 sec
+    [junit] 	FAILED
+    [junit] At index 0 expected -1997512271 but got -1245146495
+    [junit] junit.framework.AssertionFailedError: At index 0 expected -1997512271 but got -1245146495
+    [junit] 	at kwaymergesort.test.TestMergeSort.sortOnce(TestMergeSort.java:42)
+    [junit] 	at kwaymergesort.test.TestMergeSort.sortTest(TestMergeSort.java:25)
+    [junit] 
+
+BUILD FAILED
+/Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml:32: Test kwaymergesort.test.TestMergeSort failed
+
+Total time: 0 seconds
+========
+Testing in checkoutlab7late/cse247-f16-students-vihar.desu: kwaymergesort as of 2016-11-10 09:00
+========
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/roncytron/git/cse247-f16-students key vihar.desu testfilesource test/TestMergeSort package kwaymergesort repo checkoutlab7late/cse247-f16-students-vihar.desu
+     [copy] Copying 1 file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7late/cse247-f16-students-vihar.desu/labs/kwaymergesort/test
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Now in: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7late/cse247-f16-students-vihar.desu
+Compiling the code
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling kwaymergesort/KWayMergeSort
+    [mkdir] Created dir: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7late/cse247-f16-students-vihar.desu/bin
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7late/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling kwaymergesort/test/TestMergeSort
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab7late/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test test.TestMergeSort
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+test:
+    [junit] Running kwaymergesort.test.TestMergeSort
+    [junit] Testsuite: kwaymergesort.test.TestMergeSort
+    [junit] 8-way merge sort of 8 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 32-way merge sort of 32 integers
+    [junit] 4-way merge sort of 64 integers
+    [junit] 16-way merge sort of 16 integers
+    [junit] 4-way merge sort of 4 integers
+    [junit] 32-way merge sort of 1024 integers
+    [junit] 32-way merge sort of 32 integers
+    [junit] 8-way merge sort of 8 integers
+    [junit] 4-way merge sort of 4 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 16 integers
+    [junit] 32-way merge sort of 1024 integers
+    [junit] 4-way merge sort of 64 integers
+    [junit] 16-way merge sort of 256 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 256 integers
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+    [junit] Output:
+    [junit] 8-way merge sort of 8 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 32-way merge sort of 32 integers
+    [junit] 4-way merge sort of 64 integers
+    [junit] 16-way merge sort of 16 integers
+    [junit] 4-way merge sort of 4 integers
+    [junit] 32-way merge sort of 1024 integers
+    [junit] 32-way merge sort of 32 integers
+    [junit] 8-way merge sort of 8 integers
+    [junit] 4-way merge sort of 4 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 16 integers
+    [junit] 32-way merge sort of 1024 integers
+    [junit] 4-way merge sort of 64 integers
+    [junit] 16-way merge sort of 256 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 256 integers
+    [junit] 
+    [junit] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.034 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] 8-way merge sort of 8 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 32-way merge sort of 32 integers
+    [junit] 4-way merge sort of 64 integers
+    [junit] 16-way merge sort of 16 integers
+    [junit] 4-way merge sort of 4 integers
+    [junit] 32-way merge sort of 1024 integers
+    [junit] 32-way merge sort of 32 integers
+    [junit] 8-way merge sort of 8 integers
+    [junit] 4-way merge sort of 4 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 16 integers
+    [junit] 32-way merge sort of 1024 integers
+    [junit] 4-way merge sort of 64 integers
+    [junit] 16-way merge sort of 256 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 16-way merge sort of 4096 integers
+    [junit] 8-way merge sort of 512 integers
+    [junit] 16-way merge sort of 256 integers
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: sortTest took 0.022 sec
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing kwaymergesort on 2016-11-17 14:22:39 -0600
+-------------------
