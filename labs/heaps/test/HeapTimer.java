@@ -1,8 +1,6 @@
 package heaps.test;
 
-import heaps.HeapSort;
 import timing.ExecuteAlgorithm;
-import timing.InputSpec;
 import timing.utils.GenSizes;
 import timing.utils.IntArrayGenerator;
 

@@ -94,6 +94,7 @@ public class ExecuteAlgorithm<T,U> {
 			}
 			return results;
 		} catch (Throwable t) {
+			t.printStackTrace();
 			throw new Error("Error " + t);
 		}
 
