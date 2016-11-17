@@ -1,0 +1,1 @@
+MinHeap does not always provide a trace back from errors that are thrown.
