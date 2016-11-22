@@ -29,11 +29,11 @@ public class ModExp {
 	 * @return
 	 */
 	public static long tenthpower(long w, long p) {
-		long sq = mod(w*w, p);
-		long ans = sq;
-		ans = mod(ans * ans, p);
-		ans = mod(ans * ans, p);
-		return mod(ans * sq, p);
+		long sq = mod(w*w, p);     // w squared
+		long ans = sq;            
+		ans = mod(ans * ans, p);   // w squared squared, so w to the 4th power
+		ans = mod(ans * ans, p);   // w to the 4th squared, so w to the 8th power
+		return mod(ans * sq, p);   // w to the 8th times w squared = w to the 10th power
 	}
 	
 	/**
