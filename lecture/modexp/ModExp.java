@@ -11,6 +11,12 @@ public class ModExp {
 	
 	private Map<Long,Long> discreteLog;
 	
+	/**
+	 * Convenient to create an instance with base z and modulus p if you
+	 *    are wanting to raise z to various powers mod p
+	 * @param z the base
+	 * @param p the modulus
+	 */
 	public ModExp(long z, long p) {
 		this.discreteLog = null;
 		this.p = p;
@@ -26,7 +32,7 @@ public class ModExp {
 	 * Compute w to the 10th power, mod p
 	 * @param w
 	 * @param p
-	 * @return
+	 * @return w to the 10th power, mod p
 	 */
 	public static long tenthpower(long w, long p) {
 		long sq = mod(w*w, p);     // w squared
@@ -56,13 +62,24 @@ public class ModExp {
 	 * @param n exponent
 	 * @return this.z to the n mod this.p
 	 */
-	public long modexp(long n) {
+	public long toThePower(long n) {
 		char[] digs = (""+n).toCharArray();
 		long ans = 1;
 		for (int i=0; i < digs.length; ++i) {
 			ans = mod(tenthpower(ans, this.p) * h[digs[i]-'0'], p);
 		}
 		return ans;
+	}
+	
+	/**
+	 * Compute g to the x mod p.  A convenient static method for outside use.
+	 * @param g the base
+	 * @param x the exponent
+	 * @param p the modulus
+	 * @return
+	 */
+	public static long gToTheXModP(long g, long x, long p) {
+		return new ModExp(g,p).toThePower(x);
 	}
 	
 	public Long discreteLog(long y) {
@@ -72,7 +89,7 @@ public class ModExp {
 		if (this.discreteLog == null) {
 			this.discreteLog = new HashMap<Long,Long>();
 			for (long i=0; i < this.p; ++i) {
-				long ans = modexp(i);
+				long ans = toThePower(i);
 				discreteLog.put(ans, i);
 				if (i % 1000000 == 0) System.out.println(new Date().toString() + " At " + i);
 			}
@@ -84,18 +101,18 @@ public class ModExp {
 	public static void main(String[] args) {
 		ModExp smallie = new ModExp(5,23);
 		System.out.println("Examples from lecture (^ means exponentiation here):");
-		System.out.println("  5^6 mod 23 = " + smallie.modexp(6));
-		System.out.println("  5^15 mod 23 = " + smallie.modexp(15));
+		System.out.println("  5^6 mod 23 = " + smallie.toThePower(6));
+		System.out.println("  5^15 mod 23 = " + smallie.toThePower(15));
 		System.out.println("Discrete logs of those:");
 		System.out.println("  discrete log of 8: " + smallie.discreteLog(8));
 		System.out.println("  discrete log of 19: " + smallie.discreteLog(19));
 		//
 		// Compute 5 to a really large integer mod 23:
 		//
-		System.out.println("5^1567675554L mod 23 = " + smallie.modexp(1567675554L));
+		System.out.println("5^1567675554L mod 23 = " + smallie.toThePower(1567675554L));
 		System.out.println("Now a much larger modulus:  " + 67867967L);
 		ModExp biggie = new ModExp(5,67867967L);
-		System.out.println("5^1000232 mod 67867967L = " + biggie.modexp(1000232));
+		System.out.println("5^1000232 mod 67867967L = " + biggie.toThePower(1000232));
 		//
 		// Will take about 1/2 an hour to compute
 		//
