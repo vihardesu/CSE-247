@@ -6,14 +6,15 @@ import java.util.Map;
 
 public class ModExp {
 	
-	private long z, p;
-	private long[] h;
+	private long z, p;  // base and modulus
+	private long[] h;   // base raised to powers 0...9
 	
 	private Map<Long,Long> discreteLog;
 	
 	/**
 	 * Convenient to create an instance with base z and modulus p if you
-	 *    are wanting to raise z to various powers mod p
+	 *    are wanting to raise z to various powers mod p.
+	 *    
 	 * @param z the base
 	 * @param p the modulus
 	 */
