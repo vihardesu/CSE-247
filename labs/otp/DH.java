@@ -1,53 +1,37 @@
 package otp;
 
-import java.util.Random;
-
-import modexp.ModExp;
+import otp.utils.MExp;
 
 public class DH {
 	
-	private final long privKey, base, modulus;
-	private final ModExp modexp;
+	private final long privKey;
+	public  final long base, modulus;
+	private final MExp modexp;
 	
-	public DH(long privKey, long base, long modulus) {
+	public DH(long base, long privKey, long modulus) {
 		this.privKey = privKey;
-		this.base    = base;
 		this.modulus = modulus;
-		this.modexp  = new ModExp(base, modulus);
+		this.base    = base;
+		this.modexp  = new MExp(base, modulus);
 	}
 	
-	public DH() {
-		this(genRandLong(1567675554L), 5, 1567675554L);
-	}
-	
+	/**
+	 * Compute the public key for the contained private key.
+	 * As shown in lecture this is base to the privKey power mod modulus
+	 * @return
+	 */
 	public long getPubKey() {
 		return modexp.toThePower(this.privKey);
 	}
 	
+	/**
+	 * Compute Diffie--Hellman agreement:  raise the other agent's public key
+	 *   to this private key power, mod the common modulus.
+	 * @param otherPubKey
+	 * @return
+	 */
 	public long getAgreedNum(long otherPubKey) {
-		return ModExp.gToTheXModP(otherPubKey, this.privKey, this.modulus);
+		return MExp.gToTheXModP(otherPubKey, this.privKey, this.modulus);
 	}
 	
-	private static Random rand = new Random();
-	
-	private static long genRandLong(long n) {
-		long ans = rand.nextLong();
-		if (ans < 0) ans = - ans;
-		while (ans >= n) {
-			ans = ans / 10;
-		}
-		return ans;
-	}
-	
-	public static void main(String[] args) {
-		DH dh1 = new DH(); // 6, 5, 23);
-		DH dh2 = new DH(); // 15, 5, 23);
-		long pub1 = dh1.getPubKey();
-		long pub2 = dh2.getPubKey();
-		System.out.println(dh1.getPubKey());
-		System.out.println(dh2.getPubKey());
-		System.out.println(dh1.getAgreedNum(pub2));
-		System.out.println(dh2.getAgreedNum(pub1));
-	}
-
 }

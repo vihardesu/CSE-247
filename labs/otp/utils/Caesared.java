@@ -1,13 +1,13 @@
-package otp;
-
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+package otp.utils;
 
 /**
  * Carries a character along with whether it has been rotated or not
  * If it has been rotated, the character is the rotated version, not the original.
  * If it has not been rotated, the character is the original character.
+ * 
+ * This class only rotates characters between 'a' and 'z'.  All other characters
+ *   are not rotated.  This lets us see punctuation and spacing clearly 
+ *   in both the cleartext and the corresponding encrypted strings.
  * @author roncytron
  *
  */
@@ -68,39 +68,4 @@ public class Caesared {
 		}
 	}
 
-	/**
-	 * Demonstrate this class
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		//
-		// choose a random rotation amount
-		//
-		int rot = new Random().nextInt(100000);
-		System.out.println("Rotation value: " + rot);
-		//
-		// Simple input string
-		//
-		String s = "This is a string with at least 10 characters in it but not 247.";
-		List<Caesared> list = new LinkedList<Caesared>();
-
-		// Add each rotated characer to a list
-
-		String r = "";
-		for (char c : s.toCharArray()) {
-			Caesared cs = gen(c,rot);
-			r = r + cs;
-			list.add(cs);
-		}
-		System.out.println("Rotated:   " + r);
-
-		//
-		// Now unrotate and show the result
-		//
-		String ur = "";
-		for (Caesared cs : list) {
-			ur = ur + cs.unRotate(rot);
-		}
-		System.out.println("Unrotated: " + ur);
-	}
 }
