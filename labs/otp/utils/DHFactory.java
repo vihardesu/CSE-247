@@ -1,6 +1,6 @@
-package otp;
+package otp.utils;
 
-import otp.utils.RandomWithBoundedLong;
+import otp.DH;
 
 /**
  * Generate Diffie--Hellman results with the same base and modulus
@@ -9,6 +9,9 @@ import otp.utils.RandomWithBoundedLong;
  */
 public class DHFactory {
 	
+	//
+	// Some convenient constants
+	//
 	public static final long 
 		LARGEPRIME = 1567675554L,
 		SMALLPRIME = 23,

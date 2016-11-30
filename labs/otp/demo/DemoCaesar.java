@@ -12,15 +12,15 @@ public class DemoCaesar {
 		//
 		// choose a random rotation amount
 		//
-		int rot = new Random().nextInt(100000);
+		int rot = new Random().nextInt(26);
 		System.out.println("Rotation value: " + rot);
 		//
 		// Simple input string
 		//
 		String s = "This is a string with at least 10 characters in it but not 247.";
 		List<Caesared> list = new LinkedList<Caesared>();
-
-		// Add each rotated characer to a list
+		System.out.println("Original:  " + s);
+		// Add each rotated character to a list
 
 		String r = "";
 		for (char c : s.toCharArray()) {

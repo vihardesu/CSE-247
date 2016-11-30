@@ -1,7 +1,7 @@
 package otp.demo;
 
 import otp.DH;
-import otp.DHFactory;
+import otp.utils.DHFactory;
 import otp.utils.RandomWithBoundedLong;
 
 public class DemoDH {
@@ -22,10 +22,12 @@ public class DemoDH {
 		//
 		// Example from lecture
 		//
+		System.out.println("Example from lecture:");
 		genReport(DHFactory.BASE, DHFactory.SMALLPRIME, 6, 15);
 		//
 		// Bigger and random example
 		//
+		System.out.println("\nBigger and random example:");
 		genReport(DHFactory.BASE, DHFactory.LARGEPRIME, 
 				rand.nextLong(DHFactory.LARGEPRIME),
 				rand.nextLong(DHFactory.LARGEPRIME)

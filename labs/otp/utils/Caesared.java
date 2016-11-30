@@ -18,7 +18,7 @@ public class Caesared {
 
 	/**
 	 * Only this class can create an instance, using the static method gen.
-	 * Note that we do not remember the rotation amount, as that was imposed by
+	 * Note that we do not remember the rotation amount, as that is imposed by
 	 *   cryptography.
 	 * @param rotated was this character rotated?
 	 * @param c if rotated, the value of the rotated character; otherwise the original character
