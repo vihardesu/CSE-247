@@ -1,22 +1,26 @@
 package studio12;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
 import org.junit.Test;
 
-import otp.utils.Caesared;
+import dh.utils.Caesared;
 
 public class TextBreakCaesar {
 
 	private static String preamble = "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.";
 	private Random rand = new Random();
 
+	/**
+	 * Generates a scrambled version of our Constitution's preamble.
+	 * Words are left intact, but their order is permuted.
+	 * @return
+	 */
 	private static String scramble() {
 		String[] words = preamble.split("[ ]");
 		List<String> shuffled = Arrays.asList(words);
