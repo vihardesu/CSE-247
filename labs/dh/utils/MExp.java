@@ -1,16 +1,15 @@
-package modexp;
+package dh.utils;
 
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-public class ModExp {
+/**
+ * Like the ModExp used in lecture but without discrete log
+ * @author roncytron
+ *
+ */
+public class MExp {
 	
 	private long z, p;  // base and modulus
 	private long[] h;   // base raised to powers 0...9
-	
-	private Map<Long,Long> discreteLog;
-	
+		
 	/**
 	 * Convenient to create an instance with base z and modulus p if you
 	 *    are wanting to raise z to various powers mod p.
@@ -18,8 +17,7 @@ public class ModExp {
 	 * @param z the base
 	 * @param p the modulus
 	 */
-	public ModExp(long z, long p) {
-		this.discreteLog = null;
+	public MExp(long z, long p) {
 		this.p = p;
 		this.z = mod(z,p);
 		h = new long[10];
@@ -80,47 +78,7 @@ public class ModExp {
 	 * @return
 	 */
 	public static long gToTheXModP(long g, long x, long p) {
-		return new ModExp(g,p).toThePower(x);
-	}
-	
-	public Long discreteLog(long y) {
-		//
-		// If the reverse map is not yet computed, fill it all in
-		//
-		if (this.discreteLog == null) {
-			this.discreteLog = new HashMap<Long,Long>();
-			for (long i=0; i < this.p; ++i) {
-				long ans = toThePower(i);
-				discreteLog.put(ans, i);
-				if (i % 1000000 == 0) System.out.println(new Date().toString() + " At " + i);
-			}
-		}
-		return discreteLog.get(y);
-	}
-	
-	
-	public static void main(String[] args) {
-		ModExp smallie = new ModExp(5,23);
-		System.out.println("Examples from lecture (^ means exponentiation here):");
-		System.out.println("  5^6 mod 23 = " + smallie.toThePower(6));
-		System.out.println("  5^15 mod 23 = " + smallie.toThePower(15));
-		System.out.println("Discrete logs of those:");
-		System.out.println("  discrete log of 8: " + smallie.discreteLog(8));
-		System.out.println("  discrete log of 19: " + smallie.discreteLog(19));
-		//
-		// Compute 5 to a really large integer mod 23:
-		//
-		System.out.println("5^1567675554L mod 23 = " + smallie.toThePower(1567675554L));
-		System.out.println("Now a much larger modulus:  " + 67867967L);
-		ModExp biggie = new ModExp(5,67867967L);
-		System.out.println("5^1000232 mod 67867967L = " + biggie.toThePower(1000232));
-		//
-		// Will take about 1/2 an hour to compute
-		//
-		System.out.println(biggie.discreteLog(23));
-		
-		
-
+		return new MExp(g,p).toThePower(x);
 	}
 
 }
