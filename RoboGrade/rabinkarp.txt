@@ -1,0 +1,825 @@
+-------------------
+CSE247 Robot tester starts testing rabinkarp on 2016-12-02 15:56:27 -0600
+
+========
+Testing in checkoutlab9ontime/cse247-f16-students-vihar.desu: rabinkarp as of 2016-11-17 09:00
+========
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/roncytron/git/cse247-f16-students key vihar.desu testfilesource TestRK package rabinkarp repo checkoutlab9ontime/cse247-f16-students-vihar.desu
+     [copy] Copying 1 file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9ontime/cse247-f16-students-vihar.desu/labs/rabinkarp
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Now in: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9ontime/cse247-f16-students-vihar.desu
+Compiling the code
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/TestRK
+    [mkdir] Created dir: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9ontime/cse247-f16-students-vihar.desu/bin
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/RK
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test TestRK
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+test:
+    [junit] Running rabinkarp.TestRK
+    [junit] Testsuite: rabinkarp.TestRK
+    [junit] Looking for query 
+    [junit] Looking for query o
+    [junit] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+    [junit] Output:
+    [junit] Looking for query 
+    [junit] Looking for query o
+    [junit] 
+    [junit] Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.015 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Looking for query 
+    [junit] Looking for query o
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testExample took 0.001 sec
+    [junit] 	FAILED
+    [junit] See example on web page if this fails expected:<97> but was:<0>
+    [junit] junit.framework.AssertionFailedError: See example on web page if this fails expected:<97> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testExample(TestRK.java:18)
+    [junit] 
+    [junit] Testcase: testSameChar took 0 sec
+    [junit] 	FAILED
+    [junit] expected:<120> but was:<0>
+    [junit] junit.framework.AssertionFailedError: expected:<120> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testSameChar(TestRK.java:34)
+    [junit] 
+    [junit] Testcase: testRandom took 0 sec
+    [junit] 	FAILED
+    [junit] expected:<111> but was:<0>
+    [junit] junit.framework.AssertionFailedError: expected:<111> but was:<0>
+    [junit] 	at rabinkarp.TestRK.testRandomLength(TestRK.java:47)
+    [junit] 	at rabinkarp.TestRK.testRandom(TestRK.java:25)
+    [junit] 
+
+BUILD FAILED
+/Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml:32: Test rabinkarp.TestRK failed
+
+Total time: 0 seconds
+========
+Testing in checkoutlab9late/cse247-f16-students-vihar.desu: rabinkarp as of 2016-12-01 09:00
+========
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/roncytron/git/cse247-f16-students key vihar.desu testfilesource TestRK package rabinkarp repo checkoutlab9late/cse247-f16-students-vihar.desu
+     [copy] Copying 1 file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9late/cse247-f16-students-vihar.desu/labs/rabinkarp
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Now in: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9late/cse247-f16-students-vihar.desu
+Compiling the code
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/TestRK
+    [mkdir] Created dir: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9late/cse247-f16-students-vihar.desu/bin
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab9late/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling rabinkarp/RK
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test TestRK
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+test:
+    [junit] Running rabinkarp.TestRK
+    [junit] Testsuite: rabinkarp.TestRK
+    [junit] Looking for query 
+    [junit] Looking for query 7
+    [junit]   55: 7 Found match
+    [junit] Looking for query fd
+    [junit]   196: fd Found match
+    [junit] Looking for query duj
+    [junit]   188: duj Found match
+    [junit] Looking for query tuun
+    [junit]   40: tuun Found match
+    [junit] Looking for query kpurk
+    [junit]   432: kpurk Found match
+    [junit] Looking for query becgdc
+    [junit]   91: becgdc Found match
+    [junit] Looking for query jcjxauy
+    [junit]   143: jcjxauy Found match
+    [junit] Looking for query lo7vbepu
+    [junit]   220: lo7vbepu Found match
+    [junit] Looking for query dvgbzdsrc
+    [junit]   414: dvgbzdsrc Found match
+    [junit] Looking for query hgnytgljuf
+    [junit]   142: hgnytgljuf Found match
+    [junit] Looking for query ywwqa4uykpb
+    [junit]   320: ywwqa4uykpb Found match
+    [junit] Looking for query uosrbicaejmk
+    [junit]   92: uosrbicaejmk Found match
+    [junit] Looking for query eh7ezimgjymyj
+    [junit]   309: eh7ezimgjymyj Found match
+    [junit] Looking for query najbvrfvtsngnm
+    [junit]   154: najbvrfvtsngnm Found match
+    [junit] Looking for query h4gavzzwkmghuub
+    [junit]   207: h4gavzzwkmghuub Found match
+    [junit] Looking for query k2c2andkpc7ggwgt
+    [junit]   352: k2c2andkpc7ggwgt Found match
+    [junit] Looking for query 4pjdsvwhpttqlmmou
+    [junit]   135: 4pjdsvwhpttqlmmou Found match
+    [junit] Looking for query jon4wombziijyffg2u
+    [junit]   115: jon4wombziijyffg2u Found match
+    [junit] Looking for query gdc7qjgawbsshndocrk
+    [junit]   34: gdc7qjgawbsshndocrk Found match
+    [junit] Looking for query ffsnjkswvflystwzdvlv
+    [junit]   202: ffsnjkswvflystwzdvlv Found match
+    [junit] Looking for query 4h4aagbvskccsqaszjezy
+    [junit]   420: jrtzo4z2nbxyvpp4kqw Spurious match?
+    [junit]   420: 4h4aagbvskccsqaszjezy Found match
+    [junit] Looking for query eqekdt224cqdmwerzsg7mz
+    [junit]   193: 2eqekdt224cqdmwerzsg7m Spurious match?
+    [junit]   193: eqekdt224cqdmwerzsg7mz Found match
+    [junit] Looking for query xuwscl4uvggejy7accekwav
+    [junit]   87: xuwscl4uvggejy7accekwav Found match
+    [junit] Looking for query 7jiqxykoutzjcfodw4cytj4v
+    [junit]   115: 7jiqxykoutzjcfodw4cytj4v Found match
+    [junit] Looking for query oyf7efpofbl4jhargfsxlmjtz
+    [junit]   472: oyf7efpofbl4jhargfsxlmjtz Found match
+    [junit] Looking for query htjcwfxhc7xgicrbtsmpqkikpk
+    [junit]   382: htjcwfxhc7xgicrbtsmpqkikpk Found match
+    [junit] Looking for query stsbn2pvjpdidmncy4nmipjnvnx
+    [junit]   476: stsbn2pvjpdidmncy4nmipjnvnx Found match
+    [junit] Looking for query dudotwtb2iwlqmfzffr7wp7rlcm4
+    [junit]   416: dudotwtb2iwlqmfzffr7wp7rlcm4 Found match
+    [junit] Looking for query 4vz42wpqwpi7pptlc7lcrhgnd2ysy
+    [junit]   23: 4vz42wpqwpi7pptlc7lcrhgnd2ysy Found match
+    [junit] Looking for query 4ybd7te7xfohokmjtuadcumqahdkcw
+    [junit]   242: 4ybd7te7xfohokmjtuadcumqahdkcw Found match
+    [junit] Looking for query gzwskgoxfl7shswpurynov4zl7vimmd
+    [junit]   411: gzwskgoxfl7shswpurynov4zl7vimmd Found match
+    [junit] Looking for query hhga2wzhghjqwjc4qqiykjg7gwiwahkm
+    [junit]   70: hhga2wzhghjqwjc4qqiykjg7gwiwahkm Found match
+    [junit] Looking for query srcnerejioizu2a2ijl2yjjovsyfadvc2
+    [junit]   279: srcnerejioizu2a2ijl2yjjovsyfadvc2 Found match
+    [junit] Looking for query qxoewn7eohohxrqvvw2fm7jfsbgff7atgi
+    [junit]   257: qxoewn7eohohxrqvvw2fm7jfsbgff7atgi Found match
+    [junit] Looking for query 4mgyzmwtmrsa24n4igppyjw22bjudagkzk4
+    [junit]   156: 4mgyzmwtmrsa24n4igppyjw22bjudagkzk4 Found match
+    [junit] Looking for query f2dweh2jjrtwpoovhrvkcvubvqqvycsoiwie
+    [junit]   108: f2dweh2jjrtwpoovhrvkcvubvqqvycsoiwie Found match
+    [junit] Looking for query me7yialtj4rtm7nptr7rbawizploujeyisfsm
+    [junit]   41: me7yialtj4rtm7nptr7rbawizploujeyisfsm Found match
+    [junit]   41: wizploujeyisfsmsvhigvlghqentm4abecfkg Spurious match?
+    [junit] Looking for query potehigwv7tcboysx22szeswnzvlrxlochxoif
+    [junit]   32: potehigwv7tcboysx22szeswnzvlrxlochxoif Found match
+    [junit] Looking for query kldqece2gydrhof4rha7txpzxqazncgajcrauyh
+    [junit]   419: kldqece2gydrhof4rha7txpzxqazncgajcrauyh Found match
+    [junit] Looking for query rpgaubx4zqeriwlu72cob7ylb2zfbujnt7jcbftr
+    [junit]   59: rpgaubx4zqeriwlu72cob7ylb2zfbujnt7jcbftr Found match
+    [junit]   59: lu72cob7ylb2zfbujnt7jcbftrxwgdvxtvcxjlmc Spurious match?
+    [junit] Looking for query pcpaav2fwkd2x7jdeoeq2vrcmhaxb7fyidlkcwrzh
+    [junit]   268: pcpaav2fwkd2x7jdeoeq2vrcmhaxb7fyidlkcwrzh Found match
+    [junit] Looking for query z7gtutht7g2dfbp4bmlck7cy4ygln7t2whxbua4iap
+    [junit]   6: jm7pju4alszctozbiqmoomzhagpgxoz7gtutht7g2d Spurious match?
+    [junit]   6: z7gtutht7g2dfbp4bmlck7cy4ygln7t2whxbua4iap Found match
+    [junit] Looking for query cjbseizznyqyekqzlidhxyxsxtqk2np4tgcwbii47my
+    [junit]   139: orapezapfseqehgsthzmimpoaj4sn2bjs7zbcjbseiz Spurious match?
+    [junit]   139: cjbseizznyqyekqzlidhxyxsxtqk2np4tgcwbii47my Found match
+    [junit] Looking for query xvkcjuyzzvduqi4ngd7cm4nmxhhnd2hyivusmrwkp7cm
+    [junit]   198: xvkcjuyzzvduqi4ngd7cm4nmxhhnd2hyivusmrwkp7cm Found match
+    [junit] Looking for query rwoikqvzjax4qogjlyezkwvbywlgzkevofkjwvnwfjxre
+    [junit]   47: vdm4a4siudczwjjhx Spurious match?
+    [junit]   47: rwoikqvzjax4qogjlyezkwvbywlgzkevofkjwvnwfjxre Found match
+    [junit] Looking for query qgwjpstfiliwgwxl42ahcpwp7tx7nvjayucvyfawibia2l
+    [junit]   414: qgwjpstfiliwgwxl42ahcpwp7tx7nvjayucvyfawibia2l Found match
+    [junit] Looking for query bwnwxup2fvcuruc4cmphkponjykr2mcjk7mduv2bgi4f72f
+    [junit]   439: bwnwxup2fvcuruc4cmphkponjykr2mcjk7mduv2bgi4f72f Found match
+    [junit]   439: hkponjykr2mcjk7mduv2bgi4f72f2obizdauo2jduooirdw Spurious match?
+    [junit] Looking for query dhhrd2xyqatukitsdjlwngb2unoduvuoyzngpceuhaha2bym
+    [junit]   355: dhhrd2xyqatukitsdjlwngb2unoduvuoyzngpceuhaha2bym Found match
+    [junit] Looking for query lcar4a2zb4hwhzggihxxugtdx7ysysheosacjmcvmlix2fbzb
+    [junit]   44: mleqx Spurious match?
+    [junit]   44: lcar4a2zb4hwhzggihxxugtdx7ysysheosacjmcvmlix2fbzb Found match
+    [junit] Looking for query 4t4fsgldxfbxjurgdfu22osxc7mtojyggzaozwcecotpntflpe
+    [junit]   181: 4t4fsgldxfbxjurgdfu22osxc7mtojyggzaozwcecotpntflpe Found match
+    [junit] Looking for query qpnorondfwqmmmbdsuxrjjwnymwxnfz7toqfslmmcf2j4y7sypt
+    [junit]   153: qhklrhbc7 Spurious match?
+    [junit]   153: qpnorondfwqmmmbdsuxrjjwnymwxnfz7toqfslmmcf2j4y7sypt Found match
+    [junit] Looking for query nvvv4ib7iewkaxgkfpyoafy7irhp42ynqevjby7yzgrrtyycixg7
+    [junit]   103: nvvv4ib7iewkaxgkfpyoafy7irhp42ynqevjby7yzgrrtyycixg7 Found match
+    [junit] Looking for query edo2duusel2va7mycmwrdwyj7vjoexkwnyixjulssdxnrjeleinym
+    [junit]   391: wh7ualpcpb2l2rdgwxo7oiwe4tyi2pm Spurious match?
+    [junit]   391: edo2duusel2va7mycmwrdwyj7vjoexkwnyixjulssdxnrjeleinym Found match
+    [junit] Looking for query hcxnhr72khzrr4sk7gfbsdwuqfkkmjz2zo7obvllne42aphddvxpnf
+    [junit]   331: hcxnhr72khzrr4sk7gfbsdwuqfkkmjz2zo7obvllne42aphddvxpnf Found match
+    [junit] Looking for query o2mrmlx7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlic
+    [junit]   75: o2mrmlx7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlic Found match
+    [junit]   75: 7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlicusrubsl Spurious match?
+    [junit] Looking for query vtvyorh7pgricaywxvehnfupsepdkdxxtgzqittfmuwsapvrhl72ttx4
+    [junit]   353: vtvyorh7pgricaywxvehnfupsepdkdxxtgzqittfmuwsapvrhl72ttx4 Found match
+    [junit] Looking for query iinlixpkss2h2lq7wepuppijykbc72vmoiy724mmnk4qfqfru4xivt44p
+    [junit]   346: iinlixpkss2h2lq7wepuppijykbc72vmoiy724mmnk4qfqfru4xivt44p Found match
+    [junit] Looking for query wwqazedwbiojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4q
+    [junit]   353: wwqazedwbiojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4q Found match
+    [junit]   353: iojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4qvdawlaazg Spurious match?
+    [junit] Looking for query xkrm2y4jpweipczszbq7cj4oaccnkcfjrv2fol4l2qgis7l7ausuwmgrbei
+    [junit]   442: xkrm2y4jpweipczszbq7cj4oaccnkcfjrv2fol4l2qgis7l7ausuwmgrbei Found match
+    [junit] Looking for query pribxldqfgvkpxflbueadgvzyfxqjzv2fbcgmbvsyykohoba2cazhge4wdi4
+    [junit]   505: pribxldqfgvkpxflbueadgvzyfxqjzv2fbcgmbvsyykohoba2cazhge4wdi4 Found match
+    [junit] Looking for query 2ftuif2vi7lybxdm4qoolewegenyaiyf2uenvef7vzovdnqoweqjiqht2f2or
+    [junit]   229: 2ftuif2vi7lybxdm4qoolewegenyaiyf2uenvef7vzovdnqoweqjiqht2f2or Found match
+    [junit] Looking for query ylywpuxtn4vhyjikpajir4miygcx7lot4qt2ieagmzyapjgzrd4lwzklt2t44d
+    [junit]   303: ylywpuxtn4vhyjikpajir4miygcx7lot4qt2ieagmzyapjgzrd4lwzklt2t44d Found match
+    [junit] Looking for query bsq7vysfpnnuentv2msnb4lqrldytqykzwmnhmr4peovxd2qqfljlpmnz74cpyu
+    [junit]   32: bsq7vysfpnnuentv2msnb4lqrldytqykzwmnhmr4peovxd2qqfljlpmnz74cpyu Found match
+    [junit] Looking for query wcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyunrekjiszmm
+    [junit]   137: gqzt4iyblwcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyun Spurious match?
+    [junit]   137: wcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyunrekjiszmm Found match
+    [junit] Looking for query v7fupxlgldmses4fy2lzqob7ca7kpm7x4aqcjmwt2mlgxqwnyfxgaqtfuvmmxhsia
+    [junit]   295: gjg4mvieaauj7kvk7n Spurious match?
+    [junit]   295: v7fupxlgldmses4fy2lzqob7ca7kpm7x4aqcjmwt2mlgxqwnyfxgaqtfuvmmxhsia Found match
+    [junit] Looking for query ycvfrfzsgz2szwayyllosaehaximigxbfrvw4qxho4ggowwbr7fscpaqwmjoircitl
+    [junit]   242: ycvfrfzsgz2szwayyllosaehaximigxbfrvw4qxho4ggowwbr7fscpaqwmjoircitl Found match
+    [junit] Looking for query hfmd2fkyydpkue7aysfqhw2iim4jdozn4pillqqbjpele4v4ybuzhoaacwngghjh2or
+    [junit]   497: pfoiy2mxmszgkeywf7mwquszbkxevwncgbuixigohfmjeofkvnhfmd2fkyydpkue7ay Spurious match?
+    [junit]   497: hfmd2fkyydpkue7aysfqhw2iim4jdozn4pillqqbjpele4v4ybuzhoaacwngghjh2or Found match
+    [junit] Looking for query 4ipdlb4clgyesd7rjvqitr74t7zllkwagvm7hrboedhqaokzcbphj4poutj2ny7gol7p
+    [junit]   298: qtbldmgytfrzsu2ofk7yhsgjgymhchmjnllzbzswz2vlo2vrnfu4xkphxmiyzpoz Spurious match?
+    [junit]   298: 4ipdlb4clgyesd7rjvqitr74t7zllkwagvm7hrboedhqaokzcbphj4poutj2ny7gol7p Found match
+    [junit] Looking for query keugth7zjqjsmesgjjma4qxdme7vtxfvsxwor4akaauyor77jnqajadntnmb4yxpqsiew
+    [junit]   141: iyhnz7lmteullsfakquxl4mmxiykdvaapmydp Spurious match?
+    [junit]   141: keugth7zjqjsmesgjjma4qxdme7vtxfvsxwor4akaauyor77jnqajadntnmb4yxpqsiew Found match
+    [junit] Looking for query qcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24uywxrnhbm7el
+    [junit]   436: drqzjlcmunqvnamgivh7jcajrjlkmmissxzph2lwpz7cy4igjko47a7mszjrvtiiqcrp4h Spurious match?
+    [junit]   436: a7mszjrvtiiqcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24u Spurious match?
+    [junit]   436: qcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24uywxrnhbm7el Found match
+    [junit] Looking for query jyxdhchitfnzu7qkbshtojto4msrfswqrajcn2jkyjhbhmoha2fsflsavdfazbexnephtnu
+    [junit]   401: 4lzazxmgofdux24wyawkmtk4quz2idmaua7ncjcztqqxyvvfkuiorgosfrufmkvqtgkg Spurious match?
+    [junit]   401: jyxdhchitfnzu7qkbshtojto4msrfswqrajcn2jkyjhbhmoha2fsflsavdfazbexnephtnu Found match
+    [junit] Looking for query tab2fqdofjylqmkprpcnny42n7p7la4uyipnehehrolojo2ymhblfeqduxajadc2nrwwvt7j
+    [junit]   251: cmuet4fywx4nwbteltdym2qfe27tnioy7lilstrtab2fqdofjylqmkprpcnny42n7p7la4uy Spurious match?
+    [junit]   251: tab2fqdofjylqmkprpcnny42n7p7la4uyipnehehrolojo2ymhblfeqduxajadc2nrwwvt7j Found match
+    [junit] Looking for query silugt4nqwptkystekzdked4lafzpjpqtuyxjotldgauwudwxsvzsuwa7idohmrx2qgfatwbe
+    [junit]   482: silugt4nqwptkystekzdked4lafzpjpqtuyxjotldgauwudwxsvzsuwa7idohmrx2qgfatwbe Found match
+    [junit] Looking for query xlvfcdpxvdwybwcrzpemgjmafhp7cbxiuttrsvpgmtpnvmqh7keqnyajecriyhfsrbnfeoigxv
+    [junit]   250: xlvfcdpxvdwybwcrzpemgjmafhp7cbxiuttrsvpgmtpnvmqh7keqnyajecriyhfsrbnfeoigxv Found match
+    [junit] Looking for query zqnkwjlzfuzfqwbfevadythb4fpl2obyaoyiaj47oxlyws2fp4rsrwq4osxi72epkizhsm7zajk
+    [junit]   240: zqnkwjlzfuzfqwbfevadythb4fpl2obyaoyiaj47oxlyws2fp4rsrwq4osxi72epkizhsm7zajk Found match
+    [junit] Looking for query bpgxlbujh2gq7lcoadxuobcfy7gz77xhzlm7jxpl2mnpaplqahqjzygm7d4zcghy4lorbsnolqiw
+    [junit]   75: bpgxlbujh2gq7lcoadxuobcfy7gz77xhzlm7jxpl2mnpaplqahqjzygm7d4zcghy4lorbsnolqiw Found match
+    [junit] Looking for query jnewdo7222op77vnww2bapwepfmbpjlasjqxtlbcgp4kjz2gesonuoavipnhjotlqhfbkxfpsirxz
+    [junit]   485: jnewdo7222op77vnww2bapwepfmbpjlasjqxtlbcgp4kjz2gesonuoavipnhjotlqhfbkxfpsirxz Found match
+    [junit]   485: rxzi7hgtzgbkwkxrtaydopgnnc77irfzxmaqjqwsolzxtjo2w4ft2vselcxhufuluvhhgigweu4lp Spurious match?
+    [junit] Looking for query ygbecj7pya2iqwatuvhokvjuigio4lob7djaxzxbpumxiehekmcdnfislqzmtgpie2tvqqky4cerc4
+    [junit]   47: ygbecj7pya2iqwatuvhokvjuigio4lob7djaxzxbpumxiehekmcdnfislqzmtgpie2tvqqky4cerc4 Found match
+    [junit] Looking for query coecukas2mshb2kuiwxfwwdspdrn4zsslvs7hyc44h2txeyfbbgwotozmejrywwqwrpnuvqptoaqgma
+    [junit]   232: coecukas2mshb2kuiwxfwwdspdrn4zsslvs7hyc44h2txeyfbbgwotozmejrywwqwrpnuvqptoaqgma Found match
+    [junit] Looking for query odlxionibhgspsienxvexz2vdq2dmkwoawemao4qjzr2pbslsvbzpmmngkbrmb7joqqxfiiytjosuc2v
+    [junit]   162: dgsmz4alimqasqkgbtaakxbkwqs4bzn7rhl4zcxmtsfrswetnrarfqb Spurious match?
+    [junit]   162: odlxionibhgspsienxvexz2vdq2dmkwoawemao4qjzr2pbslsvbzpmmngkbrmb7joqqxfiiytjosuc2v Found match
+    [junit] Looking for query gzrfru7hwlmwmrelf4aubgcocqrodbxhan4v7yzkob4goqjpfeygj7c7riupfkoh2kvvrfrxjxviaiq7v
+    [junit]   425: gzrfru7hwlmwmrelf4aubgcocqrodbxhan4v7yzkob4goqjpfeygj7c7riupfkoh2kvvrfrxjxviaiq7v Found match
+    [junit] Looking for query fmoi277ubmofqgsfcalasob2zf2h7bnyqnfcsgxesxqznmcywqykjet4pdrrsk7pcnjbqscebcll7nibix
+    [junit]   102: fmoi277ubmofqgsfcalasob2zf2h7bnyqnfcsgxesxqznmcywqykjet4pdrrsk7pcnjbqscebcll7nibix Found match
+    [junit] Looking for query ql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mvjd
+    [junit]   267: ifql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mv Spurious match?
+    [junit]   267: ql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mvjd Found match
+    [junit] Looking for query v2xopduu7kbtzwminsohqahozqsodbldzmptmtavzympy7piaumywqsqutblsycqahpsg24zf27n7daulejv
+    [junit]   322: v2xopduu7kbtzwminsohqahozqsodbldzmptmtavzympy7piaumywqsqutblsycqahpsg24zf27n7daulejv Found match
+    [junit] Looking for query hgpitw7n2vbnt7ypvgcld4z27h4ssvasth2pl2rc2qgikvykfr44qsvfoctprggajzelbfn2j2zg2jha2cfoi
+    [junit]   287: hgpitw7n2vbnt7ypvgcld4z27h4ssvasth2pl2rc2qgikvykfr44qsvfoctprggajzelbfn2j2zg2jha2cfoi Found match
+    [junit]   287: 2jha2cfoiao47tbk2ciusvqxxqai4pqfilsyqq27psfmte7ljo4enxldgzbsjtpev4xczw2jke4luegnncmwl Spurious match?
+    [junit] Looking for query mg4fsdzf4rt2nzbziqjb4qsro7i7fxa7pg4bzkq7rzczwiaj7vkirtdptglycyyfochgbmpbxfnjpquvitkzjs
+    [junit]   194: dz4suydtxktijwiy2cjywaukp477neoxkyznvnrk Spurious match?
+    [junit]   194: mg4fsdzf4rt2nzbziqjb4qsro7i7fxa7pg4bzkq7rzczwiaj7vkirtdptglycyyfochgbmpbxfnjpquvitkzjs Found match
+    [junit] Looking for query pdaybxfia7pzkcurcfandpebp2sbxzyx2pnkvagsnn7hjmyrrxwczsk2yhbfu2vjhcnbdiz727xrukd4o2itenj
+    [junit]   457: pdaybxfia7pzkcurcfandpebp2sbxzyx2pnkvagsnn7hjmyrrxwczsk2yhbfu2vjhcnbdiz727xrukd4o2itenj Found match
+    [junit] Looking for query hs7jwopnwzezq7ys7bvhocmhrvwktlzvahjybrf7nqodqmomcyasl4hepcsr7cdmr7pc7ullxd72qowwgx2zfgnj
+    [junit]   275: mvsymiqbuot4svd7n4t2htotbkvt2owl7ojopfyvg77if244ukw7izlqugtarbinf4vqkfqbcunnlwoek Spurious match?
+    [junit]   275: hs7jwopnwzezq7ys7bvhocmhrvwktlzvahjybrf7nqodqmomcyasl4hepcsr7cdmr7pc7ullxd72qowwgx2zfgnj Found match
+    [junit] Looking for query jzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j2ixqc7r7vaxmrap4i7qvaiflyblxwsiemuzbgn
+    [junit]   131: ej2g74mcfcpyffxkkcbuxkm2msve7ip2nm2bzmjzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j Spurious match?
+    [junit]   131: jzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j2ixqc7r7vaxmrap4i7qvaiflyblxwsiemuzbgn Found match
+    [junit] Looking for query j2472jjisgasufkh2b77qxassgl4rf24bvmobbzprgkjhbi2laeamze4yritlla4fdwlpkprqfcbqovlznbfokeznz
+    [junit]   299: j2472jjisgasufkh2b77qxassgl4rf24bvmobbzprgkjhbi2laeamze4yritlla4fdwlpkprqfcbqovlznbfokeznz Found match
+    [junit] Looking for query wqfd7jttuehwrraoikbnozohvyugayjurjgfqykew2ldoxrmvonbjjqegkrzmnur7lcgvzkmknoycsamkhmdwmfffkf
+    [junit]   37: wqfd7jttuehwrraoikbnozohvyugayjurjgfqykew2ldoxrmvonbjjqegkrzmnur7lcgvzkmknoycsamkhmdwmfffkf Found match
+    [junit] Looking for query vpbdjjhgyucwzql4bmfquqismtu27iolim2wat7zazymxpjdzetq4msxlvmdmhrjcmebqlzdzkfktyxoxmxerkfowyo2
+    [junit]   193: vpbdjjhgyucwzql4bmfquqismtu27iolim2wat7zazymxpjdzetq4msxlvmdmhrjcmebqlzdzkfktyxoxmxerkfowyo2 Found match
+    [junit]   193: mdmhrjcmebqlzdzkfktyxoxmxerkfowyo2uhyet7xvj2bxlsb4fq7hzynscffkwn4dyijesne7ydepcj2dgromaavvvy Spurious match?
+    [junit] Looking for query o2p7ipvpucs4vvnlb2vukk4v7whfqesluhrbze7xhgczdhtcdceeoclwx4imwb7eqrs7tsrgltnevanozkkekyzqzidkm
+    [junit]   210: o2p7ipvpucs4vvnlb2vukk4v7whfqesluhrbze7xhgczdhtcdceeoclwx4imwb7eqrs7tsrgltnevanozkkekyzqzidkm Found match
+    [junit] Looking for query bhh4klkoopbdrosdu2nt4vqoytypldmznbqbbmqbkylrxvzdkgptlnxhtajstblit4ybdvsmrgtxgldpgcibagcvmnekog
+    [junit]   431: lhokjweqs77lndywomwea4g4q4d27rkyjegsc7tu2awl4xrkpvzozkymapngl Spurious match?
+    [junit]   431: lhokjweqs77lndywomwea4g4q4d27rkyjegsc7tu2awl4xrkpvzozkymapnglycx Spurious match?
+    [junit]   431: bhh4klkoopbdrosdu2nt4vqoytypldmznbqbbmqbkylrxvzdkgptlnxhtajstblit4ybdvsmrgtxgldpgcibagcvmnekog Found match
+    [junit] Looking for query 7pzeezyeqe2ewtqndmzkkdxquqrn24ctzuec2ubiyhfbdsimkjztscjcafl7lxcxhivuvjul22cv4dtqdqljwpv7yaxna4d
+    [junit]   359: 7pzeezyeqe2ewtqndmzkkdxquqrn24ctzuec2ubiyhfbdsimkjztscjcafl7lxcxhivuvjul22cv4dtqdqljwpv7yaxna4d Found match
+    [junit] Looking for query eepfyh7d2fbgtfalbgtqsbv44jx7xiijpzhsqbnlmsyqdmurjuozyonwtzpt2mhfsizdt2gpg4xmgwtto2ywfjb7gkuia4fd
+    [junit]   221: eepfyh7d2fbgtfalbgtqsbv44jx7xiijpzhsqbnlmsyqdmurjuozyonwtzpt2mhfsizdt2gpg4xmgwtto2ywfjb7gkuia4fd Found match
+    [junit] Looking for query aaibh4rejmhmevzngh7gyxkzpb2wfpfvb2l4bspsvfzaioetjifwfrzbnrpgxvidavd2vrexdqafu7ffv4aykentceh77lqbe
+    [junit]   179: aaibh4rejmhmevzngh7gyxkzpb2wfpfvb2l4bspsvfzaioetjifwfrzbnrpgxvidavd2vrexdqafu7ffv4aykentceh77lqbe Found match
+    [junit] Looking for query ur4pemprzrhyubr7wbnndkeemosvidzclpdxskwuf7ush2plvgobd27bmbz4cwadqgohrhdsnelbrukybpw4rdwrvp7txxcf2g
+    [junit]   76: ajoljczjuupjcaittjk2xeeqd47uuwq2mhzp74omauumpyn7 Spurious match?
+    [junit]   76: ur4pemprzrhyubr7wbnndkeemosvidzclpdxskwuf7ush2plvgobd27bmbz4cwadqgohrhdsnelbrukybpw4rdwrvp7txxcf2g Found match
+    [junit] Looking for query 42emrx4yerz2zvjrf2updouqzspdgzxzhqgfzydv2totv2zgqnocurb2ay4milusiim27qytqcvdbqzxtt7tihvyqlc7txacism
+    [junit]   16: 42emrx4yerz2zvjrf2updouqzspdgzxzhqgfzydv2totv2zgqnocurb2ay4milusiim27qytqcvdbqzxtt7tihvyqlc7txacism Found match
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+    [junit] Output:
+    [junit] Looking for query 
+    [junit] Looking for query 7
+    [junit]   55: 7 Found match
+    [junit] Looking for query fd
+    [junit]   196: fd Found match
+    [junit] Looking for query duj
+    [junit]   188: duj Found match
+    [junit] Looking for query tuun
+    [junit]   40: tuun Found match
+    [junit] Looking for query kpurk
+    [junit]   432: kpurk Found match
+    [junit] Looking for query becgdc
+    [junit]   91: becgdc Found match
+    [junit] Looking for query jcjxauy
+    [junit]   143: jcjxauy Found match
+    [junit] Looking for query lo7vbepu
+    [junit]   220: lo7vbepu Found match
+    [junit] Looking for query dvgbzdsrc
+    [junit]   414: dvgbzdsrc Found match
+    [junit] Looking for query hgnytgljuf
+    [junit]   142: hgnytgljuf Found match
+    [junit] Looking for query ywwqa4uykpb
+    [junit]   320: ywwqa4uykpb Found match
+    [junit] Looking for query uosrbicaejmk
+    [junit]   92: uosrbicaejmk Found match
+    [junit] Looking for query eh7ezimgjymyj
+    [junit]   309: eh7ezimgjymyj Found match
+    [junit] Looking for query najbvrfvtsngnm
+    [junit]   154: najbvrfvtsngnm Found match
+    [junit] Looking for query h4gavzzwkmghuub
+    [junit]   207: h4gavzzwkmghuub Found match
+    [junit] Looking for query k2c2andkpc7ggwgt
+    [junit]   352: k2c2andkpc7ggwgt Found match
+    [junit] Looking for query 4pjdsvwhpttqlmmou
+    [junit]   135: 4pjdsvwhpttqlmmou Found match
+    [junit] Looking for query jon4wombziijyffg2u
+    [junit]   115: jon4wombziijyffg2u Found match
+    [junit] Looking for query gdc7qjgawbsshndocrk
+    [junit]   34: gdc7qjgawbsshndocrk Found match
+    [junit] Looking for query ffsnjkswvflystwzdvlv
+    [junit]   202: ffsnjkswvflystwzdvlv Found match
+    [junit] Looking for query 4h4aagbvskccsqaszjezy
+    [junit]   420: jrtzo4z2nbxyvpp4kqw Spurious match?
+    [junit]   420: 4h4aagbvskccsqaszjezy Found match
+    [junit] Looking for query eqekdt224cqdmwerzsg7mz
+    [junit]   193: 2eqekdt224cqdmwerzsg7m Spurious match?
+    [junit]   193: eqekdt224cqdmwerzsg7mz Found match
+    [junit] Looking for query xuwscl4uvggejy7accekwav
+    [junit]   87: xuwscl4uvggejy7accekwav Found match
+    [junit] Looking for query 7jiqxykoutzjcfodw4cytj4v
+    [junit]   115: 7jiqxykoutzjcfodw4cytj4v Found match
+    [junit] Looking for query oyf7efpofbl4jhargfsxlmjtz
+    [junit]   472: oyf7efpofbl4jhargfsxlmjtz Found match
+    [junit] Looking for query htjcwfxhc7xgicrbtsmpqkikpk
+    [junit]   382: htjcwfxhc7xgicrbtsmpqkikpk Found match
+    [junit] Looking for query stsbn2pvjpdidmncy4nmipjnvnx
+    [junit]   476: stsbn2pvjpdidmncy4nmipjnvnx Found match
+    [junit] Looking for query dudotwtb2iwlqmfzffr7wp7rlcm4
+    [junit]   416: dudotwtb2iwlqmfzffr7wp7rlcm4 Found match
+    [junit] Looking for query 4vz42wpqwpi7pptlc7lcrhgnd2ysy
+    [junit]   23: 4vz42wpqwpi7pptlc7lcrhgnd2ysy Found match
+    [junit] Looking for query 4ybd7te7xfohokmjtuadcumqahdkcw
+    [junit]   242: 4ybd7te7xfohokmjtuadcumqahdkcw Found match
+    [junit] Looking for query gzwskgoxfl7shswpurynov4zl7vimmd
+    [junit]   411: gzwskgoxfl7shswpurynov4zl7vimmd Found match
+    [junit] Looking for query hhga2wzhghjqwjc4qqiykjg7gwiwahkm
+    [junit]   70: hhga2wzhghjqwjc4qqiykjg7gwiwahkm Found match
+    [junit] Looking for query srcnerejioizu2a2ijl2yjjovsyfadvc2
+    [junit]   279: srcnerejioizu2a2ijl2yjjovsyfadvc2 Found match
+    [junit] Looking for query qxoewn7eohohxrqvvw2fm7jfsbgff7atgi
+    [junit]   257: qxoewn7eohohxrqvvw2fm7jfsbgff7atgi Found match
+    [junit] Looking for query 4mgyzmwtmrsa24n4igppyjw22bjudagkzk4
+    [junit]   156: 4mgyzmwtmrsa24n4igppyjw22bjudagkzk4 Found match
+    [junit] Looking for query f2dweh2jjrtwpoovhrvkcvubvqqvycsoiwie
+    [junit]   108: f2dweh2jjrtwpoovhrvkcvubvqqvycsoiwie Found match
+    [junit] Looking for query me7yialtj4rtm7nptr7rbawizploujeyisfsm
+    [junit]   41: me7yialtj4rtm7nptr7rbawizploujeyisfsm Found match
+    [junit]   41: wizploujeyisfsmsvhigvlghqentm4abecfkg Spurious match?
+    [junit] Looking for query potehigwv7tcboysx22szeswnzvlrxlochxoif
+    [junit]   32: potehigwv7tcboysx22szeswnzvlrxlochxoif Found match
+    [junit] Looking for query kldqece2gydrhof4rha7txpzxqazncgajcrauyh
+    [junit]   419: kldqece2gydrhof4rha7txpzxqazncgajcrauyh Found match
+    [junit] Looking for query rpgaubx4zqeriwlu72cob7ylb2zfbujnt7jcbftr
+    [junit]   59: rpgaubx4zqeriwlu72cob7ylb2zfbujnt7jcbftr Found match
+    [junit]   59: lu72cob7ylb2zfbujnt7jcbftrxwgdvxtvcxjlmc Spurious match?
+    [junit] Looking for query pcpaav2fwkd2x7jdeoeq2vrcmhaxb7fyidlkcwrzh
+    [junit]   268: pcpaav2fwkd2x7jdeoeq2vrcmhaxb7fyidlkcwrzh Found match
+    [junit] Looking for query z7gtutht7g2dfbp4bmlck7cy4ygln7t2whxbua4iap
+    [junit]   6: jm7pju4alszctozbiqmoomzhagpgxoz7gtutht7g2d Spurious match?
+    [junit]   6: z7gtutht7g2dfbp4bmlck7cy4ygln7t2whxbua4iap Found match
+    [junit] Looking for query cjbseizznyqyekqzlidhxyxsxtqk2np4tgcwbii47my
+    [junit]   139: orapezapfseqehgsthzmimpoaj4sn2bjs7zbcjbseiz Spurious match?
+    [junit]   139: cjbseizznyqyekqzlidhxyxsxtqk2np4tgcwbii47my Found match
+    [junit] Looking for query xvkcjuyzzvduqi4ngd7cm4nmxhhnd2hyivusmrwkp7cm
+    [junit]   198: xvkcjuyzzvduqi4ngd7cm4nmxhhnd2hyivusmrwkp7cm Found match
+    [junit] Looking for query rwoikqvzjax4qogjlyezkwvbywlgzkevofkjwvnwfjxre
+    [junit]   47: vdm4a4siudczwjjhx Spurious match?
+    [junit]   47: rwoikqvzjax4qogjlyezkwvbywlgzkevofkjwvnwfjxre Found match
+    [junit] Looking for query qgwjpstfiliwgwxl42ahcpwp7tx7nvjayucvyfawibia2l
+    [junit]   414: qgwjpstfiliwgwxl42ahcpwp7tx7nvjayucvyfawibia2l Found match
+    [junit] Looking for query bwnwxup2fvcuruc4cmphkponjykr2mcjk7mduv2bgi4f72f
+    [junit]   439: bwnwxup2fvcuruc4cmphkponjykr2mcjk7mduv2bgi4f72f Found match
+    [junit]   439: hkponjykr2mcjk7mduv2bgi4f72f2obizdauo2jduooirdw Spurious match?
+    [junit] Looking for query dhhrd2xyqatukitsdjlwngb2unoduvuoyzngpceuhaha2bym
+    [junit]   355: dhhrd2xyqatukitsdjlwngb2unoduvuoyzngpceuhaha2bym Found match
+    [junit] Looking for query lcar4a2zb4hwhzggihxxugtdx7ysysheosacjmcvmlix2fbzb
+    [junit]   44: mleqx Spurious match?
+    [junit]   44: lcar4a2zb4hwhzggihxxugtdx7ysysheosacjmcvmlix2fbzb Found match
+    [junit] Looking for query 4t4fsgldxfbxjurgdfu22osxc7mtojyggzaozwcecotpntflpe
+    [junit]   181: 4t4fsgldxfbxjurgdfu22osxc7mtojyggzaozwcecotpntflpe Found match
+    [junit] Looking for query qpnorondfwqmmmbdsuxrjjwnymwxnfz7toqfslmmcf2j4y7sypt
+    [junit]   153: qhklrhbc7 Spurious match?
+    [junit]   153: qpnorondfwqmmmbdsuxrjjwnymwxnfz7toqfslmmcf2j4y7sypt Found match
+    [junit] Looking for query nvvv4ib7iewkaxgkfpyoafy7irhp42ynqevjby7yzgrrtyycixg7
+    [junit]   103: nvvv4ib7iewkaxgkfpyoafy7irhp42ynqevjby7yzgrrtyycixg7 Found match
+    [junit] Looking for query edo2duusel2va7mycmwrdwyj7vjoexkwnyixjulssdxnrjeleinym
+    [junit]   391: wh7ualpcpb2l2rdgwxo7oiwe4tyi2pm Spurious match?
+    [junit]   391: edo2duusel2va7mycmwrdwyj7vjoexkwnyixjulssdxnrjeleinym Found match
+    [junit] Looking for query hcxnhr72khzrr4sk7gfbsdwuqfkkmjz2zo7obvllne42aphddvxpnf
+    [junit]   331: hcxnhr72khzrr4sk7gfbsdwuqfkkmjz2zo7obvllne42aphddvxpnf Found match
+    [junit] Looking for query o2mrmlx7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlic
+    [junit]   75: o2mrmlx7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlic Found match
+    [junit]   75: 7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlicusrubsl Spurious match?
+    [junit] Looking for query vtvyorh7pgricaywxvehnfupsepdkdxxtgzqittfmuwsapvrhl72ttx4
+    [junit]   353: vtvyorh7pgricaywxvehnfupsepdkdxxtgzqittfmuwsapvrhl72ttx4 Found match
+    [junit] Looking for query iinlixpkss2h2lq7wepuppijykbc72vmoiy724mmnk4qfqfru4xivt44p
+    [junit]   346: iinlixpkss2h2lq7wepuppijykbc72vmoiy724mmnk4qfqfru4xivt44p Found match
+    [junit] Looking for query wwqazedwbiojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4q
+    [junit]   353: wwqazedwbiojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4q Found match
+    [junit]   353: iojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4qvdawlaazg Spurious match?
+    [junit] Looking for query xkrm2y4jpweipczszbq7cj4oaccnkcfjrv2fol4l2qgis7l7ausuwmgrbei
+    [junit]   442: xkrm2y4jpweipczszbq7cj4oaccnkcfjrv2fol4l2qgis7l7ausuwmgrbei Found match
+    [junit] Looking for query pribxldqfgvkpxflbueadgvzyfxqjzv2fbcgmbvsyykohoba2cazhge4wdi4
+    [junit]   505: pribxldqfgvkpxflbueadgvzyfxqjzv2fbcgmbvsyykohoba2cazhge4wdi4 Found match
+    [junit] Looking for query 2ftuif2vi7lybxdm4qoolewegenyaiyf2uenvef7vzovdnqoweqjiqht2f2or
+    [junit]   229: 2ftuif2vi7lybxdm4qoolewegenyaiyf2uenvef7vzovdnqoweqjiqht2f2or Found match
+    [junit] Looking for query ylywpuxtn4vhyjikpajir4miygcx7lot4qt2ieagmzyapjgzrd4lwzklt2t44d
+    [junit]   303: ylywpuxtn4vhyjikpajir4miygcx7lot4qt2ieagmzyapjgzrd4lwzklt2t44d Found match
+    [junit] Looking for query bsq7vysfpnnuentv2msnb4lqrldytqykzwmnhmr4peovxd2qqfljlpmnz74cpyu
+    [junit]   32: bsq7vysfpnnuentv2msnb4lqrldytqykzwmnhmr4peovxd2qqfljlpmnz74cpyu Found match
+    [junit] Looking for query wcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyunrekjiszmm
+    [junit]   137: gqzt4iyblwcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyun Spurious match?
+    [junit]   137: wcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyunrekjiszmm Found match
+    [junit] Looking for query v7fupxlgldmses4fy2lzqob7ca7kpm7x4aqcjmwt2mlgxqwnyfxgaqtfuvmmxhsia
+    [junit]   295: gjg4mvieaauj7kvk7n Spurious match?
+    [junit]   295: v7fupxlgldmses4fy2lzqob7ca7kpm7x4aqcjmwt2mlgxqwnyfxgaqtfuvmmxhsia Found match
+    [junit] Looking for query ycvfrfzsgz2szwayyllosaehaximigxbfrvw4qxho4ggowwbr7fscpaqwmjoircitl
+    [junit]   242: ycvfrfzsgz2szwayyllosaehaximigxbfrvw4qxho4ggowwbr7fscpaqwmjoircitl Found match
+    [junit] Looking for query hfmd2fkyydpkue7aysfqhw2iim4jdozn4pillqqbjpele4v4ybuzhoaacwngghjh2or
+    [junit]   497: pfoiy2mxmszgkeywf7mwquszbkxevwncgbuixigohfmjeofkvnhfmd2fkyydpkue7ay Spurious match?
+    [junit]   497: hfmd2fkyydpkue7aysfqhw2iim4jdozn4pillqqbjpele4v4ybuzhoaacwngghjh2or Found match
+    [junit] Looking for query 4ipdlb4clgyesd7rjvqitr74t7zllkwagvm7hrboedhqaokzcbphj4poutj2ny7gol7p
+    [junit]   298: qtbldmgytfrzsu2ofk7yhsgjgymhchmjnllzbzswz2vlo2vrnfu4xkphxmiyzpoz Spurious match?
+    [junit]   298: 4ipdlb4clgyesd7rjvqitr74t7zllkwagvm7hrboedhqaokzcbphj4poutj2ny7gol7p Found match
+    [junit] Looking for query keugth7zjqjsmesgjjma4qxdme7vtxfvsxwor4akaauyor77jnqajadntnmb4yxpqsiew
+    [junit]   141: iyhnz7lmteullsfakquxl4mmxiykdvaapmydp Spurious match?
+    [junit]   141: keugth7zjqjsmesgjjma4qxdme7vtxfvsxwor4akaauyor77jnqajadntnmb4yxpqsiew Found match
+    [junit] Looking for query qcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24uywxrnhbm7el
+    [junit]   436: drqzjlcmunqvnamgivh7jcajrjlkmmissxzph2lwpz7cy4igjko47a7mszjrvtiiqcrp4h Spurious match?
+    [junit]   436: a7mszjrvtiiqcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24u Spurious match?
+    [junit]   436: qcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24uywxrnhbm7el Found match
+    [junit] Looking for query jyxdhchitfnzu7qkbshtojto4msrfswqrajcn2jkyjhbhmoha2fsflsavdfazbexnephtnu
+    [junit]   401: 4lzazxmgofdux24wyawkmtk4quz2idmaua7ncjcztqqxyvvfkuiorgosfrufmkvqtgkg Spurious match?
+    [junit]   401: jyxdhchitfnzu7qkbshtojto4msrfswqrajcn2jkyjhbhmoha2fsflsavdfazbexnephtnu Found match
+    [junit] Looking for query tab2fqdofjylqmkprpcnny42n7p7la4uyipnehehrolojo2ymhblfeqduxajadc2nrwwvt7j
+    [junit]   251: cmuet4fywx4nwbteltdym2qfe27tnioy7lilstrtab2fqdofjylqmkprpcnny42n7p7la4uy Spurious match?
+    [junit]   251: tab2fqdofjylqmkprpcnny42n7p7la4uyipnehehrolojo2ymhblfeqduxajadc2nrwwvt7j Found match
+    [junit] Looking for query silugt4nqwptkystekzdked4lafzpjpqtuyxjotldgauwudwxsvzsuwa7idohmrx2qgfatwbe
+    [junit]   482: silugt4nqwptkystekzdked4lafzpjpqtuyxjotldgauwudwxsvzsuwa7idohmrx2qgfatwbe Found match
+    [junit] Looking for query xlvfcdpxvdwybwcrzpemgjmafhp7cbxiuttrsvpgmtpnvmqh7keqnyajecriyhfsrbnfeoigxv
+    [junit]   250: xlvfcdpxvdwybwcrzpemgjmafhp7cbxiuttrsvpgmtpnvmqh7keqnyajecriyhfsrbnfeoigxv Found match
+    [junit] Looking for query zqnkwjlzfuzfqwbfevadythb4fpl2obyaoyiaj47oxlyws2fp4rsrwq4osxi72epkizhsm7zajk
+    [junit]   240: zqnkwjlzfuzfqwbfevadythb4fpl2obyaoyiaj47oxlyws2fp4rsrwq4osxi72epkizhsm7zajk Found match
+    [junit] Looking for query bpgxlbujh2gq7lcoadxuobcfy7gz77xhzlm7jxpl2mnpaplqahqjzygm7d4zcghy4lorbsnolqiw
+    [junit]   75: bpgxlbujh2gq7lcoadxuobcfy7gz77xhzlm7jxpl2mnpaplqahqjzygm7d4zcghy4lorbsnolqiw Found match
+    [junit] Looking for query jnewdo7222op77vnww2bapwepfmbpjlasjqxtlbcgp4kjz2gesonuoavipnhjotlqhfbkxfpsirxz
+    [junit]   485: jnewdo7222op77vnww2bapwepfmbpjlasjqxtlbcgp4kjz2gesonuoavipnhjotlqhfbkxfpsirxz Found match
+    [junit]   485: rxzi7hgtzgbkwkxrtaydopgnnc77irfzxmaqjqwsolzxtjo2w4ft2vselcxhufuluvhhgigweu4lp Spurious match?
+    [junit] Looking for query ygbecj7pya2iqwatuvhokvjuigio4lob7djaxzxbpumxiehekmcdnfislqzmtgpie2tvqqky4cerc4
+    [junit]   47: ygbecj7pya2iqwatuvhokvjuigio4lob7djaxzxbpumxiehekmcdnfislqzmtgpie2tvqqky4cerc4 Found match
+    [junit] Looking for query coecukas2mshb2kuiwxfwwdspdrn4zsslvs7hyc44h2txeyfbbgwotozmejrywwqwrpnuvqptoaqgma
+    [junit]   232: coecukas2mshb2kuiwxfwwdspdrn4zsslvs7hyc44h2txeyfbbgwotozmejrywwqwrpnuvqptoaqgma Found match
+    [junit] Looking for query odlxionibhgspsienxvexz2vdq2dmkwoawemao4qjzr2pbslsvbzpmmngkbrmb7joqqxfiiytjosuc2v
+    [junit]   162: dgsmz4alimqasqkgbtaakxbkwqs4bzn7rhl4zcxmtsfrswetnrarfqb Spurious match?
+    [junit]   162: odlxionibhgspsienxvexz2vdq2dmkwoawemao4qjzr2pbslsvbzpmmngkbrmb7joqqxfiiytjosuc2v Found match
+    [junit] Looking for query gzrfru7hwlmwmrelf4aubgcocqrodbxhan4v7yzkob4goqjpfeygj7c7riupfkoh2kvvrfrxjxviaiq7v
+    [junit]   425: gzrfru7hwlmwmrelf4aubgcocqrodbxhan4v7yzkob4goqjpfeygj7c7riupfkoh2kvvrfrxjxviaiq7v Found match
+    [junit] Looking for query fmoi277ubmofqgsfcalasob2zf2h7bnyqnfcsgxesxqznmcywqykjet4pdrrsk7pcnjbqscebcll7nibix
+    [junit]   102: fmoi277ubmofqgsfcalasob2zf2h7bnyqnfcsgxesxqznmcywqykjet4pdrrsk7pcnjbqscebcll7nibix Found match
+    [junit] Looking for query ql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mvjd
+    [junit]   267: ifql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mv Spurious match?
+    [junit]   267: ql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mvjd Found match
+    [junit] Looking for query v2xopduu7kbtzwminsohqahozqsodbldzmptmtavzympy7piaumywqsqutblsycqahpsg24zf27n7daulejv
+    [junit]   322: v2xopduu7kbtzwminsohqahozqsodbldzmptmtavzympy7piaumywqsqutblsycqahpsg24zf27n7daulejv Found match
+    [junit] Looking for query hgpitw7n2vbnt7ypvgcld4z27h4ssvasth2pl2rc2qgikvykfr44qsvfoctprggajzelbfn2j2zg2jha2cfoi
+    [junit]   287: hgpitw7n2vbnt7ypvgcld4z27h4ssvasth2pl2rc2qgikvykfr44qsvfoctprggajzelbfn2j2zg2jha2cfoi Found match
+    [junit]   287: 2jha2cfoiao47tbk2ciusvqxxqai4pqfilsyqq27psfmte7ljo4enxldgzbsjtpev4xczw2jke4luegnncmwl Spurious match?
+    [junit] Looking for query mg4fsdzf4rt2nzbziqjb4qsro7i7fxa7pg4bzkq7rzczwiaj7vkirtdptglycyyfochgbmpbxfnjpquvitkzjs
+    [junit]   194: dz4suydtxktijwiy2cjywaukp477neoxkyznvnrk Spurious match?
+    [junit]   194: mg4fsdzf4rt2nzbziqjb4qsro7i7fxa7pg4bzkq7rzczwiaj7vkirtdptglycyyfochgbmpbxfnjpquvitkzjs Found match
+    [junit] Looking for query pdaybxfia7pzkcurcfandpebp2sbxzyx2pnkvagsnn7hjmyrrxwczsk2yhbfu2vjhcnbdiz727xrukd4o2itenj
+    [junit]   457: pdaybxfia7pzkcurcfandpebp2sbxzyx2pnkvagsnn7hjmyrrxwczsk2yhbfu2vjhcnbdiz727xrukd4o2itenj Found match
+    [junit] Looking for query hs7jwopnwzezq7ys7bvhocmhrvwktlzvahjybrf7nqodqmomcyasl4hepcsr7cdmr7pc7ullxd72qowwgx2zfgnj
+    [junit]   275: mvsymiqbuot4svd7n4t2htotbkvt2owl7ojopfyvg77if244ukw7izlqugtarbinf4vqkfqbcunnlwoek Spurious match?
+    [junit]   275: hs7jwopnwzezq7ys7bvhocmhrvwktlzvahjybrf7nqodqmomcyasl4hepcsr7cdmr7pc7ullxd72qowwgx2zfgnj Found match
+    [junit] Looking for query jzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j2ixqc7r7vaxmrap4i7qvaiflyblxwsiemuzbgn
+    [junit]   131: ej2g74mcfcpyffxkkcbuxkm2msve7ip2nm2bzmjzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j Spurious match?
+    [junit]   131: jzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j2ixqc7r7vaxmrap4i7qvaiflyblxwsiemuzbgn Found match
+    [junit] Looking for query j2472jjisgasufkh2b77qxassgl4rf24bvmobbzprgkjhbi2laeamze4yritlla4fdwlpkprqfcbqovlznbfokeznz
+    [junit]   299: j2472jjisgasufkh2b77qxassgl4rf24bvmobbzprgkjhbi2laeamze4yritlla4fdwlpkprqfcbqovlznbfokeznz Found match
+    [junit] Looking for query wqfd7jttuehwrraoikbnozohvyugayjurjgfqykew2ldoxrmvonbjjqegkrzmnur7lcgvzkmknoycsamkhmdwmfffkf
+    [junit]   37: wqfd7jttuehwrraoikbnozohvyugayjurjgfqykew2ldoxrmvonbjjqegkrzmnur7lcgvzkmknoycsamkhmdwmfffkf Found match
+    [junit] Looking for query vpbdjjhgyucwzql4bmfquqismtu27iolim2wat7zazymxpjdzetq4msxlvmdmhrjcmebqlzdzkfktyxoxmxerkfowyo2
+    [junit]   193: vpbdjjhgyucwzql4bmfquqismtu27iolim2wat7zazymxpjdzetq4msxlvmdmhrjcmebqlzdzkfktyxoxmxerkfowyo2 Found match
+    [junit]   193: mdmhrjcmebqlzdzkfktyxoxmxerkfowyo2uhyet7xvj2bxlsb4fq7hzynscffkwn4dyijesne7ydepcj2dgromaavvvy Spurious match?
+    [junit] Looking for query o2p7ipvpucs4vvnlb2vukk4v7whfqesluhrbze7xhgczdhtcdceeoclwx4imwb7eqrs7tsrgltnevanozkkekyzqzidkm
+    [junit]   210: o2p7ipvpucs4vvnlb2vukk4v7whfqesluhrbze7xhgczdhtcdceeoclwx4imwb7eqrs7tsrgltnevanozkkekyzqzidkm Found match
+    [junit] Looking for query bhh4klkoopbdrosdu2nt4vqoytypldmznbqbbmqbkylrxvzdkgptlnxhtajstblit4ybdvsmrgtxgldpgcibagcvmnekog
+    [junit]   431: lhokjweqs77lndywomwea4g4q4d27rkyjegsc7tu2awl4xrkpvzozkymapngl Spurious match?
+    [junit]   431: lhokjweqs77lndywomwea4g4q4d27rkyjegsc7tu2awl4xrkpvzozkymapnglycx Spurious match?
+    [junit]   431: bhh4klkoopbdrosdu2nt4vqoytypldmznbqbbmqbkylrxvzdkgptlnxhtajstblit4ybdvsmrgtxgldpgcibagcvmnekog Found match
+    [junit] Looking for query 7pzeezyeqe2ewtqndmzkkdxquqrn24ctzuec2ubiyhfbdsimkjztscjcafl7lxcxhivuvjul22cv4dtqdqljwpv7yaxna4d
+    [junit]   359: 7pzeezyeqe2ewtqndmzkkdxquqrn24ctzuec2ubiyhfbdsimkjztscjcafl7lxcxhivuvjul22cv4dtqdqljwpv7yaxna4d Found match
+    [junit] Looking for query eepfyh7d2fbgtfalbgtqsbv44jx7xiijpzhsqbnlmsyqdmurjuozyonwtzpt2mhfsizdt2gpg4xmgwtto2ywfjb7gkuia4fd
+    [junit]   221: eepfyh7d2fbgtfalbgtqsbv44jx7xiijpzhsqbnlmsyqdmurjuozyonwtzpt2mhfsizdt2gpg4xmgwtto2ywfjb7gkuia4fd Found match
+    [junit] Looking for query aaibh4rejmhmevzngh7gyxkzpb2wfpfvb2l4bspsvfzaioetjifwfrzbnrpgxvidavd2vrexdqafu7ffv4aykentceh77lqbe
+    [junit]   179: aaibh4rejmhmevzngh7gyxkzpb2wfpfvb2l4bspsvfzaioetjifwfrzbnrpgxvidavd2vrexdqafu7ffv4aykentceh77lqbe Found match
+    [junit] Looking for query ur4pemprzrhyubr7wbnndkeemosvidzclpdxskwuf7ush2plvgobd27bmbz4cwadqgohrhdsnelbrukybpw4rdwrvp7txxcf2g
+    [junit]   76: ajoljczjuupjcaittjk2xeeqd47uuwq2mhzp74omauumpyn7 Spurious match?
+    [junit]   76: ur4pemprzrhyubr7wbnndkeemosvidzclpdxskwuf7ush2plvgobd27bmbz4cwadqgohrhdsnelbrukybpw4rdwrvp7txxcf2g Found match
+    [junit] Looking for query 42emrx4yerz2zvjrf2updouqzspdgzxzhqgfzydv2totv2zgqnocurb2ay4milusiim27qytqcvdbqzxtt7tihvyqlc7txacism
+    [junit]   16: 42emrx4yerz2zvjrf2updouqzspdgzxzhqgfzydv2totv2zgqnocurb2ay4milusiim27qytqcvdbqzxtt7tihvyqlc7txacism Found match
+    [junit] 
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 sec
+    [junit] ------------- Standard Output ---------------
+    [junit] Looking for query 
+    [junit] Looking for query 7
+    [junit]   55: 7 Found match
+    [junit] Looking for query fd
+    [junit]   196: fd Found match
+    [junit] Looking for query duj
+    [junit]   188: duj Found match
+    [junit] Looking for query tuun
+    [junit]   40: tuun Found match
+    [junit] Looking for query kpurk
+    [junit]   432: kpurk Found match
+    [junit] Looking for query becgdc
+    [junit]   91: becgdc Found match
+    [junit] Looking for query jcjxauy
+    [junit]   143: jcjxauy Found match
+    [junit] Looking for query lo7vbepu
+    [junit]   220: lo7vbepu Found match
+    [junit] Looking for query dvgbzdsrc
+    [junit]   414: dvgbzdsrc Found match
+    [junit] Looking for query hgnytgljuf
+    [junit]   142: hgnytgljuf Found match
+    [junit] Looking for query ywwqa4uykpb
+    [junit]   320: ywwqa4uykpb Found match
+    [junit] Looking for query uosrbicaejmk
+    [junit]   92: uosrbicaejmk Found match
+    [junit] Looking for query eh7ezimgjymyj
+    [junit]   309: eh7ezimgjymyj Found match
+    [junit] Looking for query najbvrfvtsngnm
+    [junit]   154: najbvrfvtsngnm Found match
+    [junit] Looking for query h4gavzzwkmghuub
+    [junit]   207: h4gavzzwkmghuub Found match
+    [junit] Looking for query k2c2andkpc7ggwgt
+    [junit]   352: k2c2andkpc7ggwgt Found match
+    [junit] Looking for query 4pjdsvwhpttqlmmou
+    [junit]   135: 4pjdsvwhpttqlmmou Found match
+    [junit] Looking for query jon4wombziijyffg2u
+    [junit]   115: jon4wombziijyffg2u Found match
+    [junit] Looking for query gdc7qjgawbsshndocrk
+    [junit]   34: gdc7qjgawbsshndocrk Found match
+    [junit] Looking for query ffsnjkswvflystwzdvlv
+    [junit]   202: ffsnjkswvflystwzdvlv Found match
+    [junit] Looking for query 4h4aagbvskccsqaszjezy
+    [junit]   420: jrtzo4z2nbxyvpp4kqw Spurious match?
+    [junit]   420: 4h4aagbvskccsqaszjezy Found match
+    [junit] Looking for query eqekdt224cqdmwerzsg7mz
+    [junit]   193: 2eqekdt224cqdmwerzsg7m Spurious match?
+    [junit]   193: eqekdt224cqdmwerzsg7mz Found match
+    [junit] Looking for query xuwscl4uvggejy7accekwav
+    [junit]   87: xuwscl4uvggejy7accekwav Found match
+    [junit] Looking for query 7jiqxykoutzjcfodw4cytj4v
+    [junit]   115: 7jiqxykoutzjcfodw4cytj4v Found match
+    [junit] Looking for query oyf7efpofbl4jhargfsxlmjtz
+    [junit]   472: oyf7efpofbl4jhargfsxlmjtz Found match
+    [junit] Looking for query htjcwfxhc7xgicrbtsmpqkikpk
+    [junit]   382: htjcwfxhc7xgicrbtsmpqkikpk Found match
+    [junit] Looking for query stsbn2pvjpdidmncy4nmipjnvnx
+    [junit]   476: stsbn2pvjpdidmncy4nmipjnvnx Found match
+    [junit] Looking for query dudotwtb2iwlqmfzffr7wp7rlcm4
+    [junit]   416: dudotwtb2iwlqmfzffr7wp7rlcm4 Found match
+    [junit] Looking for query 4vz42wpqwpi7pptlc7lcrhgnd2ysy
+    [junit]   23: 4vz42wpqwpi7pptlc7lcrhgnd2ysy Found match
+    [junit] Looking for query 4ybd7te7xfohokmjtuadcumqahdkcw
+    [junit]   242: 4ybd7te7xfohokmjtuadcumqahdkcw Found match
+    [junit] Looking for query gzwskgoxfl7shswpurynov4zl7vimmd
+    [junit]   411: gzwskgoxfl7shswpurynov4zl7vimmd Found match
+    [junit] Looking for query hhga2wzhghjqwjc4qqiykjg7gwiwahkm
+    [junit]   70: hhga2wzhghjqwjc4qqiykjg7gwiwahkm Found match
+    [junit] Looking for query srcnerejioizu2a2ijl2yjjovsyfadvc2
+    [junit]   279: srcnerejioizu2a2ijl2yjjovsyfadvc2 Found match
+    [junit] Looking for query qxoewn7eohohxrqvvw2fm7jfsbgff7atgi
+    [junit]   257: qxoewn7eohohxrqvvw2fm7jfsbgff7atgi Found match
+    [junit] Looking for query 4mgyzmwtmrsa24n4igppyjw22bjudagkzk4
+    [junit]   156: 4mgyzmwtmrsa24n4igppyjw22bjudagkzk4 Found match
+    [junit] Looking for query f2dweh2jjrtwpoovhrvkcvubvqqvycsoiwie
+    [junit]   108: f2dweh2jjrtwpoovhrvkcvubvqqvycsoiwie Found match
+    [junit] Looking for query me7yialtj4rtm7nptr7rbawizploujeyisfsm
+    [junit]   41: me7yialtj4rtm7nptr7rbawizploujeyisfsm Found match
+    [junit]   41: wizploujeyisfsmsvhigvlghqentm4abecfkg Spurious match?
+    [junit] Looking for query potehigwv7tcboysx22szeswnzvlrxlochxoif
+    [junit]   32: potehigwv7tcboysx22szeswnzvlrxlochxoif Found match
+    [junit] Looking for query kldqece2gydrhof4rha7txpzxqazncgajcrauyh
+    [junit]   419: kldqece2gydrhof4rha7txpzxqazncgajcrauyh Found match
+    [junit] Looking for query rpgaubx4zqeriwlu72cob7ylb2zfbujnt7jcbftr
+    [junit]   59: rpgaubx4zqeriwlu72cob7ylb2zfbujnt7jcbftr Found match
+    [junit]   59: lu72cob7ylb2zfbujnt7jcbftrxwgdvxtvcxjlmc Spurious match?
+    [junit] Looking for query pcpaav2fwkd2x7jdeoeq2vrcmhaxb7fyidlkcwrzh
+    [junit]   268: pcpaav2fwkd2x7jdeoeq2vrcmhaxb7fyidlkcwrzh Found match
+    [junit] Looking for query z7gtutht7g2dfbp4bmlck7cy4ygln7t2whxbua4iap
+    [junit]   6: jm7pju4alszctozbiqmoomzhagpgxoz7gtutht7g2d Spurious match?
+    [junit]   6: z7gtutht7g2dfbp4bmlck7cy4ygln7t2whxbua4iap Found match
+    [junit] Looking for query cjbseizznyqyekqzlidhxyxsxtqk2np4tgcwbii47my
+    [junit]   139: orapezapfseqehgsthzmimpoaj4sn2bjs7zbcjbseiz Spurious match?
+    [junit]   139: cjbseizznyqyekqzlidhxyxsxtqk2np4tgcwbii47my Found match
+    [junit] Looking for query xvkcjuyzzvduqi4ngd7cm4nmxhhnd2hyivusmrwkp7cm
+    [junit]   198: xvkcjuyzzvduqi4ngd7cm4nmxhhnd2hyivusmrwkp7cm Found match
+    [junit] Looking for query rwoikqvzjax4qogjlyezkwvbywlgzkevofkjwvnwfjxre
+    [junit]   47: vdm4a4siudczwjjhx Spurious match?
+    [junit]   47: rwoikqvzjax4qogjlyezkwvbywlgzkevofkjwvnwfjxre Found match
+    [junit] Looking for query qgwjpstfiliwgwxl42ahcpwp7tx7nvjayucvyfawibia2l
+    [junit]   414: qgwjpstfiliwgwxl42ahcpwp7tx7nvjayucvyfawibia2l Found match
+    [junit] Looking for query bwnwxup2fvcuruc4cmphkponjykr2mcjk7mduv2bgi4f72f
+    [junit]   439: bwnwxup2fvcuruc4cmphkponjykr2mcjk7mduv2bgi4f72f Found match
+    [junit]   439: hkponjykr2mcjk7mduv2bgi4f72f2obizdauo2jduooirdw Spurious match?
+    [junit] Looking for query dhhrd2xyqatukitsdjlwngb2unoduvuoyzngpceuhaha2bym
+    [junit]   355: dhhrd2xyqatukitsdjlwngb2unoduvuoyzngpceuhaha2bym Found match
+    [junit] Looking for query lcar4a2zb4hwhzggihxxugtdx7ysysheosacjmcvmlix2fbzb
+    [junit]   44: mleqx Spurious match?
+    [junit]   44: lcar4a2zb4hwhzggihxxugtdx7ysysheosacjmcvmlix2fbzb Found match
+    [junit] Looking for query 4t4fsgldxfbxjurgdfu22osxc7mtojyggzaozwcecotpntflpe
+    [junit]   181: 4t4fsgldxfbxjurgdfu22osxc7mtojyggzaozwcecotpntflpe Found match
+    [junit] Looking for query qpnorondfwqmmmbdsuxrjjwnymwxnfz7toqfslmmcf2j4y7sypt
+    [junit]   153: qhklrhbc7 Spurious match?
+    [junit]   153: qpnorondfwqmmmbdsuxrjjwnymwxnfz7toqfslmmcf2j4y7sypt Found match
+    [junit] Looking for query nvvv4ib7iewkaxgkfpyoafy7irhp42ynqevjby7yzgrrtyycixg7
+    [junit]   103: nvvv4ib7iewkaxgkfpyoafy7irhp42ynqevjby7yzgrrtyycixg7 Found match
+    [junit] Looking for query edo2duusel2va7mycmwrdwyj7vjoexkwnyixjulssdxnrjeleinym
+    [junit]   391: wh7ualpcpb2l2rdgwxo7oiwe4tyi2pm Spurious match?
+    [junit]   391: edo2duusel2va7mycmwrdwyj7vjoexkwnyixjulssdxnrjeleinym Found match
+    [junit] Looking for query hcxnhr72khzrr4sk7gfbsdwuqfkkmjz2zo7obvllne42aphddvxpnf
+    [junit]   331: hcxnhr72khzrr4sk7gfbsdwuqfkkmjz2zo7obvllne42aphddvxpnf Found match
+    [junit] Looking for query o2mrmlx7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlic
+    [junit]   75: o2mrmlx7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlic Found match
+    [junit]   75: 7inkxcvhctgnwptklivbmmbqjjorxw2c47ikoicod2smtlicusrubsl Spurious match?
+    [junit] Looking for query vtvyorh7pgricaywxvehnfupsepdkdxxtgzqittfmuwsapvrhl72ttx4
+    [junit]   353: vtvyorh7pgricaywxvehnfupsepdkdxxtgzqittfmuwsapvrhl72ttx4 Found match
+    [junit] Looking for query iinlixpkss2h2lq7wepuppijykbc72vmoiy724mmnk4qfqfru4xivt44p
+    [junit]   346: iinlixpkss2h2lq7wepuppijykbc72vmoiy724mmnk4qfqfru4xivt44p Found match
+    [junit] Looking for query wwqazedwbiojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4q
+    [junit]   353: wwqazedwbiojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4q Found match
+    [junit]   353: iojupfc4bfafmztt2qxlvihk22fmbciqxxoici7bommxmdr4qvdawlaazg Spurious match?
+    [junit] Looking for query xkrm2y4jpweipczszbq7cj4oaccnkcfjrv2fol4l2qgis7l7ausuwmgrbei
+    [junit]   442: xkrm2y4jpweipczszbq7cj4oaccnkcfjrv2fol4l2qgis7l7ausuwmgrbei Found match
+    [junit] Looking for query pribxldqfgvkpxflbueadgvzyfxqjzv2fbcgmbvsyykohoba2cazhge4wdi4
+    [junit]   505: pribxldqfgvkpxflbueadgvzyfxqjzv2fbcgmbvsyykohoba2cazhge4wdi4 Found match
+    [junit] Looking for query 2ftuif2vi7lybxdm4qoolewegenyaiyf2uenvef7vzovdnqoweqjiqht2f2or
+    [junit]   229: 2ftuif2vi7lybxdm4qoolewegenyaiyf2uenvef7vzovdnqoweqjiqht2f2or Found match
+    [junit] Looking for query ylywpuxtn4vhyjikpajir4miygcx7lot4qt2ieagmzyapjgzrd4lwzklt2t44d
+    [junit]   303: ylywpuxtn4vhyjikpajir4miygcx7lot4qt2ieagmzyapjgzrd4lwzklt2t44d Found match
+    [junit] Looking for query bsq7vysfpnnuentv2msnb4lqrldytqykzwmnhmr4peovxd2qqfljlpmnz74cpyu
+    [junit]   32: bsq7vysfpnnuentv2msnb4lqrldytqykzwmnhmr4peovxd2qqfljlpmnz74cpyu Found match
+    [junit] Looking for query wcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyunrekjiszmm
+    [junit]   137: gqzt4iyblwcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyun Spurious match?
+    [junit]   137: wcwj2ad2ycajaorc7rjdstuauymjscacbktygxyrxqimvirmervqyunrekjiszmm Found match
+    [junit] Looking for query v7fupxlgldmses4fy2lzqob7ca7kpm7x4aqcjmwt2mlgxqwnyfxgaqtfuvmmxhsia
+    [junit]   295: gjg4mvieaauj7kvk7n Spurious match?
+    [junit]   295: v7fupxlgldmses4fy2lzqob7ca7kpm7x4aqcjmwt2mlgxqwnyfxgaqtfuvmmxhsia Found match
+    [junit] Looking for query ycvfrfzsgz2szwayyllosaehaximigxbfrvw4qxho4ggowwbr7fscpaqwmjoircitl
+    [junit]   242: ycvfrfzsgz2szwayyllosaehaximigxbfrvw4qxho4ggowwbr7fscpaqwmjoircitl Found match
+    [junit] Looking for query hfmd2fkyydpkue7aysfqhw2iim4jdozn4pillqqbjpele4v4ybuzhoaacwngghjh2or
+    [junit]   497: pfoiy2mxmszgkeywf7mwquszbkxevwncgbuixigohfmjeofkvnhfmd2fkyydpkue7ay Spurious match?
+    [junit]   497: hfmd2fkyydpkue7aysfqhw2iim4jdozn4pillqqbjpele4v4ybuzhoaacwngghjh2or Found match
+    [junit] Looking for query 4ipdlb4clgyesd7rjvqitr74t7zllkwagvm7hrboedhqaokzcbphj4poutj2ny7gol7p
+    [junit]   298: qtbldmgytfrzsu2ofk7yhsgjgymhchmjnllzbzswz2vlo2vrnfu4xkphxmiyzpoz Spurious match?
+    [junit]   298: 4ipdlb4clgyesd7rjvqitr74t7zllkwagvm7hrboedhqaokzcbphj4poutj2ny7gol7p Found match
+    [junit] Looking for query keugth7zjqjsmesgjjma4qxdme7vtxfvsxwor4akaauyor77jnqajadntnmb4yxpqsiew
+    [junit]   141: iyhnz7lmteullsfakquxl4mmxiykdvaapmydp Spurious match?
+    [junit]   141: keugth7zjqjsmesgjjma4qxdme7vtxfvsxwor4akaauyor77jnqajadntnmb4yxpqsiew Found match
+    [junit] Looking for query qcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24uywxrnhbm7el
+    [junit]   436: drqzjlcmunqvnamgivh7jcajrjlkmmissxzph2lwpz7cy4igjko47a7mszjrvtiiqcrp4h Spurious match?
+    [junit]   436: a7mszjrvtiiqcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24u Spurious match?
+    [junit]   436: qcrp4hgpugtstgvzezjfhks4zem7p7ge4djoyfisrumtwvqmocaulfcv24uywxrnhbm7el Found match
+    [junit] Looking for query jyxdhchitfnzu7qkbshtojto4msrfswqrajcn2jkyjhbhmoha2fsflsavdfazbexnephtnu
+    [junit]   401: 4lzazxmgofdux24wyawkmtk4quz2idmaua7ncjcztqqxyvvfkuiorgosfrufmkvqtgkg Spurious match?
+    [junit]   401: jyxdhchitfnzu7qkbshtojto4msrfswqrajcn2jkyjhbhmoha2fsflsavdfazbexnephtnu Found match
+    [junit] Looking for query tab2fqdofjylqmkprpcnny42n7p7la4uyipnehehrolojo2ymhblfeqduxajadc2nrwwvt7j
+    [junit]   251: cmuet4fywx4nwbteltdym2qfe27tnioy7lilstrtab2fqdofjylqmkprpcnny42n7p7la4uy Spurious match?
+    [junit]   251: tab2fqdofjylqmkprpcnny42n7p7la4uyipnehehrolojo2ymhblfeqduxajadc2nrwwvt7j Found match
+    [junit] Looking for query silugt4nqwptkystekzdked4lafzpjpqtuyxjotldgauwudwxsvzsuwa7idohmrx2qgfatwbe
+    [junit]   482: silugt4nqwptkystekzdked4lafzpjpqtuyxjotldgauwudwxsvzsuwa7idohmrx2qgfatwbe Found match
+    [junit] Looking for query xlvfcdpxvdwybwcrzpemgjmafhp7cbxiuttrsvpgmtpnvmqh7keqnyajecriyhfsrbnfeoigxv
+    [junit]   250: xlvfcdpxvdwybwcrzpemgjmafhp7cbxiuttrsvpgmtpnvmqh7keqnyajecriyhfsrbnfeoigxv Found match
+    [junit] Looking for query zqnkwjlzfuzfqwbfevadythb4fpl2obyaoyiaj47oxlyws2fp4rsrwq4osxi72epkizhsm7zajk
+    [junit]   240: zqnkwjlzfuzfqwbfevadythb4fpl2obyaoyiaj47oxlyws2fp4rsrwq4osxi72epkizhsm7zajk Found match
+    [junit] Looking for query bpgxlbujh2gq7lcoadxuobcfy7gz77xhzlm7jxpl2mnpaplqahqjzygm7d4zcghy4lorbsnolqiw
+    [junit]   75: bpgxlbujh2gq7lcoadxuobcfy7gz77xhzlm7jxpl2mnpaplqahqjzygm7d4zcghy4lorbsnolqiw Found match
+    [junit] Looking for query jnewdo7222op77vnww2bapwepfmbpjlasjqxtlbcgp4kjz2gesonuoavipnhjotlqhfbkxfpsirxz
+    [junit]   485: jnewdo7222op77vnww2bapwepfmbpjlasjqxtlbcgp4kjz2gesonuoavipnhjotlqhfbkxfpsirxz Found match
+    [junit]   485: rxzi7hgtzgbkwkxrtaydopgnnc77irfzxmaqjqwsolzxtjo2w4ft2vselcxhufuluvhhgigweu4lp Spurious match?
+    [junit] Looking for query ygbecj7pya2iqwatuvhokvjuigio4lob7djaxzxbpumxiehekmcdnfislqzmtgpie2tvqqky4cerc4
+    [junit]   47: ygbecj7pya2iqwatuvhokvjuigio4lob7djaxzxbpumxiehekmcdnfislqzmtgpie2tvqqky4cerc4 Found match
+    [junit] Looking for query coecukas2mshb2kuiwxfwwdspdrn4zsslvs7hyc44h2txeyfbbgwotozmejrywwqwrpnuvqptoaqgma
+    [junit]   232: coecukas2mshb2kuiwxfwwdspdrn4zsslvs7hyc44h2txeyfbbgwotozmejrywwqwrpnuvqptoaqgma Found match
+    [junit] Looking for query odlxionibhgspsienxvexz2vdq2dmkwoawemao4qjzr2pbslsvbzpmmngkbrmb7joqqxfiiytjosuc2v
+    [junit]   162: dgsmz4alimqasqkgbtaakxbkwqs4bzn7rhl4zcxmtsfrswetnrarfqb Spurious match?
+    [junit]   162: odlxionibhgspsienxvexz2vdq2dmkwoawemao4qjzr2pbslsvbzpmmngkbrmb7joqqxfiiytjosuc2v Found match
+    [junit] Looking for query gzrfru7hwlmwmrelf4aubgcocqrodbxhan4v7yzkob4goqjpfeygj7c7riupfkoh2kvvrfrxjxviaiq7v
+    [junit]   425: gzrfru7hwlmwmrelf4aubgcocqrodbxhan4v7yzkob4goqjpfeygj7c7riupfkoh2kvvrfrxjxviaiq7v Found match
+    [junit] Looking for query fmoi277ubmofqgsfcalasob2zf2h7bnyqnfcsgxesxqznmcywqykjet4pdrrsk7pcnjbqscebcll7nibix
+    [junit]   102: fmoi277ubmofqgsfcalasob2zf2h7bnyqnfcsgxesxqznmcywqykjet4pdrrsk7pcnjbqscebcll7nibix Found match
+    [junit] Looking for query ql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mvjd
+    [junit]   267: ifql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mv Spurious match?
+    [junit]   267: ql7smq4zdespirn4ipeltdiptzuyydxekrzbpob4jbdyzzyluiyzypqlwaqypyrfa4rjstp7annbfy7mvjd Found match
+    [junit] Looking for query v2xopduu7kbtzwminsohqahozqsodbldzmptmtavzympy7piaumywqsqutblsycqahpsg24zf27n7daulejv
+    [junit]   322: v2xopduu7kbtzwminsohqahozqsodbldzmptmtavzympy7piaumywqsqutblsycqahpsg24zf27n7daulejv Found match
+    [junit] Looking for query hgpitw7n2vbnt7ypvgcld4z27h4ssvasth2pl2rc2qgikvykfr44qsvfoctprggajzelbfn2j2zg2jha2cfoi
+    [junit]   287: hgpitw7n2vbnt7ypvgcld4z27h4ssvasth2pl2rc2qgikvykfr44qsvfoctprggajzelbfn2j2zg2jha2cfoi Found match
+    [junit]   287: 2jha2cfoiao47tbk2ciusvqxxqai4pqfilsyqq27psfmte7ljo4enxldgzbsjtpev4xczw2jke4luegnncmwl Spurious match?
+    [junit] Looking for query mg4fsdzf4rt2nzbziqjb4qsro7i7fxa7pg4bzkq7rzczwiaj7vkirtdptglycyyfochgbmpbxfnjpquvitkzjs
+    [junit]   194: dz4suydtxktijwiy2cjywaukp477neoxkyznvnrk Spurious match?
+    [junit]   194: mg4fsdzf4rt2nzbziqjb4qsro7i7fxa7pg4bzkq7rzczwiaj7vkirtdptglycyyfochgbmpbxfnjpquvitkzjs Found match
+    [junit] Looking for query pdaybxfia7pzkcurcfandpebp2sbxzyx2pnkvagsnn7hjmyrrxwczsk2yhbfu2vjhcnbdiz727xrukd4o2itenj
+    [junit]   457: pdaybxfia7pzkcurcfandpebp2sbxzyx2pnkvagsnn7hjmyrrxwczsk2yhbfu2vjhcnbdiz727xrukd4o2itenj Found match
+    [junit] Looking for query hs7jwopnwzezq7ys7bvhocmhrvwktlzvahjybrf7nqodqmomcyasl4hepcsr7cdmr7pc7ullxd72qowwgx2zfgnj
+    [junit]   275: mvsymiqbuot4svd7n4t2htotbkvt2owl7ojopfyvg77if244ukw7izlqugtarbinf4vqkfqbcunnlwoek Spurious match?
+    [junit]   275: hs7jwopnwzezq7ys7bvhocmhrvwktlzvahjybrf7nqodqmomcyasl4hepcsr7cdmr7pc7ullxd72qowwgx2zfgnj Found match
+    [junit] Looking for query jzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j2ixqc7r7vaxmrap4i7qvaiflyblxwsiemuzbgn
+    [junit]   131: ej2g74mcfcpyffxkkcbuxkm2msve7ip2nm2bzmjzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j Spurious match?
+    [junit]   131: jzk7kjgdsbwr7fhaz2cc2xtskrmx4oucyfujg2rrdbjvwdpqc4j2ixqc7r7vaxmrap4i7qvaiflyblxwsiemuzbgn Found match
+    [junit] Looking for query j2472jjisgasufkh2b77qxassgl4rf24bvmobbzprgkjhbi2laeamze4yritlla4fdwlpkprqfcbqovlznbfokeznz
+    [junit]   299: j2472jjisgasufkh2b77qxassgl4rf24bvmobbzprgkjhbi2laeamze4yritlla4fdwlpkprqfcbqovlznbfokeznz Found match
+    [junit] Looking for query wqfd7jttuehwrraoikbnozohvyugayjurjgfqykew2ldoxrmvonbjjqegkrzmnur7lcgvzkmknoycsamkhmdwmfffkf
+    [junit]   37: wqfd7jttuehwrraoikbnozohvyugayjurjgfqykew2ldoxrmvonbjjqegkrzmnur7lcgvzkmknoycsamkhmdwmfffkf Found match
+    [junit] Looking for query vpbdjjhgyucwzql4bmfquqismtu27iolim2wat7zazymxpjdzetq4msxlvmdmhrjcmebqlzdzkfktyxoxmxerkfowyo2
+    [junit]   193: vpbdjjhgyucwzql4bmfquqismtu27iolim2wat7zazymxpjdzetq4msxlvmdmhrjcmebqlzdzkfktyxoxmxerkfowyo2 Found match
+    [junit]   193: mdmhrjcmebqlzdzkfktyxoxmxerkfowyo2uhyet7xvj2bxlsb4fq7hzynscffkwn4dyijesne7ydepcj2dgromaavvvy Spurious match?
+    [junit] Looking for query o2p7ipvpucs4vvnlb2vukk4v7whfqesluhrbze7xhgczdhtcdceeoclwx4imwb7eqrs7tsrgltnevanozkkekyzqzidkm
+    [junit]   210: o2p7ipvpucs4vvnlb2vukk4v7whfqesluhrbze7xhgczdhtcdceeoclwx4imwb7eqrs7tsrgltnevanozkkekyzqzidkm Found match
+    [junit] Looking for query bhh4klkoopbdrosdu2nt4vqoytypldmznbqbbmqbkylrxvzdkgptlnxhtajstblit4ybdvsmrgtxgldpgcibagcvmnekog
+    [junit]   431: lhokjweqs77lndywomwea4g4q4d27rkyjegsc7tu2awl4xrkpvzozkymapngl Spurious match?
+    [junit]   431: lhokjweqs77lndywomwea4g4q4d27rkyjegsc7tu2awl4xrkpvzozkymapnglycx Spurious match?
+    [junit]   431: bhh4klkoopbdrosdu2nt4vqoytypldmznbqbbmqbkylrxvzdkgptlnxhtajstblit4ybdvsmrgtxgldpgcibagcvmnekog Found match
+    [junit] Looking for query 7pzeezyeqe2ewtqndmzkkdxquqrn24ctzuec2ubiyhfbdsimkjztscjcafl7lxcxhivuvjul22cv4dtqdqljwpv7yaxna4d
+    [junit]   359: 7pzeezyeqe2ewtqndmzkkdxquqrn24ctzuec2ubiyhfbdsimkjztscjcafl7lxcxhivuvjul22cv4dtqdqljwpv7yaxna4d Found match
+    [junit] Looking for query eepfyh7d2fbgtfalbgtqsbv44jx7xiijpzhsqbnlmsyqdmurjuozyonwtzpt2mhfsizdt2gpg4xmgwtto2ywfjb7gkuia4fd
+    [junit]   221: eepfyh7d2fbgtfalbgtqsbv44jx7xiijpzhsqbnlmsyqdmurjuozyonwtzpt2mhfsizdt2gpg4xmgwtto2ywfjb7gkuia4fd Found match
+    [junit] Looking for query aaibh4rejmhmevzngh7gyxkzpb2wfpfvb2l4bspsvfzaioetjifwfrzbnrpgxvidavd2vrexdqafu7ffv4aykentceh77lqbe
+    [junit]   179: aaibh4rejmhmevzngh7gyxkzpb2wfpfvb2l4bspsvfzaioetjifwfrzbnrpgxvidavd2vrexdqafu7ffv4aykentceh77lqbe Found match
+    [junit] Looking for query ur4pemprzrhyubr7wbnndkeemosvidzclpdxskwuf7ush2plvgobd27bmbz4cwadqgohrhdsnelbrukybpw4rdwrvp7txxcf2g
+    [junit]   76: ajoljczjuupjcaittjk2xeeqd47uuwq2mhzp74omauumpyn7 Spurious match?
+    [junit]   76: ur4pemprzrhyubr7wbnndkeemosvidzclpdxskwuf7ush2plvgobd27bmbz4cwadqgohrhdsnelbrukybpw4rdwrvp7txxcf2g Found match
+    [junit] Looking for query 42emrx4yerz2zvjrf2updouqzspdgzxzhqgfzydv2totv2zgqnocurb2ay4milusiim27qytqcvdbqzxtt7tihvyqlc7txacism
+    [junit]   16: 42emrx4yerz2zvjrf2updouqzspdgzxzhqgfzydv2totv2zgqnocurb2ay4milusiim27qytqcvdbqzxtt7tihvyqlc7txacism Found match
+    [junit] ------------- ---------------- ---------------
+    [junit] 
+    [junit] Testcase: testExample took 0 sec
+    [junit] Testcase: testSameChar took 0 sec
+    [junit] Testcase: testRandom took 0.012 sec
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing rabinkarp on 2016-12-02 15:56:31 -0600
+-------------------
