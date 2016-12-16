@@ -1,0 +1,62 @@
+-------------------
+CSE247 Robot tester starts testing dh on 2016-12-16 11:39:46 -0600
+
+========
+Testing in checkoutlab12ontime/cse247-f16-students-vihar.desu: dh as of 2016-12-08 09:00
+========
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+copytest:
+     [echo] would copy from /Users/roncytron/git/cse247-f16-students key vihar.desu testfilesource testing/TestDH package dh repo checkoutlab12ontime/cse247-f16-students-vihar.desu
+     [copy] Copying 1 file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab12ontime/cse247-f16-students-vihar.desu/labs/dh/testing
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Now in: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab12ontime/cse247-f16-students-vihar.desu
+Compiling the code
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling dh/utils/MExp
+    [mkdir] Created dir: /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab12ontime/cse247-f16-students-vihar.desu/bin
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab12ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling dh/DH
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab12ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+compile:
+     [echo] Compiling dh/testing/TestDH
+    [javac] Compiling 1 source file to /Users/roncytron/Desktop/247/bitbucket/cse247-support/checkoutlab12ontime/cse247-f16-students-vihar.desu/bin
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+Running test testing.TestDH
+Buildfile: /Users/roncytron/Desktop/247/bitbucket/cse247-support/build.xml
+
+test:
+    [junit] Running dh.testing.TestDH
+    [junit] Testsuite: dh.testing.TestDH
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+    [junit] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 sec
+    [junit] 
+    [junit] Testcase: testPubKeys took 0.005 sec
+    [junit] Testcase: testLectureExample took 0 sec
+    [junit] Testcase: testAgreement took 0.005 sec
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+================
+Lab is counted as working
+================
+
+CSE247 Robot tester ends testing dh on 2016-12-16 11:39:49 -0600
+-------------------
